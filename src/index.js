@@ -106,7 +106,7 @@ async function getTemporaryCredentials(accessKey, secretKey, bucket) {
 /**
  * 创建 S3 客户端
  *
- * @param {{endpoint:string, credentials:{accessKeyId:string, secretAccessKey:string, sessionToken?:string}, forcePathStyle:boolean}} cfg
+ * @param {{endpoint:string, credentials:{accessKeyId:string, secretAccessKey:string, sessionToken?:string}}} cfg
  * @returns {S3Client}
  */
 function createS3Client(cfg) {
@@ -119,7 +119,6 @@ function createS3Client(cfg) {
     region: "auto",
     endpoint: cfg.endpoint,
     credentials: cfg.credentials,
-    forcePathStyle: true,
     maxAttempts: 5,
     requestHandler,
   });

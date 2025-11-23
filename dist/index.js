@@ -4000,12 +4000,6 @@ let S3ServiceException$1 = class S3ServiceException extends smithyClient.Service
     }
 };
 
-const RequestCharged = {
-    requester: "requester",
-};
-const RequestPayer = {
-    requester: "requester",
-};
 let NoSuchUpload$1 = class NoSuchUpload extends S3ServiceException$1 {
     name = "NoSuchUpload";
     $fault = "client";
@@ -4017,81 +4011,6 @@ let NoSuchUpload$1 = class NoSuchUpload extends S3ServiceException$1 {
         });
         Object.setPrototypeOf(this, NoSuchUpload.prototype);
     }
-};
-const BucketAccelerateStatus = {
-    Enabled: "Enabled",
-    Suspended: "Suspended",
-};
-const Type = {
-    AmazonCustomerByEmail: "AmazonCustomerByEmail",
-    CanonicalUser: "CanonicalUser",
-    Group: "Group",
-};
-const Permission = {
-    FULL_CONTROL: "FULL_CONTROL",
-    READ: "READ",
-    READ_ACP: "READ_ACP",
-    WRITE: "WRITE",
-    WRITE_ACP: "WRITE_ACP",
-};
-const OwnerOverride = {
-    Destination: "Destination",
-};
-const ChecksumType = {
-    COMPOSITE: "COMPOSITE",
-    FULL_OBJECT: "FULL_OBJECT",
-};
-const ServerSideEncryption = {
-    AES256: "AES256",
-    aws_fsx: "aws:fsx",
-    aws_kms: "aws:kms",
-    aws_kms_dsse: "aws:kms:dsse",
-};
-const ObjectCannedACL = {
-    authenticated_read: "authenticated-read",
-    aws_exec_read: "aws-exec-read",
-    bucket_owner_full_control: "bucket-owner-full-control",
-    bucket_owner_read: "bucket-owner-read",
-    private: "private",
-    public_read: "public-read",
-    public_read_write: "public-read-write",
-};
-const ChecksumAlgorithm = {
-    CRC32: "CRC32",
-    CRC32C: "CRC32C",
-    CRC64NVME: "CRC64NVME",
-    SHA1: "SHA1",
-    SHA256: "SHA256",
-};
-const MetadataDirective = {
-    COPY: "COPY",
-    REPLACE: "REPLACE",
-};
-const ObjectLockLegalHoldStatus = {
-    OFF: "OFF",
-    ON: "ON",
-};
-const ObjectLockMode = {
-    COMPLIANCE: "COMPLIANCE",
-    GOVERNANCE: "GOVERNANCE",
-};
-const StorageClass = {
-    DEEP_ARCHIVE: "DEEP_ARCHIVE",
-    EXPRESS_ONEZONE: "EXPRESS_ONEZONE",
-    FSX_OPENZFS: "FSX_OPENZFS",
-    GLACIER: "GLACIER",
-    GLACIER_IR: "GLACIER_IR",
-    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
-    ONEZONE_IA: "ONEZONE_IA",
-    OUTPOSTS: "OUTPOSTS",
-    REDUCED_REDUNDANCY: "REDUCED_REDUNDANCY",
-    SNOW: "SNOW",
-    STANDARD: "STANDARD",
-    STANDARD_IA: "STANDARD_IA",
-};
-const TaggingDirective = {
-    COPY: "COPY",
-    REPLACE: "REPLACE",
 };
 let ObjectNotInActiveTierError$1 = class ObjectNotInActiveTierError extends S3ServiceException$1 {
     name = "ObjectNotInActiveTierError";
@@ -4129,79 +4048,6 @@ let BucketAlreadyOwnedByYou$1 = class BucketAlreadyOwnedByYou extends S3ServiceE
         Object.setPrototypeOf(this, BucketAlreadyOwnedByYou.prototype);
     }
 };
-const BucketCannedACL = {
-    authenticated_read: "authenticated-read",
-    private: "private",
-    public_read: "public-read",
-    public_read_write: "public-read-write",
-};
-const DataRedundancy = {
-    SingleAvailabilityZone: "SingleAvailabilityZone",
-    SingleLocalZone: "SingleLocalZone",
-};
-const BucketType = {
-    Directory: "Directory",
-};
-const LocationType = {
-    AvailabilityZone: "AvailabilityZone",
-    LocalZone: "LocalZone",
-};
-const BucketLocationConstraint = {
-    EU: "EU",
-    af_south_1: "af-south-1",
-    ap_east_1: "ap-east-1",
-    ap_northeast_1: "ap-northeast-1",
-    ap_northeast_2: "ap-northeast-2",
-    ap_northeast_3: "ap-northeast-3",
-    ap_south_1: "ap-south-1",
-    ap_south_2: "ap-south-2",
-    ap_southeast_1: "ap-southeast-1",
-    ap_southeast_2: "ap-southeast-2",
-    ap_southeast_3: "ap-southeast-3",
-    ap_southeast_4: "ap-southeast-4",
-    ap_southeast_5: "ap-southeast-5",
-    ca_central_1: "ca-central-1",
-    cn_north_1: "cn-north-1",
-    cn_northwest_1: "cn-northwest-1",
-    eu_central_1: "eu-central-1",
-    eu_central_2: "eu-central-2",
-    eu_north_1: "eu-north-1",
-    eu_south_1: "eu-south-1",
-    eu_south_2: "eu-south-2",
-    eu_west_1: "eu-west-1",
-    eu_west_2: "eu-west-2",
-    eu_west_3: "eu-west-3",
-    il_central_1: "il-central-1",
-    me_central_1: "me-central-1",
-    me_south_1: "me-south-1",
-    sa_east_1: "sa-east-1",
-    us_east_2: "us-east-2",
-    us_gov_east_1: "us-gov-east-1",
-    us_gov_west_1: "us-gov-west-1",
-    us_west_1: "us-west-1",
-    us_west_2: "us-west-2",
-};
-const ObjectOwnership = {
-    BucketOwnerEnforced: "BucketOwnerEnforced",
-    BucketOwnerPreferred: "BucketOwnerPreferred",
-    ObjectWriter: "ObjectWriter",
-};
-const InventoryConfigurationState = {
-    DISABLED: "DISABLED",
-    ENABLED: "ENABLED",
-};
-const TableSseAlgorithm = {
-    AES256: "AES256",
-    aws_kms: "aws:kms",
-};
-const ExpirationState = {
-    DISABLED: "DISABLED",
-    ENABLED: "ENABLED",
-};
-const SessionMode = {
-    ReadOnly: "ReadOnly",
-    ReadWrite: "ReadWrite",
-};
 let NoSuchBucket$1 = class NoSuchBucket extends S3ServiceException$1 {
     name = "NoSuchBucket";
     $fault = "client";
@@ -4213,166 +4059,6 @@ let NoSuchBucket$1 = class NoSuchBucket extends S3ServiceException$1 {
         });
         Object.setPrototypeOf(this, NoSuchBucket.prototype);
     }
-};
-const AnalyticsS3ExportFileFormat = {
-    CSV: "CSV",
-};
-const StorageClassAnalysisSchemaVersion = {
-    V_1: "V_1",
-};
-const IntelligentTieringStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const IntelligentTieringAccessTier = {
-    ARCHIVE_ACCESS: "ARCHIVE_ACCESS",
-    DEEP_ARCHIVE_ACCESS: "DEEP_ARCHIVE_ACCESS",
-};
-const InventoryFormat = {
-    CSV: "CSV",
-    ORC: "ORC",
-    Parquet: "Parquet",
-};
-const InventoryIncludedObjectVersions = {
-    All: "All",
-    Current: "Current",
-};
-const InventoryOptionalField = {
-    BucketKeyStatus: "BucketKeyStatus",
-    ChecksumAlgorithm: "ChecksumAlgorithm",
-    ETag: "ETag",
-    EncryptionStatus: "EncryptionStatus",
-    IntelligentTieringAccessTier: "IntelligentTieringAccessTier",
-    IsMultipartUploaded: "IsMultipartUploaded",
-    LastModifiedDate: "LastModifiedDate",
-    ObjectAccessControlList: "ObjectAccessControlList",
-    ObjectLockLegalHoldStatus: "ObjectLockLegalHoldStatus",
-    ObjectLockMode: "ObjectLockMode",
-    ObjectLockRetainUntilDate: "ObjectLockRetainUntilDate",
-    ObjectOwner: "ObjectOwner",
-    ReplicationStatus: "ReplicationStatus",
-    Size: "Size",
-    StorageClass: "StorageClass",
-};
-const InventoryFrequency = {
-    Daily: "Daily",
-    Weekly: "Weekly",
-};
-const TransitionStorageClass = {
-    DEEP_ARCHIVE: "DEEP_ARCHIVE",
-    GLACIER: "GLACIER",
-    GLACIER_IR: "GLACIER_IR",
-    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
-    ONEZONE_IA: "ONEZONE_IA",
-    STANDARD_IA: "STANDARD_IA",
-};
-const ExpirationStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const TransitionDefaultMinimumObjectSize = {
-    all_storage_classes_128K: "all_storage_classes_128K",
-    varies_by_storage_class: "varies_by_storage_class",
-};
-const BucketLogsPermission = {
-    FULL_CONTROL: "FULL_CONTROL",
-    READ: "READ",
-    WRITE: "WRITE",
-};
-const PartitionDateSource = {
-    DeliveryTime: "DeliveryTime",
-    EventTime: "EventTime",
-};
-const S3TablesBucketType = {
-    aws: "aws",
-    customer: "customer",
-};
-const Event = {
-    s3_IntelligentTiering: "s3:IntelligentTiering",
-    s3_LifecycleExpiration_: "s3:LifecycleExpiration:*",
-    s3_LifecycleExpiration_Delete: "s3:LifecycleExpiration:Delete",
-    s3_LifecycleExpiration_DeleteMarkerCreated: "s3:LifecycleExpiration:DeleteMarkerCreated",
-    s3_LifecycleTransition: "s3:LifecycleTransition",
-    s3_ObjectAcl_Put: "s3:ObjectAcl:Put",
-    s3_ObjectCreated_: "s3:ObjectCreated:*",
-    s3_ObjectCreated_CompleteMultipartUpload: "s3:ObjectCreated:CompleteMultipartUpload",
-    s3_ObjectCreated_Copy: "s3:ObjectCreated:Copy",
-    s3_ObjectCreated_Post: "s3:ObjectCreated:Post",
-    s3_ObjectCreated_Put: "s3:ObjectCreated:Put",
-    s3_ObjectRemoved_: "s3:ObjectRemoved:*",
-    s3_ObjectRemoved_Delete: "s3:ObjectRemoved:Delete",
-    s3_ObjectRemoved_DeleteMarkerCreated: "s3:ObjectRemoved:DeleteMarkerCreated",
-    s3_ObjectRestore_: "s3:ObjectRestore:*",
-    s3_ObjectRestore_Completed: "s3:ObjectRestore:Completed",
-    s3_ObjectRestore_Delete: "s3:ObjectRestore:Delete",
-    s3_ObjectRestore_Post: "s3:ObjectRestore:Post",
-    s3_ObjectTagging_: "s3:ObjectTagging:*",
-    s3_ObjectTagging_Delete: "s3:ObjectTagging:Delete",
-    s3_ObjectTagging_Put: "s3:ObjectTagging:Put",
-    s3_ReducedRedundancyLostObject: "s3:ReducedRedundancyLostObject",
-    s3_Replication_: "s3:Replication:*",
-    s3_Replication_OperationFailedReplication: "s3:Replication:OperationFailedReplication",
-    s3_Replication_OperationMissedThreshold: "s3:Replication:OperationMissedThreshold",
-    s3_Replication_OperationNotTracked: "s3:Replication:OperationNotTracked",
-    s3_Replication_OperationReplicatedAfterThreshold: "s3:Replication:OperationReplicatedAfterThreshold",
-};
-const FilterRuleName = {
-    prefix: "prefix",
-    suffix: "suffix",
-};
-const DeleteMarkerReplicationStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const MetricsStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const ReplicationTimeStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const ExistingObjectReplicationStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const ReplicaModificationsStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const SseKmsEncryptedObjectsStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const ReplicationRuleStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const Payer = {
-    BucketOwner: "BucketOwner",
-    Requester: "Requester",
-};
-const MFADeleteStatus = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
-};
-const BucketVersioningStatus = {
-    Enabled: "Enabled",
-    Suspended: "Suspended",
-};
-const Protocol = {
-    http: "http",
-    https: "https",
-};
-const ReplicationStatus = {
-    COMPLETE: "COMPLETE",
-    COMPLETED: "COMPLETED",
-    FAILED: "FAILED",
-    PENDING: "PENDING",
-    REPLICA: "REPLICA",
-};
-const ChecksumMode = {
-    ENABLED: "ENABLED",
 };
 let InvalidObjectState$1 = class InvalidObjectState extends S3ServiceException$1 {
     name = "InvalidObjectState";
@@ -4402,20 +4088,6 @@ let NoSuchKey$1 = class NoSuchKey extends S3ServiceException$1 {
         Object.setPrototypeOf(this, NoSuchKey.prototype);
     }
 };
-const ObjectAttributes = {
-    CHECKSUM: "Checksum",
-    ETAG: "ETag",
-    OBJECT_PARTS: "ObjectParts",
-    OBJECT_SIZE: "ObjectSize",
-    STORAGE_CLASS: "StorageClass",
-};
-const ObjectLockEnabled = {
-    Enabled: "Enabled",
-};
-const ObjectLockRetentionMode = {
-    COMPLIANCE: "COMPLIANCE",
-    GOVERNANCE: "GOVERNANCE",
-};
 let NotFound$1 = class NotFound extends S3ServiceException$1 {
     name = "NotFound";
     $fault = "client";
@@ -4427,38 +4099,6 @@ let NotFound$1 = class NotFound extends S3ServiceException$1 {
         });
         Object.setPrototypeOf(this, NotFound.prototype);
     }
-};
-const ArchiveStatus = {
-    ARCHIVE_ACCESS: "ARCHIVE_ACCESS",
-    DEEP_ARCHIVE_ACCESS: "DEEP_ARCHIVE_ACCESS",
-};
-const EncodingType = {
-    url: "url",
-};
-
-const ObjectStorageClass = {
-    DEEP_ARCHIVE: "DEEP_ARCHIVE",
-    EXPRESS_ONEZONE: "EXPRESS_ONEZONE",
-    FSX_OPENZFS: "FSX_OPENZFS",
-    GLACIER: "GLACIER",
-    GLACIER_IR: "GLACIER_IR",
-    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
-    ONEZONE_IA: "ONEZONE_IA",
-    OUTPOSTS: "OUTPOSTS",
-    REDUCED_REDUNDANCY: "REDUCED_REDUNDANCY",
-    SNOW: "SNOW",
-    STANDARD: "STANDARD",
-    STANDARD_IA: "STANDARD_IA",
-};
-const OptionalObjectAttributes = {
-    RESTORE_STATUS: "RestoreStatus",
-};
-const ObjectVersionStorageClass = {
-    STANDARD: "STANDARD",
-};
-const MFADelete = {
-    Disabled: "Disabled",
-    Enabled: "Enabled",
 };
 let EncryptionTypeMismatch$1 = class EncryptionTypeMismatch extends S3ServiceException$1 {
     name = "EncryptionTypeMismatch";
@@ -4532,35 +4172,6 @@ let ObjectAlreadyInActiveTierError$1 = class ObjectAlreadyInActiveTierError exte
         Object.setPrototypeOf(this, ObjectAlreadyInActiveTierError.prototype);
     }
 };
-const Tier = {
-    Bulk: "Bulk",
-    Expedited: "Expedited",
-    Standard: "Standard",
-};
-const ExpressionType = {
-    SQL: "SQL",
-};
-const CompressionType = {
-    BZIP2: "BZIP2",
-    GZIP: "GZIP",
-    NONE: "NONE",
-};
-const FileHeaderInfo = {
-    IGNORE: "IGNORE",
-    NONE: "NONE",
-    USE: "USE",
-};
-const JSONType = {
-    DOCUMENT: "DOCUMENT",
-    LINES: "LINES",
-};
-const QuoteFields = {
-    ALWAYS: "ALWAYS",
-    ASNEEDED: "ASNEEDED",
-};
-const RestoreRequestType = {
-    SELECT: "SELECT",
-};
 
 const _A = "Account";
 const _AAO = "AnalyticsAndOperator";
@@ -4591,9 +4202,10 @@ const _APAc = "AccessPointArn";
 const _AQRD = "AllowQuotedRecordDelimiter";
 const _AR = "AcceptRanges";
 const _ARI = "AbortRuleId";
-const _AS = "ArchiveStatus";
+const _AS = "AbacStatus";
 const _ASBD = "AnalyticsS3BucketDestination";
 const _ASSEBD = "ApplyServerSideEncryptionByDefault";
+const _ASr = "ArchiveStatus";
 const _AT = "AccessTier";
 const _An = "And";
 const _B = "Bucket";
@@ -4601,6 +4213,7 @@ const _BA = "BucketArn";
 const _BAE = "BucketAlreadyExists";
 const _BAI = "BucketAccountId";
 const _BAOBY = "BucketAlreadyOwnedByYou";
+const _BET = "BlockedEncryptionTypes";
 const _BGR = "BypassGovernanceRetention";
 const _BI = "BucketInfo";
 const _BKE = "BucketKeyEnabled";
@@ -4787,10 +4400,11 @@ const _EODM = "ExpiredObjectDeleteMarker";
 const _EOR = "ExistingObjectReplication";
 const _ES = "ExpiresString";
 const _ESBO = "ExpectedSourceBucketOwner";
-const _ET = "ETag";
+const _ET = "EncryptionType";
+const _ETL = "EncryptionTypeList";
 const _ETM = "EncryptionTypeMismatch";
-const _ETn = "EncryptionType";
-const _ETnc = "EncodingType";
+const _ETa = "ETag";
+const _ETn = "EncodingType";
 const _ETv = "EventThreshold";
 const _ETx = "ExpressionType";
 const _En = "Encryption";
@@ -4813,15 +4427,18 @@ const _Fi = "Field";
 const _Fo = "Format";
 const _Fr = "Frequency";
 const _G = "Grants";
-const _GBA = "GetBucketAcl";
+const _GBA = "GetBucketAbac";
 const _GBAC = "GetBucketAccelerateConfiguration";
 const _GBACO = "GetBucketAccelerateConfigurationOutput";
 const _GBACOe = "GetBucketAnalyticsConfigurationOutput";
 const _GBACR = "GetBucketAccelerateConfigurationRequest";
 const _GBACRe = "GetBucketAnalyticsConfigurationRequest";
 const _GBACe = "GetBucketAnalyticsConfiguration";
-const _GBAO = "GetBucketAclOutput";
-const _GBAR = "GetBucketAclRequest";
+const _GBAO = "GetBucketAbacOutput";
+const _GBAOe = "GetBucketAclOutput";
+const _GBAR = "GetBucketAbacRequest";
+const _GBARe = "GetBucketAclRequest";
+const _GBAe = "GetBucketAcl";
 const _GBC = "GetBucketCors";
 const _GBCO = "GetBucketCorsOutput";
 const _GBCR = "GetBucketCorsRequest";
@@ -5130,12 +4747,14 @@ const _Ob = "Objects";
 const _Obj = "Object";
 const _P = "Prefix";
 const _PABC = "PublicAccessBlockConfiguration";
-const _PBA = "PutBucketAcl";
+const _PBA = "PutBucketAbac";
 const _PBAC = "PutBucketAccelerateConfiguration";
 const _PBACR = "PutBucketAccelerateConfigurationRequest";
 const _PBACRu = "PutBucketAnalyticsConfigurationRequest";
 const _PBACu = "PutBucketAnalyticsConfiguration";
-const _PBAR = "PutBucketAclRequest";
+const _PBAR = "PutBucketAbacRequest";
+const _PBARu = "PutBucketAclRequest";
+const _PBAu = "PutBucketAcl";
 const _PBC = "PutBucketCors";
 const _PBCR = "PutBucketCorsRequest";
 const _PBE = "PutBucketEncryption";
@@ -5573,6 +5192,7 @@ var StreamingBlob = [
     },
     42,
 ];
+var AbacStatus = [3, n0, _AS, 0, [_S], [0]];
 var AbortIncompleteMultipartUpload = [3, n0, _AIMU, 0, [_DAI], [1]];
 var AbortMultipartUploadOutput = [
     3,
@@ -5676,6 +5296,21 @@ var AnalyticsExportDestination = [
     [() => AnalyticsS3BucketDestination],
 ];
 var AnalyticsS3BucketDestination = [3, n0, _ASBD, 0, [_Fo, _BAI, _B, _P], [0, 0, 0, 0]];
+var BlockedEncryptionTypes = [
+    3,
+    n0,
+    _BET,
+    0,
+    [_ET],
+    [
+        [
+            () => EncryptionTypeList,
+            {
+                [_xF]: 1,
+            },
+        ],
+    ],
+];
 var Bucket = [3, n0, _B, 0, [_N, _CD, _BR, _BA], [0, 4, 0, 0]];
 var BucketAlreadyExists = [
     -3,
@@ -5749,7 +5384,7 @@ var CompletedPart = [
     n0,
     _CPo,
     0,
-    [_ET, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _PN],
+    [_ETa, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _PN],
     [0, 0, 0, 0, 0, 0, 1],
 ];
 var CompleteMultipartUploadOutput = [
@@ -5759,7 +5394,7 @@ var CompleteMultipartUploadOutput = [
     {
         [_xN]: _CMUR,
     },
-    [_L, _B, _K, _E, _ET, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _CT, _SSE, _VI, _SSEKMSKI, _BKE, _RC],
+    [_L, _B, _K, _E, _ETa, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _CT, _SSE, _VI, _SSEKMSKI, _BKE, _RC],
     [
         0,
         0,
@@ -6314,7 +5949,7 @@ var CopyObjectResult = [
     n0,
     _COR,
     0,
-    [_ET, _LM, _CT, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
+    [_ETa, _LM, _CT, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
     [0, 4, 0, 0, 0, 0, 0, 0],
 ];
 var CopyPartResult = [
@@ -6322,7 +5957,7 @@ var CopyPartResult = [
     n0,
     _CPR,
     0,
-    [_ET, _LM, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
+    [_ETa, _LM, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
     [0, 4, 0, 0, 0, 0, 0],
 ];
 var CORSConfiguration = [
@@ -7454,7 +7089,7 @@ var Destination = [
     [0, 0, 0, () => AccessControlTranslation, () => EncryptionConfiguration, () => ReplicationTime, () => Metrics],
 ];
 var DestinationResult = [3, n0, _DRes, 0, [_TBT, _TBA, _TN], [0, 0, 0]];
-var Encryption = [3, n0, _En, 0, [_ETn, _KMSKI, _KMSC], [0, [() => SSEKMSKeyId, 0], 0]];
+var Encryption = [3, n0, _En, 0, [_ET, _KMSKI, _KMSC], [0, [() => SSEKMSKeyId, 0], 0]];
 var EncryptionConfiguration = [3, n0, _EC, 0, [_RKKID], [0]];
 var EncryptionTypeMismatch = [
     -3,
@@ -7475,6 +7110,23 @@ var ErrorDocument = [3, n0, _EDr, 0, [_K], [0]];
 var EventBridgeConfiguration = [3, n0, _EBC, 0, [], []];
 var ExistingObjectReplication = [3, n0, _EOR, 0, [_S], [0]];
 var FilterRule = [3, n0, _FR, 0, [_N, _V], [0, 0]];
+var GetBucketAbacOutput = [3, n0, _GBAO, 0, [_AS], [[() => AbacStatus, 16]]];
+var GetBucketAbacRequest = [
+    3,
+    n0,
+    _GBAR,
+    0,
+    [_B, _EBO],
+    [
+        [0, 1],
+        [
+            0,
+            {
+                [_hH]: _xaebo,
+            },
+        ],
+    ],
+];
 var GetBucketAccelerateConfigurationOutput = [
     3,
     n0,
@@ -7518,7 +7170,7 @@ var GetBucketAccelerateConfigurationRequest = [
 var GetBucketAclOutput = [
     3,
     n0,
-    _GBAO,
+    _GBAOe,
     {
         [_xN]: _ACP,
     },
@@ -7536,7 +7188,7 @@ var GetBucketAclOutput = [
 var GetBucketAclRequest = [
     3,
     n0,
-    _GBAR,
+    _GBARe,
     0,
     [_B, _EBO],
     [
@@ -8153,7 +7805,7 @@ var GetObjectAttributesOutput = [
     {
         [_xN]: _GOARe,
     },
-    [_DM, _LM, _VI, _RC, _ET, _C, _OP, _SC, _OS],
+    [_DM, _LM, _VI, _RC, _ETa, _C, _OP, _SC, _OS],
     [
         [
             2,
@@ -8359,7 +8011,7 @@ var GetObjectOutput = [
         _Re,
         _LM,
         _CLo,
-        _ET,
+        _ETa,
         _CCRC,
         _CCRCC,
         _CCRCNVME,
@@ -8433,7 +8085,7 @@ var GetObjectOutput = [
         [
             0,
             {
-                [_hH]: _ET,
+                [_hH]: _ETa,
             },
         ],
         [
@@ -9028,7 +8680,7 @@ var HeadObjectOutput = [
         _AR,
         _E,
         _Re,
-        _AS,
+        _ASr,
         _LM,
         _CLo,
         _CCRC,
@@ -9037,7 +8689,7 @@ var HeadObjectOutput = [
         _CSHA,
         _CSHAh,
         _CT,
-        _ET,
+        _ETa,
         _MM,
         _VI,
         _CC,
@@ -9146,7 +8798,7 @@ var HeadObjectOutput = [
         [
             0,
             {
-                [_hH]: _ET,
+                [_hH]: _ETa,
             },
         ],
         [
@@ -9988,7 +9640,7 @@ var ListMultipartUploadsOutput = [
     {
         [_xN]: _LMUR,
     },
-    [_B, _KM, _UIM, _NKM, _P, _Deli, _NUIM, _MUa, _IT, _U, _CPom, _ETnc, _RC],
+    [_B, _KM, _UIM, _NKM, _P, _Deli, _NUIM, _MUa, _IT, _U, _CPom, _ETn, _RC],
     [
         0,
         0,
@@ -10026,7 +9678,7 @@ var ListMultipartUploadsRequest = [
     n0,
     _LMURi,
     0,
-    [_B, _Deli, _ETnc, _KM, _MUa, _P, _UIM, _EBO, _RP],
+    [_B, _Deli, _ETn, _KM, _MUa, _P, _UIM, _EBO, _RP],
     [
         [0, 1],
         [
@@ -10086,7 +9738,7 @@ var ListObjectsOutput = [
     {
         [_xN]: _LBRi,
     },
-    [_IT, _Ma, _NM, _Con, _N, _P, _Deli, _MK, _CPom, _ETnc, _RC],
+    [_IT, _Ma, _NM, _Con, _N, _P, _Deli, _MK, _CPom, _ETn, _RC],
     [
         2,
         0,
@@ -10121,7 +9773,7 @@ var ListObjectsRequest = [
     n0,
     _LOR,
     0,
-    [_B, _Deli, _ETnc, _Ma, _MK, _P, _RP, _EBO, _OOA],
+    [_B, _Deli, _ETn, _Ma, _MK, _P, _RP, _EBO, _OOA],
     [
         [0, 1],
         [
@@ -10181,7 +9833,7 @@ var ListObjectsV2Output = [
     {
         [_xN]: _LBRi,
     },
-    [_IT, _Con, _N, _P, _Deli, _MK, _CPom, _ETnc, _KC, _CTon, _NCT, _SA, _RC],
+    [_IT, _Con, _N, _P, _Deli, _MK, _CPom, _ETn, _KC, _CTon, _NCT, _SA, _RC],
     [
         2,
         [
@@ -10218,7 +9870,7 @@ var ListObjectsV2Request = [
     n0,
     _LOVR,
     0,
-    [_B, _Deli, _ETnc, _MK, _P, _CTon, _FO, _SA, _RP, _EBO, _OOA],
+    [_B, _Deli, _ETn, _MK, _P, _CTon, _FO, _SA, _RP, _EBO, _OOA],
     [
         [0, 1],
         [
@@ -10290,7 +9942,7 @@ var ListObjectVersionsOutput = [
     {
         [_xN]: _LVR,
     },
-    [_IT, _KM, _VIM, _NKM, _NVIM, _Ve, _DMe, _N, _P, _Deli, _MK, _CPom, _ETnc, _RC],
+    [_IT, _KM, _VIM, _NKM, _NVIM, _Ve, _DMe, _N, _P, _Deli, _MK, _CPom, _ETn, _RC],
     [
         2,
         0,
@@ -10335,7 +9987,7 @@ var ListObjectVersionsRequest = [
     n0,
     _LOVRi,
     0,
-    [_B, _Deli, _ETnc, _KM, _MK, _P, _VIM, _EBO, _RP, _OOA],
+    [_B, _Deli, _ETn, _KM, _MK, _P, _VIM, _EBO, _RP, _OOA],
     [
         [0, 1],
         [
@@ -10665,7 +10317,7 @@ var _Object = [
     n0,
     _Obj,
     0,
-    [_K, _LM, _ET, _CA, _CT, _Si, _SC, _O, _RSe],
+    [_K, _LM, _ETa, _CA, _CT, _Si, _SC, _O, _RSe],
     [
         0,
         4,
@@ -10695,7 +10347,7 @@ var ObjectAlreadyInActiveTierError = [
     [],
 ];
 schema.TypeRegistry.for(n0).registerError(ObjectAlreadyInActiveTierError, ObjectAlreadyInActiveTierError$1);
-var ObjectIdentifier = [3, n0, _OI, 0, [_K, _VI, _ET, _LMT, _Si], [0, 0, 0, 6, 1]];
+var ObjectIdentifier = [3, n0, _OI, 0, [_K, _VI, _ETa, _LMT, _Si], [0, 0, 0, 6, 1]];
 var ObjectLockConfiguration = [3, n0, _OLC, 0, [_OLE, _Ru], [0, () => ObjectLockRule]];
 var ObjectLockLegalHold = [3, n0, _OLLH, 0, [_S], [0]];
 var ObjectLockRetention = [3, n0, _OLR, 0, [_Mo, _RUD], [0, 5]];
@@ -10725,7 +10377,7 @@ var ObjectVersion = [
     n0,
     _OV,
     0,
-    [_ET, _CA, _CT, _Si, _SC, _K, _VI, _IL, _LM, _O, _RSe],
+    [_ETa, _CA, _CT, _Si, _SC, _K, _VI, _IL, _LM, _O, _RSe],
     [
         0,
         [
@@ -10778,7 +10430,7 @@ var Part = [
     n0,
     _Par,
     0,
-    [_PN, _LM, _ET, _Si, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
+    [_PN, _LM, _ETa, _Si, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
     [1, 4, 0, 1, 0, 0, 0, 0, 0],
 ];
 var PartitionedPrefix = [
@@ -10855,6 +10507,41 @@ var PublicAccessBlockConfiguration = [
         ],
     ],
 ];
+var PutBucketAbacRequest = [
+    3,
+    n0,
+    _PBAR,
+    0,
+    [_B, _CMD, _CA, _EBO, _AS],
+    [
+        [0, 1],
+        [
+            0,
+            {
+                [_hH]: _CM,
+            },
+        ],
+        [
+            0,
+            {
+                [_hH]: _xasca,
+            },
+        ],
+        [
+            0,
+            {
+                [_hH]: _xaebo,
+            },
+        ],
+        [
+            () => AbacStatus,
+            {
+                [_xN]: _AS,
+                [_hP]: 1,
+            },
+        ],
+    ],
+];
 var PutBucketAccelerateConfigurationRequest = [
     3,
     n0,
@@ -10887,7 +10574,7 @@ var PutBucketAccelerateConfigurationRequest = [
 var PutBucketAclRequest = [
     3,
     n0,
-    _PBAR,
+    _PBARu,
     0,
     [_ACL_, _ACP, _B, _CMD, _CA, _GFC, _GR, _GRACP, _GW, _GWACP, _EBO],
     [
@@ -11743,7 +11430,7 @@ var PutObjectOutput = [
     0,
     [
         _E,
-        _ET,
+        _ETa,
         _CCRC,
         _CCRCC,
         _CCRCNVME,
@@ -11770,7 +11457,7 @@ var PutObjectOutput = [
         [
             0,
             {
-                [_hH]: _ET,
+                [_hH]: _ETa,
             },
         ],
         [
@@ -12680,8 +12367,8 @@ var ServerSideEncryptionRule = [
     n0,
     _SSER,
     0,
-    [_ASSEBD, _BKE],
-    [[() => ServerSideEncryptionByDefault, 0], 2],
+    [_ASSEBD, _BKE, _BET],
+    [[() => ServerSideEncryptionByDefault, 0], 2, [() => BlockedEncryptionTypes, 0]],
 ];
 var SessionCredentials = [
     3,
@@ -13124,7 +12811,7 @@ var UploadPartOutput = [
     n0,
     _UPO,
     0,
-    [_SSE, _ET, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _SSECA, _SSECKMD, _SSEKMSKI, _BKE, _RC],
+    [_SSE, _ETa, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _SSECA, _SSECKMD, _SSEKMSKI, _BKE, _RC],
     [
         [
             0,
@@ -13135,7 +12822,7 @@ var UploadPartOutput = [
         [
             0,
             {
-                [_hH]: _ET,
+                [_hH]: _ETa,
             },
         ],
         [
@@ -13371,7 +13058,7 @@ var WriteGetObjectResponseRequest = [
         _CSHA,
         _CSHAh,
         _DM,
-        _ET,
+        _ETa,
         _Ex,
         _E,
         _LM,
@@ -13659,6 +13346,18 @@ var CompletedPartList = [1, n0, _CPLo, 0, () => CompletedPart];
 var CORSRules = [1, n0, _CORSR, 0, [() => CORSRule, 0]];
 var DeletedObjects = [1, n0, _DOe, 0, () => DeletedObject];
 var DeleteMarkers = [1, n0, _DMe, 0, () => DeleteMarkerEntry];
+var EncryptionTypeList = [
+    1,
+    n0,
+    _ETL,
+    0,
+    [
+        0,
+        {
+            [_xN]: _ET,
+        },
+    ],
+];
 var Errors = [1, n0, _Er, 0, () => _Error];
 var FilterRuleList = [1, n0, _FRL, 0, () => FilterRule];
 var Grants = [
@@ -14060,6 +13759,16 @@ var DeletePublicAccessBlock = [
     () => DeletePublicAccessBlockRequest,
     () => __Unit,
 ];
+var GetBucketAbac = [
+    9,
+    n0,
+    _GBA,
+    {
+        [_h]: ["GET", "/?abac", 200],
+    },
+    () => GetBucketAbacRequest,
+    () => GetBucketAbacOutput,
+];
 var GetBucketAccelerateConfiguration = [
     9,
     n0,
@@ -14073,7 +13782,7 @@ var GetBucketAccelerateConfiguration = [
 var GetBucketAcl = [
     9,
     n0,
-    _GBA,
+    _GBAe,
     {
         [_h]: ["GET", "/?acl", 200],
     },
@@ -14500,6 +14209,16 @@ var ListParts = [
     () => ListPartsRequest,
     () => ListPartsOutput,
 ];
+var PutBucketAbac = [
+    9,
+    n0,
+    _PBA,
+    {
+        [_h]: ["PUT", "/?abac", 200],
+    },
+    () => PutBucketAbacRequest,
+    () => __Unit,
+];
 var PutBucketAccelerateConfiguration = [
     9,
     n0,
@@ -14513,7 +14232,7 @@ var PutBucketAccelerateConfiguration = [
 var PutBucketAcl = [
     9,
     n0,
-    _PBA,
+    _PBAu,
     {
         [_h]: ["PUT", "/?acl", 200],
     },
@@ -15389,6 +15108,21 @@ class DeletePublicAccessBlockCommand extends smithyClient.Command
     .build() {
 }
 
+class GetBucketAbacCommand extends smithyClient.Command
+    .classBuilder()
+    .ep({
+    ...commonParams,
+    Bucket: { type: "contextParams", name: "Bucket" },
+})
+    .m(function (Command, cs, config, o) {
+    return [middlewareEndpoint.getEndpointPlugin(config, Command.getEndpointParameterInstructions()), middlewareSdkS3.getThrow200ExceptionsPlugin(config)];
+})
+    .s("AmazonS3", "GetBucketAbac", {})
+    .n("S3Client", "GetBucketAbacCommand")
+    .sc(GetBucketAbac)
+    .build() {
+}
+
 class GetBucketAccelerateConfigurationCommand extends smithyClient.Command
     .classBuilder()
     .ep({
@@ -16099,6 +15833,27 @@ class ListPartsCommand extends smithyClient.Command
     .s("AmazonS3", "ListParts", {})
     .n("S3Client", "ListPartsCommand")
     .sc(ListParts)
+    .build() {
+}
+
+class PutBucketAbacCommand extends smithyClient.Command
+    .classBuilder()
+    .ep({
+    ...commonParams,
+    Bucket: { type: "contextParams", name: "Bucket" },
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        middlewareEndpoint.getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+        middlewareFlexibleChecksums.getFlexibleChecksumsPlugin(config, {
+            requestAlgorithmMember: { httpHeader: "x-amz-sdk-checksum-algorithm", name: "ChecksumAlgorithm" },
+            requestChecksumRequired: false,
+        }),
+    ];
+})
+    .s("AmazonS3", "PutBucketAbac", {})
+    .n("S3Client", "PutBucketAbacCommand")
+    .sc(PutBucketAbac)
     .build() {
 }
 
@@ -16819,6 +16574,7 @@ const commands = {
     DeleteObjectsCommand,
     DeleteObjectTaggingCommand,
     DeletePublicAccessBlockCommand,
+    GetBucketAbacCommand,
     GetBucketAccelerateConfigurationCommand,
     GetBucketAclCommand,
     GetBucketAnalyticsConfigurationCommand,
@@ -16863,6 +16619,7 @@ const commands = {
     ListObjectsV2Command,
     ListObjectVersionsCommand,
     ListPartsCommand,
+    PutBucketAbacCommand,
     PutBucketAccelerateConfigurationCommand,
     PutBucketAclCommand,
     PutBucketAnalyticsConfigurationCommand,
@@ -17007,6 +16764,403 @@ const waitUntilObjectNotExists = async (params, input) => {
     return utilWaiter.checkExceptions(result);
 };
 
+const BucketAbacStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const RequestCharged = {
+    requester: "requester",
+};
+const RequestPayer = {
+    requester: "requester",
+};
+const BucketAccelerateStatus = {
+    Enabled: "Enabled",
+    Suspended: "Suspended",
+};
+const Type = {
+    AmazonCustomerByEmail: "AmazonCustomerByEmail",
+    CanonicalUser: "CanonicalUser",
+    Group: "Group",
+};
+const Permission = {
+    FULL_CONTROL: "FULL_CONTROL",
+    READ: "READ",
+    READ_ACP: "READ_ACP",
+    WRITE: "WRITE",
+    WRITE_ACP: "WRITE_ACP",
+};
+const OwnerOverride = {
+    Destination: "Destination",
+};
+const ChecksumType = {
+    COMPOSITE: "COMPOSITE",
+    FULL_OBJECT: "FULL_OBJECT",
+};
+const ServerSideEncryption = {
+    AES256: "AES256",
+    aws_fsx: "aws:fsx",
+    aws_kms: "aws:kms",
+    aws_kms_dsse: "aws:kms:dsse",
+};
+const ObjectCannedACL = {
+    authenticated_read: "authenticated-read",
+    aws_exec_read: "aws-exec-read",
+    bucket_owner_full_control: "bucket-owner-full-control",
+    bucket_owner_read: "bucket-owner-read",
+    private: "private",
+    public_read: "public-read",
+    public_read_write: "public-read-write",
+};
+const ChecksumAlgorithm = {
+    CRC32: "CRC32",
+    CRC32C: "CRC32C",
+    CRC64NVME: "CRC64NVME",
+    SHA1: "SHA1",
+    SHA256: "SHA256",
+};
+const MetadataDirective = {
+    COPY: "COPY",
+    REPLACE: "REPLACE",
+};
+const ObjectLockLegalHoldStatus = {
+    OFF: "OFF",
+    ON: "ON",
+};
+const ObjectLockMode = {
+    COMPLIANCE: "COMPLIANCE",
+    GOVERNANCE: "GOVERNANCE",
+};
+const StorageClass = {
+    DEEP_ARCHIVE: "DEEP_ARCHIVE",
+    EXPRESS_ONEZONE: "EXPRESS_ONEZONE",
+    FSX_OPENZFS: "FSX_OPENZFS",
+    GLACIER: "GLACIER",
+    GLACIER_IR: "GLACIER_IR",
+    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
+    ONEZONE_IA: "ONEZONE_IA",
+    OUTPOSTS: "OUTPOSTS",
+    REDUCED_REDUNDANCY: "REDUCED_REDUNDANCY",
+    SNOW: "SNOW",
+    STANDARD: "STANDARD",
+    STANDARD_IA: "STANDARD_IA",
+};
+const TaggingDirective = {
+    COPY: "COPY",
+    REPLACE: "REPLACE",
+};
+const BucketCannedACL = {
+    authenticated_read: "authenticated-read",
+    private: "private",
+    public_read: "public-read",
+    public_read_write: "public-read-write",
+};
+const DataRedundancy = {
+    SingleAvailabilityZone: "SingleAvailabilityZone",
+    SingleLocalZone: "SingleLocalZone",
+};
+const BucketType = {
+    Directory: "Directory",
+};
+const LocationType = {
+    AvailabilityZone: "AvailabilityZone",
+    LocalZone: "LocalZone",
+};
+const BucketLocationConstraint = {
+    EU: "EU",
+    af_south_1: "af-south-1",
+    ap_east_1: "ap-east-1",
+    ap_northeast_1: "ap-northeast-1",
+    ap_northeast_2: "ap-northeast-2",
+    ap_northeast_3: "ap-northeast-3",
+    ap_south_1: "ap-south-1",
+    ap_south_2: "ap-south-2",
+    ap_southeast_1: "ap-southeast-1",
+    ap_southeast_2: "ap-southeast-2",
+    ap_southeast_3: "ap-southeast-3",
+    ap_southeast_4: "ap-southeast-4",
+    ap_southeast_5: "ap-southeast-5",
+    ca_central_1: "ca-central-1",
+    cn_north_1: "cn-north-1",
+    cn_northwest_1: "cn-northwest-1",
+    eu_central_1: "eu-central-1",
+    eu_central_2: "eu-central-2",
+    eu_north_1: "eu-north-1",
+    eu_south_1: "eu-south-1",
+    eu_south_2: "eu-south-2",
+    eu_west_1: "eu-west-1",
+    eu_west_2: "eu-west-2",
+    eu_west_3: "eu-west-3",
+    il_central_1: "il-central-1",
+    me_central_1: "me-central-1",
+    me_south_1: "me-south-1",
+    sa_east_1: "sa-east-1",
+    us_east_2: "us-east-2",
+    us_gov_east_1: "us-gov-east-1",
+    us_gov_west_1: "us-gov-west-1",
+    us_west_1: "us-west-1",
+    us_west_2: "us-west-2",
+};
+const ObjectOwnership = {
+    BucketOwnerEnforced: "BucketOwnerEnforced",
+    BucketOwnerPreferred: "BucketOwnerPreferred",
+    ObjectWriter: "ObjectWriter",
+};
+const InventoryConfigurationState = {
+    DISABLED: "DISABLED",
+    ENABLED: "ENABLED",
+};
+const TableSseAlgorithm = {
+    AES256: "AES256",
+    aws_kms: "aws:kms",
+};
+const ExpirationState = {
+    DISABLED: "DISABLED",
+    ENABLED: "ENABLED",
+};
+const SessionMode = {
+    ReadOnly: "ReadOnly",
+    ReadWrite: "ReadWrite",
+};
+const AnalyticsS3ExportFileFormat = {
+    CSV: "CSV",
+};
+const StorageClassAnalysisSchemaVersion = {
+    V_1: "V_1",
+};
+const EncryptionType = {
+    NONE: "NONE",
+    SSE_C: "SSE-C",
+};
+const IntelligentTieringStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const IntelligentTieringAccessTier = {
+    ARCHIVE_ACCESS: "ARCHIVE_ACCESS",
+    DEEP_ARCHIVE_ACCESS: "DEEP_ARCHIVE_ACCESS",
+};
+const InventoryFormat = {
+    CSV: "CSV",
+    ORC: "ORC",
+    Parquet: "Parquet",
+};
+const InventoryIncludedObjectVersions = {
+    All: "All",
+    Current: "Current",
+};
+const InventoryOptionalField = {
+    BucketKeyStatus: "BucketKeyStatus",
+    ChecksumAlgorithm: "ChecksumAlgorithm",
+    ETag: "ETag",
+    EncryptionStatus: "EncryptionStatus",
+    IntelligentTieringAccessTier: "IntelligentTieringAccessTier",
+    IsMultipartUploaded: "IsMultipartUploaded",
+    LastModifiedDate: "LastModifiedDate",
+    ObjectAccessControlList: "ObjectAccessControlList",
+    ObjectLockLegalHoldStatus: "ObjectLockLegalHoldStatus",
+    ObjectLockMode: "ObjectLockMode",
+    ObjectLockRetainUntilDate: "ObjectLockRetainUntilDate",
+    ObjectOwner: "ObjectOwner",
+    ReplicationStatus: "ReplicationStatus",
+    Size: "Size",
+    StorageClass: "StorageClass",
+};
+const InventoryFrequency = {
+    Daily: "Daily",
+    Weekly: "Weekly",
+};
+const TransitionStorageClass = {
+    DEEP_ARCHIVE: "DEEP_ARCHIVE",
+    GLACIER: "GLACIER",
+    GLACIER_IR: "GLACIER_IR",
+    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
+    ONEZONE_IA: "ONEZONE_IA",
+    STANDARD_IA: "STANDARD_IA",
+};
+const ExpirationStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const TransitionDefaultMinimumObjectSize = {
+    all_storage_classes_128K: "all_storage_classes_128K",
+    varies_by_storage_class: "varies_by_storage_class",
+};
+const BucketLogsPermission = {
+    FULL_CONTROL: "FULL_CONTROL",
+    READ: "READ",
+    WRITE: "WRITE",
+};
+const PartitionDateSource = {
+    DeliveryTime: "DeliveryTime",
+    EventTime: "EventTime",
+};
+const S3TablesBucketType = {
+    aws: "aws",
+    customer: "customer",
+};
+const Event = {
+    s3_IntelligentTiering: "s3:IntelligentTiering",
+    s3_LifecycleExpiration_: "s3:LifecycleExpiration:*",
+    s3_LifecycleExpiration_Delete: "s3:LifecycleExpiration:Delete",
+    s3_LifecycleExpiration_DeleteMarkerCreated: "s3:LifecycleExpiration:DeleteMarkerCreated",
+    s3_LifecycleTransition: "s3:LifecycleTransition",
+    s3_ObjectAcl_Put: "s3:ObjectAcl:Put",
+    s3_ObjectCreated_: "s3:ObjectCreated:*",
+    s3_ObjectCreated_CompleteMultipartUpload: "s3:ObjectCreated:CompleteMultipartUpload",
+    s3_ObjectCreated_Copy: "s3:ObjectCreated:Copy",
+    s3_ObjectCreated_Post: "s3:ObjectCreated:Post",
+    s3_ObjectCreated_Put: "s3:ObjectCreated:Put",
+    s3_ObjectRemoved_: "s3:ObjectRemoved:*",
+    s3_ObjectRemoved_Delete: "s3:ObjectRemoved:Delete",
+    s3_ObjectRemoved_DeleteMarkerCreated: "s3:ObjectRemoved:DeleteMarkerCreated",
+    s3_ObjectRestore_: "s3:ObjectRestore:*",
+    s3_ObjectRestore_Completed: "s3:ObjectRestore:Completed",
+    s3_ObjectRestore_Delete: "s3:ObjectRestore:Delete",
+    s3_ObjectRestore_Post: "s3:ObjectRestore:Post",
+    s3_ObjectTagging_: "s3:ObjectTagging:*",
+    s3_ObjectTagging_Delete: "s3:ObjectTagging:Delete",
+    s3_ObjectTagging_Put: "s3:ObjectTagging:Put",
+    s3_ReducedRedundancyLostObject: "s3:ReducedRedundancyLostObject",
+    s3_Replication_: "s3:Replication:*",
+    s3_Replication_OperationFailedReplication: "s3:Replication:OperationFailedReplication",
+    s3_Replication_OperationMissedThreshold: "s3:Replication:OperationMissedThreshold",
+    s3_Replication_OperationNotTracked: "s3:Replication:OperationNotTracked",
+    s3_Replication_OperationReplicatedAfterThreshold: "s3:Replication:OperationReplicatedAfterThreshold",
+};
+const FilterRuleName = {
+    prefix: "prefix",
+    suffix: "suffix",
+};
+const DeleteMarkerReplicationStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const MetricsStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const ReplicationTimeStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const ExistingObjectReplicationStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const ReplicaModificationsStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const SseKmsEncryptedObjectsStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const ReplicationRuleStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const Payer = {
+    BucketOwner: "BucketOwner",
+    Requester: "Requester",
+};
+const MFADeleteStatus = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const BucketVersioningStatus = {
+    Enabled: "Enabled",
+    Suspended: "Suspended",
+};
+const Protocol = {
+    http: "http",
+    https: "https",
+};
+const ReplicationStatus = {
+    COMPLETE: "COMPLETE",
+    COMPLETED: "COMPLETED",
+    FAILED: "FAILED",
+    PENDING: "PENDING",
+    REPLICA: "REPLICA",
+};
+const ChecksumMode = {
+    ENABLED: "ENABLED",
+};
+const ObjectAttributes = {
+    CHECKSUM: "Checksum",
+    ETAG: "ETag",
+    OBJECT_PARTS: "ObjectParts",
+    OBJECT_SIZE: "ObjectSize",
+    STORAGE_CLASS: "StorageClass",
+};
+const ObjectLockEnabled = {
+    Enabled: "Enabled",
+};
+const ObjectLockRetentionMode = {
+    COMPLIANCE: "COMPLIANCE",
+    GOVERNANCE: "GOVERNANCE",
+};
+const ArchiveStatus = {
+    ARCHIVE_ACCESS: "ARCHIVE_ACCESS",
+    DEEP_ARCHIVE_ACCESS: "DEEP_ARCHIVE_ACCESS",
+};
+const EncodingType = {
+    url: "url",
+};
+const ObjectStorageClass = {
+    DEEP_ARCHIVE: "DEEP_ARCHIVE",
+    EXPRESS_ONEZONE: "EXPRESS_ONEZONE",
+    FSX_OPENZFS: "FSX_OPENZFS",
+    GLACIER: "GLACIER",
+    GLACIER_IR: "GLACIER_IR",
+    INTELLIGENT_TIERING: "INTELLIGENT_TIERING",
+    ONEZONE_IA: "ONEZONE_IA",
+    OUTPOSTS: "OUTPOSTS",
+    REDUCED_REDUNDANCY: "REDUCED_REDUNDANCY",
+    SNOW: "SNOW",
+    STANDARD: "STANDARD",
+    STANDARD_IA: "STANDARD_IA",
+};
+const OptionalObjectAttributes = {
+    RESTORE_STATUS: "RestoreStatus",
+};
+const ObjectVersionStorageClass = {
+    STANDARD: "STANDARD",
+};
+const MFADelete = {
+    Disabled: "Disabled",
+    Enabled: "Enabled",
+};
+const Tier = {
+    Bulk: "Bulk",
+    Expedited: "Expedited",
+    Standard: "Standard",
+};
+const ExpressionType = {
+    SQL: "SQL",
+};
+const CompressionType = {
+    BZIP2: "BZIP2",
+    GZIP: "GZIP",
+    NONE: "NONE",
+};
+const FileHeaderInfo = {
+    IGNORE: "IGNORE",
+    NONE: "NONE",
+    USE: "USE",
+};
+const JSONType = {
+    DOCUMENT: "DOCUMENT",
+    LINES: "LINES",
+};
+const QuoteFields = {
+    ALWAYS: "ALWAYS",
+    ASNEEDED: "ASNEEDED",
+};
+const RestoreRequestType = {
+    SELECT: "SELECT",
+};
+
 __webpack_unused_export__ = ({
     enumerable: true,
     get: function () { return smithyClient.Command; }
@@ -17018,6 +17172,7 @@ __webpack_unused_export__ = ({
 __webpack_unused_export__ = AbortMultipartUploadCommand;
 __webpack_unused_export__ = AnalyticsS3ExportFileFormat;
 __webpack_unused_export__ = ArchiveStatus;
+__webpack_unused_export__ = BucketAbacStatus;
 __webpack_unused_export__ = BucketAccelerateStatus;
 __webpack_unused_export__ = BucketAlreadyExists$1;
 __webpack_unused_export__ = BucketAlreadyOwnedByYou$1;
@@ -17059,6 +17214,7 @@ __webpack_unused_export__ = DeleteObjectTaggingCommand;
 __webpack_unused_export__ = DeleteObjectsCommand;
 __webpack_unused_export__ = DeletePublicAccessBlockCommand;
 __webpack_unused_export__ = EncodingType;
+__webpack_unused_export__ = EncryptionType;
 __webpack_unused_export__ = EncryptionTypeMismatch$1;
 __webpack_unused_export__ = Event;
 __webpack_unused_export__ = ExistingObjectReplicationStatus;
@@ -17067,6 +17223,7 @@ __webpack_unused_export__ = ExpirationStatus;
 __webpack_unused_export__ = ExpressionType;
 __webpack_unused_export__ = FileHeaderInfo;
 __webpack_unused_export__ = FilterRuleName;
+__webpack_unused_export__ = GetBucketAbacCommand;
 __webpack_unused_export__ = GetBucketAccelerateConfigurationCommand;
 __webpack_unused_export__ = GetBucketAclCommand;
 __webpack_unused_export__ = GetBucketAnalyticsConfigurationCommand;
@@ -17149,6 +17306,7 @@ __webpack_unused_export__ = PartitionDateSource;
 __webpack_unused_export__ = Payer;
 __webpack_unused_export__ = Permission;
 __webpack_unused_export__ = Protocol;
+__webpack_unused_export__ = PutBucketAbacCommand;
 __webpack_unused_export__ = PutBucketAccelerateConfigurationCommand;
 __webpack_unused_export__ = PutBucketAclCommand;
 __webpack_unused_export__ = PutBucketAnalyticsConfigurationCommand;
@@ -22385,7 +22543,8 @@ const recursionDetectionMiddleware = () => (next) => async (args) => {
     }
     const functionName = process.env[ENV_LAMBDA_FUNCTION_NAME];
     const traceIdFromEnv = process.env[ENV_TRACE_ID];
-    const traceIdFromInvokeStore = lambda_invoke_store_1.InvokeStore.getXRayTraceId();
+    const invokeStore = await lambda_invoke_store_1.InvokeStore.getInstanceAsync();
+    const traceIdFromInvokeStore = invokeStore?.getXRayTraceId();
     const traceId = traceIdFromInvokeStore ?? traceIdFromEnv;
     const nonEmptyString = (str) => typeof str === "string" && str.length > 0;
     if (nonEmptyString(functionName) && nonEmptyString(traceId)) {
@@ -24198,70 +24357,128 @@ function parseXML(xmlString) {
 "use strict";
 
 
-var async_hooks = __nccwpck_require__(290);
-
-const noGlobalAwsLambda = process.env["AWS_LAMBDA_NODEJS_NO_GLOBAL_AWSLAMBDA"] === "1" ||
-    process.env["AWS_LAMBDA_NODEJS_NO_GLOBAL_AWSLAMBDA"] === "true";
-if (!noGlobalAwsLambda) {
+const PROTECTED_KEYS = {
+    REQUEST_ID: Symbol.for("_AWS_LAMBDA_REQUEST_ID"),
+    X_RAY_TRACE_ID: Symbol.for("_AWS_LAMBDA_X_RAY_TRACE_ID"),
+    TENANT_ID: Symbol.for("_AWS_LAMBDA_TENANT_ID"),
+};
+const NO_GLOBAL_AWS_LAMBDA = ["true", "1"].includes(process.env?.AWS_LAMBDA_NODEJS_NO_GLOBAL_AWSLAMBDA ?? "");
+if (!NO_GLOBAL_AWS_LAMBDA) {
     globalThis.awslambda = globalThis.awslambda || {};
 }
-const PROTECTED_KEYS = {
-    REQUEST_ID: Symbol("_AWS_LAMBDA_REQUEST_ID"),
-    X_RAY_TRACE_ID: Symbol("_AWS_LAMBDA_X_RAY_TRACE_ID"),
-    TENANT_ID: Symbol("_AWS_LAMBDA_TENANT_ID"),
-};
-class InvokeStoreImpl {
-    static storage = new async_hooks.AsyncLocalStorage();
+class InvokeStoreBase {
     static PROTECTED_KEYS = PROTECTED_KEYS;
-    static run(context, fn) {
-        return this.storage.run({ ...context }, fn);
+    isProtectedKey(key) {
+        return Object.values(PROTECTED_KEYS).includes(key);
     }
-    static getContext() {
-        return this.storage.getStore();
+    getRequestId() {
+        return this.get(PROTECTED_KEYS.REQUEST_ID) ?? "-";
     }
-    static get(key) {
-        const context = this.storage.getStore();
-        return context?.[key];
+    getXRayTraceId() {
+        return this.get(PROTECTED_KEYS.X_RAY_TRACE_ID);
     }
-    static set(key, value) {
+    getTenantId() {
+        return this.get(PROTECTED_KEYS.TENANT_ID);
+    }
+}
+class InvokeStoreSingle extends InvokeStoreBase {
+    currentContext;
+    getContext() {
+        return this.currentContext;
+    }
+    hasContext() {
+        return this.currentContext !== undefined;
+    }
+    get(key) {
+        return this.currentContext?.[key];
+    }
+    set(key, value) {
         if (this.isProtectedKey(key)) {
-            throw new Error(`Cannot modify protected Lambda context field`);
+            throw new Error(`Cannot modify protected Lambda context field: ${String(key)}`);
         }
-        const context = this.storage.getStore();
-        if (context) {
-            context[key] = value;
+        this.currentContext = this.currentContext || {};
+        this.currentContext[key] = value;
+    }
+    run(context, fn) {
+        this.currentContext = context;
+        try {
+            return fn();
+        }
+        finally {
+            this.currentContext = undefined;
         }
     }
-    static getRequestId() {
-        return this.get(this.PROTECTED_KEYS.REQUEST_ID) ?? "-";
+}
+class InvokeStoreMulti extends InvokeStoreBase {
+    als;
+    static async create() {
+        const instance = new InvokeStoreMulti();
+        const asyncHooks = await Promise.resolve(/* import() */).then(__nccwpck_require__.t.bind(__nccwpck_require__, 6698, 23));
+        instance.als = new asyncHooks.AsyncLocalStorage();
+        return instance;
     }
-    static getXRayTraceId() {
-        return this.get(this.PROTECTED_KEYS.X_RAY_TRACE_ID);
+    getContext() {
+        return this.als.getStore();
     }
-    static getTenantId() {
-        return this.get(this.PROTECTED_KEYS.TENANT_ID);
+    hasContext() {
+        return this.als.getStore() !== undefined;
     }
-    static hasContext() {
-        return this.storage.getStore() !== undefined;
+    get(key) {
+        return this.als.getStore()?.[key];
     }
-    static isProtectedKey(key) {
-        return (key === this.PROTECTED_KEYS.REQUEST_ID ||
-            key === this.PROTECTED_KEYS.X_RAY_TRACE_ID);
+    set(key, value) {
+        if (this.isProtectedKey(key)) {
+            throw new Error(`Cannot modify protected Lambda context field: ${String(key)}`);
+        }
+        const store = this.als.getStore();
+        if (!store) {
+            throw new Error("No context available");
+        }
+        store[key] = value;
+    }
+    run(context, fn) {
+        return this.als.run(context, fn);
     }
 }
-let instance;
-if (!noGlobalAwsLambda && globalThis.awslambda?.InvokeStore) {
-    instance = globalThis.awslambda.InvokeStore;
-}
-else {
-    instance = InvokeStoreImpl;
-    if (!noGlobalAwsLambda && globalThis.awslambda) {
-        globalThis.awslambda.InvokeStore = instance;
+exports.InvokeStore = void 0;
+(function (InvokeStore) {
+    let instance = null;
+    async function getInstanceAsync() {
+        if (!instance) {
+            instance = (async () => {
+                const isMulti = "AWS_LAMBDA_MAX_CONCURRENCY" in process.env;
+                const newInstance = isMulti
+                    ? await InvokeStoreMulti.create()
+                    : new InvokeStoreSingle();
+                if (!NO_GLOBAL_AWS_LAMBDA && globalThis.awslambda?.InvokeStore) {
+                    return globalThis.awslambda.InvokeStore;
+                }
+                else if (!NO_GLOBAL_AWS_LAMBDA && globalThis.awslambda) {
+                    globalThis.awslambda.InvokeStore = newInstance;
+                    return newInstance;
+                }
+                else {
+                    return newInstance;
+                }
+            })();
+        }
+        return instance;
     }
-}
-const InvokeStore = instance;
+    InvokeStore.getInstanceAsync = getInstanceAsync;
+    InvokeStore._testing = process.env.AWS_LAMBDA_BENCHMARK_MODE === "1"
+        ? {
+            reset: () => {
+                instance = null;
+                if (globalThis.awslambda?.InvokeStore) {
+                    delete globalThis.awslambda.InvokeStore;
+                }
+                globalThis.awslambda = {};
+            },
+        }
+        : undefined;
+})(exports.InvokeStore || (exports.InvokeStore = {}));
 
-exports.InvokeStore = InvokeStore;
+exports.InvokeStoreBase = InvokeStoreBase;
 
 
 /***/ }),
@@ -26197,6 +26414,9 @@ class HttpBindingProtocol extends HttpProtocol {
                 }
             }
         }
+        else if (nonHttpBindingMembers.discardResponseBody) {
+            await collectBody(response.body, context);
+        }
         dataObject.$metadata = this.deserializeMetadata(response);
         return dataObject;
     }
@@ -26208,12 +26428,14 @@ class HttpBindingProtocol extends HttpProtocol {
         else {
             dataObject = arg4;
         }
+        let discardResponseBody = true;
         const deserializer = this.deserializer;
         const ns = schema.NormalizedSchema.of(schema$1);
         const nonHttpBindingMembers = [];
         for (const [memberName, memberSchema] of ns.structIterator()) {
             const memberTraits = memberSchema.getMemberTraits();
             if (memberTraits.httpPayload) {
+                discardResponseBody = false;
                 const isStreaming = memberSchema.isStreaming();
                 if (isStreaming) {
                     const isEventStream = memberSchema.isStructSchema();
@@ -26277,6 +26499,7 @@ class HttpBindingProtocol extends HttpProtocol {
                 nonHttpBindingMembers.push(memberName);
             }
         }
+        nonHttpBindingMembers.discardResponseBody = discardResponseBody;
         return nonHttpBindingMembers;
     }
 }
@@ -35326,7 +35549,7 @@ populateMaps(exports.extensions, exports.types)
  * Get the default charset for a MIME type.
  *
  * @param {string} type
- * @return {boolean|string}
+ * @return {false|string}
  */
 
 function charset (type) {
@@ -35354,7 +35577,7 @@ function charset (type) {
  * Create a full Content-Type header given a MIME type or extension.
  *
  * @param {string} str
- * @return {boolean|string}
+ * @return {false|string}
  */
 
 function contentType (str) {
@@ -35382,7 +35605,7 @@ function contentType (str) {
  * Get the default extension for a MIME type.
  *
  * @param {string} type
- * @return {boolean|string}
+ * @return {false|string}
  */
 
 function extension (type) {
@@ -35407,7 +35630,7 @@ function extension (type) {
  * Lookup the MIME type for a file path/extension.
  *
  * @param {string} path
- * @return {boolean|string}
+ * @return {false|string}
  */
 
 function lookup (path) {
@@ -35523,6 +35746,11 @@ var TYPE_SCORES = {
 
   // prefer font/woff over application/font-woff
   font: 2,
+
+  // prefer video/mp4 over audio/mp4 over application/mp4
+  // See https://www.rfc-editor.org/rfc/rfc4337.html#section-2
+  audio: 2,
+  video: 3,
 
   default: 0
 }
@@ -58571,6 +58799,14 @@ module.exports = require("net");
 
 /***/ }),
 
+/***/ 6698:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:async_hooks");
+
+/***/ }),
+
 /***/ 7598:
 /***/ ((module) => {
 
@@ -58600,6 +58836,22 @@ module.exports = require("node:fs");
 
 "use strict";
 module.exports = require("node:fs/promises");
+
+/***/ }),
+
+/***/ 8161:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:os");
+
+/***/ }),
+
+/***/ 6760:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:path");
 
 /***/ }),
 
@@ -60375,7 +60627,7 @@ module.exports = parseParams
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.932.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-s3","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn g:vitest run","test:browser":"node ./test/browser-build/esbuild && yarn g:vitest run -c vitest.config.browser.mts","test:browser:watch":"node ./test/browser-build/esbuild && yarn g:vitest watch -c vitest.config.browser.mts","test:e2e":"yarn g:vitest run -c vitest.config.e2e.mts && yarn test:browser","test:e2e:watch":"yarn g:vitest watch -c vitest.config.e2e.mts","test:integration":"yarn g:vitest run -c vitest.config.integ.mts","test:integration:watch":"yarn g:vitest watch -c vitest.config.integ.mts","test:watch":"yarn g:vitest watch"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"5.2.0","@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.932.0","@aws-sdk/credential-provider-node":"3.932.0","@aws-sdk/middleware-bucket-endpoint":"3.930.0","@aws-sdk/middleware-expect-continue":"3.930.0","@aws-sdk/middleware-flexible-checksums":"3.932.0","@aws-sdk/middleware-host-header":"3.930.0","@aws-sdk/middleware-location-constraint":"3.930.0","@aws-sdk/middleware-logger":"3.930.0","@aws-sdk/middleware-recursion-detection":"3.930.0","@aws-sdk/middleware-sdk-s3":"3.932.0","@aws-sdk/middleware-ssec":"3.930.0","@aws-sdk/middleware-user-agent":"3.932.0","@aws-sdk/region-config-resolver":"3.930.0","@aws-sdk/signature-v4-multi-region":"3.932.0","@aws-sdk/types":"3.930.0","@aws-sdk/util-endpoints":"3.930.0","@aws-sdk/util-user-agent-browser":"3.930.0","@aws-sdk/util-user-agent-node":"3.932.0","@smithy/config-resolver":"^4.4.3","@smithy/core":"^3.18.2","@smithy/eventstream-serde-browser":"^4.2.5","@smithy/eventstream-serde-config-resolver":"^4.3.5","@smithy/eventstream-serde-node":"^4.2.5","@smithy/fetch-http-handler":"^5.3.6","@smithy/hash-blob-browser":"^4.2.6","@smithy/hash-node":"^4.2.5","@smithy/hash-stream-node":"^4.2.5","@smithy/invalid-dependency":"^4.2.5","@smithy/md5-js":"^4.2.5","@smithy/middleware-content-length":"^4.2.5","@smithy/middleware-endpoint":"^4.3.9","@smithy/middleware-retry":"^4.4.9","@smithy/middleware-serde":"^4.2.5","@smithy/middleware-stack":"^4.2.5","@smithy/node-config-provider":"^4.3.5","@smithy/node-http-handler":"^4.4.5","@smithy/protocol-http":"^5.3.5","@smithy/smithy-client":"^4.9.5","@smithy/types":"^4.9.0","@smithy/url-parser":"^4.2.5","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.8","@smithy/util-defaults-mode-node":"^4.2.11","@smithy/util-endpoints":"^3.2.5","@smithy/util-middleware":"^4.2.5","@smithy/util-retry":"^4.2.5","@smithy/util-stream":"^4.5.6","@smithy/util-utf8":"^4.2.0","@smithy/util-waiter":"^4.2.5","tslib":"^2.6.2"},"devDependencies":{"@aws-sdk/signature-v4-crt":"3.932.0","@tsconfig/node18":"18.2.4","@types/node":"^18.19.69","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~5.8.3"},"engines":{"node":">=18.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.937.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-s3","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn g:vitest run","test:browser":"node ./test/browser-build/esbuild && yarn g:vitest run -c vitest.config.browser.mts","test:browser:watch":"node ./test/browser-build/esbuild && yarn g:vitest watch -c vitest.config.browser.mts","test:e2e":"yarn g:vitest run -c vitest.config.e2e.mts && yarn test:browser","test:e2e:watch":"yarn g:vitest watch -c vitest.config.e2e.mts","test:integration":"yarn g:vitest run -c vitest.config.integ.mts","test:integration:watch":"yarn g:vitest watch -c vitest.config.integ.mts","test:watch":"yarn g:vitest watch"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"5.2.0","@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.936.0","@aws-sdk/credential-provider-node":"3.936.0","@aws-sdk/middleware-bucket-endpoint":"3.936.0","@aws-sdk/middleware-expect-continue":"3.936.0","@aws-sdk/middleware-flexible-checksums":"3.936.0","@aws-sdk/middleware-host-header":"3.936.0","@aws-sdk/middleware-location-constraint":"3.936.0","@aws-sdk/middleware-logger":"3.936.0","@aws-sdk/middleware-recursion-detection":"3.936.0","@aws-sdk/middleware-sdk-s3":"3.936.0","@aws-sdk/middleware-ssec":"3.936.0","@aws-sdk/middleware-user-agent":"3.936.0","@aws-sdk/region-config-resolver":"3.936.0","@aws-sdk/signature-v4-multi-region":"3.936.0","@aws-sdk/types":"3.936.0","@aws-sdk/util-endpoints":"3.936.0","@aws-sdk/util-user-agent-browser":"3.936.0","@aws-sdk/util-user-agent-node":"3.936.0","@smithy/config-resolver":"^4.4.3","@smithy/core":"^3.18.5","@smithy/eventstream-serde-browser":"^4.2.5","@smithy/eventstream-serde-config-resolver":"^4.3.5","@smithy/eventstream-serde-node":"^4.2.5","@smithy/fetch-http-handler":"^5.3.6","@smithy/hash-blob-browser":"^4.2.6","@smithy/hash-node":"^4.2.5","@smithy/hash-stream-node":"^4.2.5","@smithy/invalid-dependency":"^4.2.5","@smithy/md5-js":"^4.2.5","@smithy/middleware-content-length":"^4.2.5","@smithy/middleware-endpoint":"^4.3.12","@smithy/middleware-retry":"^4.4.12","@smithy/middleware-serde":"^4.2.6","@smithy/middleware-stack":"^4.2.5","@smithy/node-config-provider":"^4.3.5","@smithy/node-http-handler":"^4.4.5","@smithy/protocol-http":"^5.3.5","@smithy/smithy-client":"^4.9.8","@smithy/types":"^4.9.0","@smithy/url-parser":"^4.2.5","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.11","@smithy/util-defaults-mode-node":"^4.2.14","@smithy/util-endpoints":"^3.2.5","@smithy/util-middleware":"^4.2.5","@smithy/util-retry":"^4.2.5","@smithy/util-stream":"^4.5.6","@smithy/util-utf8":"^4.2.0","@smithy/util-waiter":"^4.2.5","tslib":"^2.6.2"},"devDependencies":{"@aws-sdk/signature-v4-crt":"3.936.0","@tsconfig/node18":"18.2.4","@types/node":"^18.19.69","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~5.8.3"},"engines":{"node":">=18.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
@@ -60686,7 +60938,7 @@ async function getTemporaryCredentials(accessKey, secretKey, bucket) {
 /**
  * 创建 S3 客户端
  *
- * @param {{endpoint:string, credentials:{accessKeyId:string, secretAccessKey:string, sessionToken?:string}, forcePathStyle:boolean}} cfg
+ * @param {{endpoint:string, credentials:{accessKeyId:string, secretAccessKey:string, sessionToken?:string}}} cfg
  * @returns {S3Client}
  */
 function createS3Client(cfg) {
@@ -60699,7 +60951,6 @@ function createS3Client(cfg) {
     region: "auto",
     endpoint: cfg.endpoint,
     credentials: cfg.credentials,
-    forcePathStyle: true,
     maxAttempts: 5,
     requestHandler,
   });
