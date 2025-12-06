@@ -5183,32 +5183,10 @@ var SessionCredentialValue = [0, n0, _SCV, 8, 0];
 var SSECustomerKey = [0, n0, _SSECK, 8, 0];
 var SSEKMSEncryptionContext = [0, n0, _SSEKMSEC, 8, 0];
 var SSEKMSKeyId = [0, n0, _SSEKMSKI, 8, 0];
-var StreamingBlob = [
-    0,
-    n0,
-    _SB,
-    {
-        [_s]: 1,
-    },
-    42,
-];
+var StreamingBlob = [0, n0, _SB, { [_s]: 1 }, 42];
 var AbacStatus = [3, n0, _AS, 0, [_S], [0]];
 var AbortIncompleteMultipartUpload = [3, n0, _AIMU, 0, [_DAI], [1]];
-var AbortMultipartUploadOutput = [
-    3,
-    n0,
-    _AMUO,
-    0,
-    [_RC],
-    [
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
-];
+var AbortMultipartUploadOutput = [3, n0, _AMUO, 0, [_RC], [[0, { [_hH]: _xarc }]]];
 var AbortMultipartUploadRequest = [
     3,
     n0,
@@ -5218,30 +5196,10 @@ var AbortMultipartUploadRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _uI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            6,
-            {
-                [_hH]: _xaimit,
-            },
-        ],
+        [0, { [_hQ]: _uI }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [6, { [_hH]: _xaimit }],
     ],
 ];
 var AccelerateConfiguration = [3, n0, _AC, 0, [_S], [0]];
@@ -5251,15 +5209,7 @@ var AccessControlPolicy = [
     _ACP,
     0,
     [_G, _O],
-    [
-        [
-            () => Grants,
-            {
-                [_xN]: _ACL,
-            },
-        ],
-        () => Owner,
-    ],
+    [[() => Grants, { [_xN]: _ACL }], () => Owner],
 ];
 var AccessControlTranslation = [3, n0, _ACT, 0, [_O], [0]];
 var AnalyticsAndOperator = [
@@ -5268,16 +5218,7 @@ var AnalyticsAndOperator = [
     _AAO,
     0,
     [_P, _T],
-    [
-        0,
-        [
-            () => TagSet,
-            {
-                [_xN]: _Ta,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [0, [() => TagSet, { [_xN]: _Ta, [_xF]: 1 }]],
 ];
 var AnalyticsConfiguration = [
     3,
@@ -5302,39 +5243,12 @@ var BlockedEncryptionTypes = [
     _BET,
     0,
     [_ET],
-    [
-        [
-            () => EncryptionTypeList,
-            {
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => EncryptionTypeList, { [_xF]: 1 }]],
 ];
 var Bucket = [3, n0, _B, 0, [_N, _CD, _BR, _BA], [0, 4, 0, 0]];
-var BucketAlreadyExists = [
-    -3,
-    n0,
-    _BAE,
-    {
-        [_e]: _c,
-        [_hE]: 409,
-    },
-    [],
-    [],
-];
+var BucketAlreadyExists = [-3, n0, _BAE, { [_e]: _c, [_hE]: 409 }, [], []];
 schema.TypeRegistry.for(n0).registerError(BucketAlreadyExists, BucketAlreadyExists$1);
-var BucketAlreadyOwnedByYou = [
-    -3,
-    n0,
-    _BAOBY,
-    {
-        [_e]: _c,
-        [_hE]: 409,
-    },
-    [],
-    [],
-];
+var BucketAlreadyOwnedByYou = [-3, n0, _BAOBY, { [_e]: _c, [_hE]: 409 }, [], []];
 schema.TypeRegistry.for(n0).registerError(BucketAlreadyOwnedByYou, BucketAlreadyOwnedByYou$1);
 var BucketInfo = [3, n0, _BI, 0, [_DR, _Ty], [0, 0]];
 var BucketLifecycleConfiguration = [
@@ -5343,15 +5257,7 @@ var BucketLifecycleConfiguration = [
     _BLC,
     0,
     [_R],
-    [
-        [
-            () => LifecycleRules,
-            {
-                [_xN]: _Ru,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => LifecycleRules, { [_xN]: _Ru, [_xF]: 1 }]],
 ];
 var BucketLoggingStatus = [3, n0, _BLS, 0, [_LE], [[() => LoggingEnabled, 0]]];
 var Checksum = [
@@ -5369,15 +5275,7 @@ var CompletedMultipartUpload = [
     _CMU,
     0,
     [_Pa],
-    [
-        [
-            () => CompletedPartList,
-            {
-                [_xN]: _Par,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => CompletedPartList, { [_xN]: _Par, [_xF]: 1 }]],
 ];
 var CompletedPart = [
     3,
@@ -5391,20 +5289,13 @@ var CompleteMultipartUploadOutput = [
     3,
     n0,
     _CMUO,
-    {
-        [_xN]: _CMUR,
-    },
+    { [_xN]: _CMUR },
     [_L, _B, _K, _E, _ETa, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _CT, _SSE, _VI, _SSEKMSKI, _BKE, _RC],
     [
         0,
         0,
         0,
-        [
-            0,
-            {
-                [_hH]: _xae,
-            },
-        ],
+        [0, { [_hH]: _xae }],
         0,
         0,
         0,
@@ -5412,36 +5303,11 @@ var CompleteMultipartUploadOutput = [
         0,
         0,
         0,
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xavi }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var CompleteMultipartUploadRequest = [
@@ -5472,103 +5338,22 @@ var CompleteMultipartUploadRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            () => CompletedMultipartUpload,
-            {
-                [_xN]: _CMUo,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _uI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xamos,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _INM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
+        [() => CompletedMultipartUpload, { [_xN]: _CMUo, [_hP]: 1 }],
+        [0, { [_hQ]: _uI }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
+        [0, { [_hH]: _xact }],
+        [1, { [_hH]: _xamos }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _IM_ }],
+        [0, { [_hH]: _INM_ }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
     ],
 ];
 var Condition = [3, n0, _Co, 0, [_HECRE, _KPE], [0, 0]];
@@ -5581,66 +5366,16 @@ var CopyObjectOutput = [
     [_COR, _E, _CSVI, _VI, _SSE, _SSECA, _SSECKMD, _SSEKMSKI, _SSEKMSEC, _BKE, _RC],
     [
         [() => CopyObjectResult, 16],
-        [
-            0,
-            {
-                [_hH]: _xae,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacsvi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xae }],
+        [0, { [_hH]: _xacsvi }],
+        [0, { [_hH]: _xavi }],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var CopyObjectRequest = [
@@ -5694,254 +5429,49 @@ var CopyObjectRequest = [
         _ESBO,
     ],
     [
-        [
-            0,
-            {
-                [_hH]: _xaa,
-            },
-        ],
+        [0, { [_hH]: _xaa }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CC_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CD_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CE_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CL_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CT_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacsim,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _xacsims,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacsinm,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _xacsius,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _Ex,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagfc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagwa,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _INM_,
-            },
-        ],
+        [0, { [_hH]: _CC_ }],
+        [0, { [_hH]: _xaca }],
+        [0, { [_hH]: _CD_ }],
+        [0, { [_hH]: _CE_ }],
+        [0, { [_hH]: _CL_ }],
+        [0, { [_hH]: _CT_ }],
+        [0, { [_hH]: _xacs__ }],
+        [0, { [_hH]: _xacsim }],
+        [4, { [_hH]: _xacsims }],
+        [0, { [_hH]: _xacsinm }],
+        [4, { [_hH]: _xacsius }],
+        [4, { [_hH]: _Ex }],
+        [0, { [_hH]: _xagfc }],
+        [0, { [_hH]: _xagr }],
+        [0, { [_hH]: _xagra }],
+        [0, { [_hH]: _xagwa }],
+        [0, { [_hH]: _IM_ }],
+        [0, { [_hH]: _INM_ }],
         [0, 1],
-        [
-            128 | 0,
-            {
-                [_hPH]: _xam,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xamd,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xatd,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xawrl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacssseca,
-            },
-        ],
-        [
-            () => CopySourceSSECustomerKey,
-            {
-                [_hH]: _xacssseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacssseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xat,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaolm,
-            },
-        ],
-        [
-            5,
-            {
-                [_hH]: _xaolrud,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaollh,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasebo,
-            },
-        ],
+        [128 | 0, { [_hPH]: _xam }],
+        [0, { [_hH]: _xamd }],
+        [0, { [_hH]: _xatd }],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xasc }],
+        [0, { [_hH]: _xawrl }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xacssseca }],
+        [() => CopySourceSSECustomerKey, { [_hH]: _xacssseck }],
+        [0, { [_hH]: _xacssseckM }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xat }],
+        [0, { [_hH]: _xaolm }],
+        [5, { [_hH]: _xaolrud }],
+        [0, { [_hH]: _xaollh }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xasebo }],
     ],
 ];
 var CopyObjectResult = [
@@ -5966,15 +5496,7 @@ var CORSConfiguration = [
     _CORSC,
     0,
     [_CORSR],
-    [
-        [
-            () => CORSRules,
-            {
-                [_xN]: _CORSRu,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => CORSRules, { [_xN]: _CORSRu, [_xF]: 1 }]],
 ];
 var CORSRule = [
     3,
@@ -5984,34 +5506,10 @@ var CORSRule = [
     [_ID, _AH, _AM, _AO, _EH, _MAS],
     [
         0,
-        [
-            64 | 0,
-            {
-                [_xN]: _AHl,
-                [_xF]: 1,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_xN]: _AMl,
-                [_xF]: 1,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_xN]: _AOl,
-                [_xF]: 1,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_xN]: _EHx,
-                [_xF]: 1,
-            },
-        ],
+        [64 | 0, { [_xN]: _AHl, [_xF]: 1 }],
+        [64 | 0, { [_xN]: _AMl, [_xF]: 1 }],
+        [64 | 0, { [_xN]: _AOl, [_xF]: 1 }],
+        [64 | 0, { [_xN]: _EHx, [_xF]: 1 }],
         1,
     ],
 ];
@@ -6031,31 +5529,10 @@ var CreateBucketMetadataConfigurationRequest = [
     [_B, _CMD, _CA, _MC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => MetadataConfiguration,
-            {
-                [_xN]: _MC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => MetadataConfiguration, { [_xN]: _MC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var CreateBucketMetadataTableConfigurationRequest = [
@@ -6066,31 +5543,10 @@ var CreateBucketMetadataTableConfigurationRequest = [
     [_B, _CMD, _CA, _MTC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => MetadataTableConfiguration,
-            {
-                [_xN]: _MTC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => MetadataTableConfiguration, { [_xN]: _MTC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var CreateBucketOutput = [
@@ -6100,18 +5556,8 @@ var CreateBucketOutput = [
     0,
     [_L, _BA],
     [
-        [
-            0,
-            {
-                [_hH]: _L,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaba,
-            },
-        ],
+        [0, { [_hH]: _L }],
+        [0, { [_hH]: _xaba }],
     ],
 ];
 var CreateBucketRequest = [
@@ -6121,147 +5567,39 @@ var CreateBucketRequest = [
     0,
     [_ACL_, _B, _CBC, _GFC, _GR, _GRACP, _GW, _GWACP, _OLEFB, _OO],
     [
-        [
-            0,
-            {
-                [_hH]: _xaa,
-            },
-        ],
+        [0, { [_hH]: _xaa }],
         [0, 1],
-        [
-            () => CreateBucketConfiguration,
-            {
-                [_xN]: _CBC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagfc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagw,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagwa,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xabole,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaoo,
-            },
-        ],
+        [() => CreateBucketConfiguration, { [_xN]: _CBC, [_hP]: 1 }],
+        [0, { [_hH]: _xagfc }],
+        [0, { [_hH]: _xagr }],
+        [0, { [_hH]: _xagra }],
+        [0, { [_hH]: _xagw }],
+        [0, { [_hH]: _xagwa }],
+        [2, { [_hH]: _xabole }],
+        [0, { [_hH]: _xaoo }],
     ],
 ];
 var CreateMultipartUploadOutput = [
     3,
     n0,
     _CMUOr,
-    {
-        [_xN]: _IMUR,
-    },
+    { [_xN]: _IMUR },
     [_AD, _ARI, _B, _K, _UI, _SSE, _SSECA, _SSECKMD, _SSEKMSKI, _SSEKMSEC, _BKE, _RC, _CA, _CT],
     [
-        [
-            4,
-            {
-                [_hH]: _xaad,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaari,
-            },
-        ],
-        [
-            0,
-            {
-                [_xN]: _B,
-            },
-        ],
+        [4, { [_hH]: _xaad }],
+        [0, { [_hH]: _xaari }],
+        [0, { [_xN]: _B }],
         0,
         0,
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact,
-            },
-        ],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarc }],
+        [0, { [_hH]: _xaca }],
+        [0, { [_hH]: _xact }],
     ],
 ];
 var CreateMultipartUploadRequest = [
@@ -6303,223 +5641,51 @@ var CreateMultipartUploadRequest = [
         _CT,
     ],
     [
-        [
-            0,
-            {
-                [_hH]: _xaa,
-            },
-        ],
+        [0, { [_hH]: _xaa }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CC_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CD_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CE_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CL_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CT_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _Ex,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagfc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagwa,
-            },
-        ],
+        [0, { [_hH]: _CC_ }],
+        [0, { [_hH]: _CD_ }],
+        [0, { [_hH]: _CE_ }],
+        [0, { [_hH]: _CL_ }],
+        [0, { [_hH]: _CT_ }],
+        [4, { [_hH]: _Ex }],
+        [0, { [_hH]: _xagfc }],
+        [0, { [_hH]: _xagr }],
+        [0, { [_hH]: _xagra }],
+        [0, { [_hH]: _xagwa }],
         [0, 1],
-        [
-            128 | 0,
-            {
-                [_hPH]: _xam,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xawrl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xat,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaolm,
-            },
-        ],
-        [
-            5,
-            {
-                [_hH]: _xaolrud,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaollh,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact,
-            },
-        ],
+        [128 | 0, { [_hPH]: _xam }],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xasc }],
+        [0, { [_hH]: _xawrl }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xat }],
+        [0, { [_hH]: _xaolm }],
+        [5, { [_hH]: _xaolrud }],
+        [0, { [_hH]: _xaollh }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xaca }],
+        [0, { [_hH]: _xact }],
     ],
 ];
 var CreateSessionOutput = [
     3,
     n0,
     _CSO,
-    {
-        [_xN]: _CSR,
-    },
+    { [_xN]: _CSR },
     [_SSE, _SSEKMSKI, _SSEKMSEC, _BKE, _Cr],
     [
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            () => SessionCredentials,
-            {
-                [_xN]: _Cr,
-            },
-        ],
+        [0, { [_hH]: _xasse }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [() => SessionCredentials, { [_xN]: _Cr }],
     ],
 ];
 var CreateSessionRequest = [
@@ -6529,37 +5695,12 @@ var CreateSessionRequest = [
     0,
     [_SM, _B, _SSE, _SSEKMSKI, _SSEKMSEC, _BKE],
     [
-        [
-            0,
-            {
-                [_hH]: _xacsm,
-            },
-        ],
+        [0, { [_hH]: _xacsm }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
+        [0, { [_hH]: _xasse }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
     ],
 ];
 var CSVInput = [
@@ -6578,16 +5719,7 @@ var Delete = [
     _De,
     0,
     [_Ob, _Q],
-    [
-        [
-            () => ObjectIdentifierList,
-            {
-                [_xN]: _Obj,
-                [_xF]: 1,
-            },
-        ],
-        2,
-    ],
+    [[() => ObjectIdentifierList, { [_xN]: _Obj, [_xF]: 1 }], 2],
 ];
 var DeleteBucketAnalyticsConfigurationRequest = [
     3,
@@ -6597,18 +5729,8 @@ var DeleteBucketAnalyticsConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketCorsRequest = [
@@ -6619,12 +5741,7 @@ var DeleteBucketCorsRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketEncryptionRequest = [
@@ -6635,12 +5752,7 @@ var DeleteBucketEncryptionRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketIntelligentTieringConfigurationRequest = [
@@ -6651,18 +5763,8 @@ var DeleteBucketIntelligentTieringConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketInventoryConfigurationRequest = [
@@ -6673,18 +5775,8 @@ var DeleteBucketInventoryConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketLifecycleRequest = [
@@ -6695,12 +5787,7 @@ var DeleteBucketLifecycleRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketMetadataConfigurationRequest = [
@@ -6711,12 +5798,7 @@ var DeleteBucketMetadataConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketMetadataTableConfigurationRequest = [
@@ -6727,12 +5809,7 @@ var DeleteBucketMetadataTableConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketMetricsConfigurationRequest = [
@@ -6743,18 +5820,8 @@ var DeleteBucketMetricsConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketOwnershipControlsRequest = [
@@ -6765,12 +5832,7 @@ var DeleteBucketOwnershipControlsRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketPolicyRequest = [
@@ -6781,12 +5843,7 @@ var DeleteBucketPolicyRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketReplicationRequest = [
@@ -6797,12 +5854,7 @@ var DeleteBucketReplicationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketRequest = [
@@ -6813,12 +5865,7 @@ var DeleteBucketRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketTaggingRequest = [
@@ -6829,12 +5876,7 @@ var DeleteBucketTaggingRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeleteBucketWebsiteRequest = [
@@ -6845,12 +5887,7 @@ var DeleteBucketWebsiteRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeletedObject = [3, n0, _DO, 0, [_K, _VI, _DM, _DMVI], [0, 0, 2, 0]];
@@ -6870,24 +5907,9 @@ var DeleteObjectOutput = [
     0,
     [_DM, _VI, _RC],
     [
-        [
-            2,
-            {
-                [_hH]: _xadm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [2, { [_hH]: _xadm }],
+        [0, { [_hH]: _xavi }],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var DeleteObjectRequest = [
@@ -6899,84 +5921,26 @@ var DeleteObjectRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xam_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xabgr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            6,
-            {
-                [_hH]: _xaimlmt,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xaims,
-            },
-        ],
+        [0, { [_hH]: _xam_ }],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xarp }],
+        [2, { [_hH]: _xabgr }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _IM_ }],
+        [6, { [_hH]: _xaimlmt }],
+        [1, { [_hH]: _xaims }],
     ],
 ];
 var DeleteObjectsOutput = [
     3,
     n0,
     _DOOe,
-    {
-        [_xN]: _DRel,
-    },
+    { [_xN]: _DRel },
     [_Del, _RC, _Er],
     [
-        [
-            () => DeletedObjects,
-            {
-                [_xF]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-        [
-            () => Errors,
-            {
-                [_xN]: _Err,
-                [_xF]: 1,
-            },
-        ],
+        [() => DeletedObjects, { [_xF]: 1 }],
+        [0, { [_hH]: _xarc }],
+        [() => Errors, { [_xN]: _Err, [_xF]: 1 }],
     ],
 ];
 var DeleteObjectsRequest = [
@@ -6987,60 +5951,15 @@ var DeleteObjectsRequest = [
     [_B, _De, _MFA, _RP, _BGR, _EBO, _CA],
     [
         [0, 1],
-        [
-            () => Delete,
-            {
-                [_xN]: _De,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xam_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xabgr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
+        [() => Delete, { [_xN]: _De, [_hP]: 1 }],
+        [0, { [_hH]: _xam_ }],
+        [0, { [_hH]: _xarp }],
+        [2, { [_hH]: _xabgr }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xasca }],
     ],
 ];
-var DeleteObjectTaggingOutput = [
-    3,
-    n0,
-    _DOTO,
-    0,
-    [_VI],
-    [
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-    ],
-];
+var DeleteObjectTaggingOutput = [3, n0, _DOTO, 0, [_VI], [[0, { [_hH]: _xavi }]]];
 var DeleteObjectTaggingRequest = [
     3,
     n0,
@@ -7050,18 +5969,8 @@ var DeleteObjectTaggingRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var DeletePublicAccessBlockRequest = [
@@ -7072,12 +5981,7 @@ var DeletePublicAccessBlockRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var Destination = [
@@ -7091,17 +5995,7 @@ var Destination = [
 var DestinationResult = [3, n0, _DRes, 0, [_TBT, _TBA, _TN], [0, 0, 0]];
 var Encryption = [3, n0, _En, 0, [_ET, _KMSKI, _KMSC], [0, [() => SSEKMSKeyId, 0], 0]];
 var EncryptionConfiguration = [3, n0, _EC, 0, [_RKKID], [0]];
-var EncryptionTypeMismatch = [
-    -3,
-    n0,
-    _ETM,
-    {
-        [_e]: _c,
-        [_hE]: 400,
-    },
-    [],
-    [],
-];
+var EncryptionTypeMismatch = [-3, n0, _ETM, { [_e]: _c, [_hE]: 400 }, [], []];
 schema.TypeRegistry.for(n0).registerError(EncryptionTypeMismatch, EncryptionTypeMismatch$1);
 var EndEvent = [3, n0, _EE, 0, [], []];
 var _Error = [3, n0, _Err, 0, [_K, _VI, _Cod, _Mes], [0, 0, 0, 0]];
@@ -7119,31 +6013,16 @@ var GetBucketAbacRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketAccelerateConfigurationOutput = [
     3,
     n0,
     _GBACO,
-    {
-        [_xN]: _AC,
-    },
+    { [_xN]: _AC },
     [_S, _RC],
-    [
-        0,
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
+    [0, [0, { [_hH]: _xarc }]],
 ];
 var GetBucketAccelerateConfigurationRequest = [
     3,
@@ -7153,37 +6032,17 @@ var GetBucketAccelerateConfigurationRequest = [
     [_B, _EBO, _RP],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xarp }],
     ],
 ];
 var GetBucketAclOutput = [
     3,
     n0,
     _GBAOe,
-    {
-        [_xN]: _ACP,
-    },
+    { [_xN]: _ACP },
     [_O, _G],
-    [
-        () => Owner,
-        [
-            () => Grants,
-            {
-                [_xN]: _ACL,
-            },
-        ],
-    ],
+    [() => Owner, [() => Grants, { [_xN]: _ACL }]],
 ];
 var GetBucketAclRequest = [
     3,
@@ -7193,12 +6052,7 @@ var GetBucketAclRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketAnalyticsConfigurationOutput = [
@@ -7217,37 +6071,17 @@ var GetBucketAnalyticsConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketCorsOutput = [
     3,
     n0,
     _GBCO,
-    {
-        [_xN]: _CORSC,
-    },
+    { [_xN]: _CORSC },
     [_CORSR],
-    [
-        [
-            () => CORSRules,
-            {
-                [_xN]: _CORSRu,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => CORSRules, { [_xN]: _CORSRu, [_xF]: 1 }]],
 ];
 var GetBucketCorsRequest = [
     3,
@@ -7257,12 +6091,7 @@ var GetBucketCorsRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketEncryptionOutput = [
@@ -7281,12 +6110,7 @@ var GetBucketEncryptionRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketIntelligentTieringConfigurationOutput = [
@@ -7305,18 +6129,8 @@ var GetBucketIntelligentTieringConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketInventoryConfigurationOutput = [
@@ -7335,42 +6149,19 @@ var GetBucketInventoryConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketLifecycleConfigurationOutput = [
     3,
     n0,
     _GBLCO,
-    {
-        [_xN]: _LCi,
-    },
+    { [_xN]: _LCi },
     [_R, _TDMOS],
     [
-        [
-            () => LifecycleRules,
-            {
-                [_xN]: _Ru,
-                [_xF]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xatdmos,
-            },
-        ],
+        [() => LifecycleRules, { [_xN]: _Ru, [_xF]: 1 }],
+        [0, { [_hH]: _xatdmos }],
     ],
 ];
 var GetBucketLifecycleConfigurationRequest = [
@@ -7381,24 +6172,10 @@ var GetBucketLifecycleConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var GetBucketLocationOutput = [
-    3,
-    n0,
-    _GBLO,
-    {
-        [_xN]: _LC,
-    },
-    [_LC],
-    [0],
-];
+var GetBucketLocationOutput = [3, n0, _GBLO, { [_xN]: _LC }, [_LC], [0]];
 var GetBucketLocationRequest = [
     3,
     n0,
@@ -7407,21 +6184,14 @@ var GetBucketLocationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketLoggingOutput = [
     3,
     n0,
     _GBLOe,
-    {
-        [_xN]: _BLS,
-    },
+    { [_xN]: _BLS },
     [_LE],
     [[() => LoggingEnabled, 0]],
 ];
@@ -7433,12 +6203,7 @@ var GetBucketLoggingRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketMetadataConfigurationOutput = [
@@ -7457,12 +6222,7 @@ var GetBucketMetadataConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketMetadataConfigurationResult = [
@@ -7489,12 +6249,7 @@ var GetBucketMetadataTableConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketMetadataTableConfigurationResult = [
@@ -7521,18 +6276,8 @@ var GetBucketMetricsConfigurationRequest = [
     [_B, _I, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketNotificationConfigurationRequest = [
@@ -7543,12 +6288,7 @@ var GetBucketNotificationConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketOwnershipControlsOutput = [
@@ -7567,12 +6307,7 @@ var GetBucketOwnershipControlsRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketPolicyOutput = [3, n0, _GBPO, 0, [_Po], [[0, 16]]];
@@ -7584,12 +6319,7 @@ var GetBucketPolicyRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketPolicyStatusOutput = [3, n0, _GBPSO, 0, [_PS], [[() => PolicyStatus, 16]]];
@@ -7601,12 +6331,7 @@ var GetBucketPolicyStatusRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketReplicationOutput = [
@@ -7625,24 +6350,10 @@ var GetBucketReplicationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var GetBucketRequestPaymentOutput = [
-    3,
-    n0,
-    _GBRPO,
-    {
-        [_xN]: _RPC,
-    },
-    [_Pay],
-    [0],
-];
+var GetBucketRequestPaymentOutput = [3, n0, _GBRPO, { [_xN]: _RPC }, [_Pay], [0]];
 var GetBucketRequestPaymentRequest = [
     3,
     n0,
@@ -7651,24 +6362,10 @@ var GetBucketRequestPaymentRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var GetBucketTaggingOutput = [
-    3,
-    n0,
-    _GBTO,
-    {
-        [_xN]: _Tag,
-    },
-    [_TS],
-    [[() => TagSet, 0]],
-];
+var GetBucketTaggingOutput = [3, n0, _GBTO, { [_xN]: _Tag }, [_TS], [[() => TagSet, 0]]];
 var GetBucketTaggingRequest = [
     3,
     n0,
@@ -7677,31 +6374,16 @@ var GetBucketTaggingRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketVersioningOutput = [
     3,
     n0,
     _GBVO,
-    {
-        [_xN]: _VC,
-    },
+    { [_xN]: _VC },
     [_S, _MFAD],
-    [
-        0,
-        [
-            0,
-            {
-                [_xN]: _MDf,
-            },
-        ],
-    ],
+    [0, [0, { [_xN]: _MDf }]],
 ];
 var GetBucketVersioningRequest = [
     3,
@@ -7711,21 +6393,14 @@ var GetBucketVersioningRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetBucketWebsiteOutput = [
     3,
     n0,
     _GBWO,
-    {
-        [_xN]: _WC,
-    },
+    { [_xN]: _WC },
     [_RART, _IDn, _EDr, _RR],
     [() => RedirectAllRequestsTo, () => IndexDocument, () => ErrorDocument, [() => RoutingRules, 0]],
 ];
@@ -7737,37 +6412,16 @@ var GetBucketWebsiteRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetObjectAclOutput = [
     3,
     n0,
     _GOAO,
-    {
-        [_xN]: _ACP,
-    },
+    { [_xN]: _ACP },
     [_O, _G, _RC],
-    [
-        () => Owner,
-        [
-            () => Grants,
-            {
-                [_xN]: _ACL,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
+    [() => Owner, [() => Grants, { [_xN]: _ACL }], [0, { [_hH]: _xarc }]],
 ];
 var GetObjectAclRequest = [
     3,
@@ -7778,59 +6432,22 @@ var GetObjectAclRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetObjectAttributesOutput = [
     3,
     n0,
     _GOAOe,
-    {
-        [_xN]: _GOARe,
-    },
+    { [_xN]: _GOARe },
     [_DM, _LM, _VI, _RC, _ETa, _C, _OP, _SC, _OS],
     [
-        [
-            2,
-            {
-                [_hH]: _xadm,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _LM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [2, { [_hH]: _xadm }],
+        [4, { [_hH]: _LM_ }],
+        [0, { [_hH]: _xavi }],
+        [0, { [_hH]: _xarc }],
         0,
         () => Checksum,
         [() => GetObjectAttributesParts, 0],
@@ -7844,25 +6461,7 @@ var GetObjectAttributesParts = [
     _GOAP,
     0,
     [_TPC, _PNM, _NPNM, _MP, _IT, _Pa],
-    [
-        [
-            1,
-            {
-                [_xN]: _PC,
-            },
-        ],
-        0,
-        0,
-        1,
-        2,
-        [
-            () => PartsList,
-            {
-                [_xN]: _Par,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[1, { [_xN]: _PC }], 0, 0, 1, 2, [() => PartsList, { [_xN]: _Par, [_xF]: 1 }]],
 ];
 var GetObjectAttributesRequest = [
     3,
@@ -7873,60 +6472,15 @@ var GetObjectAttributesRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xamp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xapnm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_hH]: _xaoa,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [1, { [_hH]: _xamp }],
+        [0, { [_hH]: _xapnm }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [64 | 0, { [_hH]: _xaoa }],
     ],
 ];
 var GetObjectLegalHoldOutput = [
@@ -7935,15 +6489,7 @@ var GetObjectLegalHoldOutput = [
     _GOLHO,
     0,
     [_LH],
-    [
-        [
-            () => ObjectLockLegalHold,
-            {
-                [_xN]: _LH,
-                [_hP]: 1,
-            },
-        ],
-    ],
+    [[() => ObjectLockLegalHold, { [_xN]: _LH, [_hP]: 1 }]],
 ];
 var GetObjectLegalHoldRequest = [
     3,
@@ -7954,24 +6500,9 @@ var GetObjectLegalHoldRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetObjectLockConfigurationOutput = [
@@ -7990,12 +6521,7 @@ var GetObjectLockConfigurationRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetObjectOutput = [
@@ -8046,234 +6572,44 @@ var GetObjectOutput = [
     ],
     [
         [() => StreamingBlob, 16],
-        [
-            2,
-            {
-                [_hH]: _xadm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ar,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xae,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xar,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _LM_,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _CL__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ETa,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xamm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CC_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CD_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CE_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CL_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CR_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CT_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _Ex,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ES,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xawrl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            128 | 0,
-            {
-                [_hPH]: _xam,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xars,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xampc,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xatc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaolm,
-            },
-        ],
-        [
-            5,
-            {
-                [_hH]: _xaolrud,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaollh,
-            },
-        ],
+        [2, { [_hH]: _xadm }],
+        [0, { [_hH]: _ar }],
+        [0, { [_hH]: _xae }],
+        [0, { [_hH]: _xar }],
+        [4, { [_hH]: _LM_ }],
+        [1, { [_hH]: _CL__ }],
+        [0, { [_hH]: _ETa }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
+        [0, { [_hH]: _xact }],
+        [1, { [_hH]: _xamm }],
+        [0, { [_hH]: _xavi }],
+        [0, { [_hH]: _CC_ }],
+        [0, { [_hH]: _CD_ }],
+        [0, { [_hH]: _CE_ }],
+        [0, { [_hH]: _CL_ }],
+        [0, { [_hH]: _CR_ }],
+        [0, { [_hH]: _CT_ }],
+        [4, { [_hH]: _Ex }],
+        [0, { [_hH]: _ES }],
+        [0, { [_hH]: _xawrl }],
+        [0, { [_hH]: _xasse }],
+        [128 | 0, { [_hPH]: _xam }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xasc }],
+        [0, { [_hH]: _xarc }],
+        [0, { [_hH]: _xars }],
+        [1, { [_hH]: _xampc }],
+        [1, { [_hH]: _xatc }],
+        [0, { [_hH]: _xaolm }],
+        [5, { [_hH]: _xaolrud }],
+        [0, { [_hH]: _xaollh }],
     ],
 ];
 var GetObjectRequest = [
@@ -8306,121 +6642,26 @@ var GetObjectRequest = [
     ],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _IMS_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _INM_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _IUS_,
-            },
-        ],
+        [0, { [_hH]: _IM_ }],
+        [4, { [_hH]: _IMS_ }],
+        [0, { [_hH]: _INM_ }],
+        [4, { [_hH]: _IUS_ }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _Ra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rcc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rcd,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rce,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rcl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rct,
-            },
-        ],
-        [
-            6,
-            {
-                [_hQ]: _re,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _pN,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacm,
-            },
-        ],
+        [0, { [_hH]: _Ra }],
+        [0, { [_hQ]: _rcc }],
+        [0, { [_hQ]: _rcd }],
+        [0, { [_hQ]: _rce }],
+        [0, { [_hQ]: _rcl }],
+        [0, { [_hQ]: _rct }],
+        [6, { [_hQ]: _re }],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [0, { [_hH]: _xarp }],
+        [1, { [_hQ]: _pN }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xacm }],
     ],
 ];
 var GetObjectRetentionOutput = [
@@ -8429,15 +6670,7 @@ var GetObjectRetentionOutput = [
     _GORO,
     0,
     [_Ret],
-    [
-        [
-            () => ObjectLockRetention,
-            {
-                [_xN]: _Ret,
-                [_hP]: 1,
-            },
-        ],
-    ],
+    [[() => ObjectLockRetention, { [_xN]: _Ret, [_hP]: 1 }]],
 ];
 var GetObjectRetentionRequest = [
     3,
@@ -8448,41 +6681,19 @@ var GetObjectRetentionRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetObjectTaggingOutput = [
     3,
     n0,
     _GOTO,
-    {
-        [_xN]: _Tag,
-    },
+    { [_xN]: _Tag },
     [_VI, _TS],
     [
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
+        [0, { [_hH]: _xavi }],
         [() => TagSet, 0],
     ],
 ];
@@ -8495,24 +6706,9 @@ var GetObjectTaggingRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xarp }],
     ],
 ];
 var GetObjectTorrentOutput = [
@@ -8523,12 +6719,7 @@ var GetObjectTorrentOutput = [
     [_Bo, _RC],
     [
         [() => StreamingBlob, 16],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var GetObjectTorrentRequest = [
@@ -8540,18 +6731,8 @@ var GetObjectTorrentRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GetPublicAccessBlockOutput = [
@@ -8570,50 +6751,18 @@ var GetPublicAccessBlockRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var GlacierJobParameters = [3, n0, _GJP, 0, [_Ti], [0]];
-var Grant = [
-    3,
-    n0,
-    _Gr,
-    0,
-    [_Gra, _Pe],
-    [
-        [
-            () => Grantee,
-            {
-                [_xNm]: [_x, _hi],
-            },
-        ],
-        0,
-    ],
-];
+var Grant = [3, n0, _Gr, 0, [_Gra, _Pe], [[() => Grantee, { [_xNm]: [_x, _hi] }], 0]];
 var Grantee = [
     3,
     n0,
     _Gra,
     0,
     [_DN, _EA, _ID, _URI, _Ty],
-    [
-        0,
-        0,
-        0,
-        0,
-        [
-            0,
-            {
-                [_xN]: _xs,
-                [_xA]: 1,
-            },
-        ],
-    ],
+    [0, 0, 0, 0, [0, { [_xN]: _xs, [_xA]: 1 }]],
 ];
 var HeadBucketOutput = [
     3,
@@ -8622,36 +6771,11 @@ var HeadBucketOutput = [
     0,
     [_BA, _BLT, _BLN, _BR, _APA],
     [
-        [
-            0,
-            {
-                [_hH]: _xaba,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xablt,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xabln,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xabr,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xaapa,
-            },
-        ],
+        [0, { [_hH]: _xaba }],
+        [0, { [_hH]: _xablt }],
+        [0, { [_hH]: _xabln }],
+        [0, { [_hH]: _xabr }],
+        [2, { [_hH]: _xaapa }],
     ],
 ];
 var HeadBucketRequest = [
@@ -8662,12 +6786,7 @@ var HeadBucketRequest = [
     [_B, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var HeadObjectOutput = [
@@ -8717,240 +6836,45 @@ var HeadObjectOutput = [
         _OLLHS,
     ],
     [
-        [
-            2,
-            {
-                [_hH]: _xadm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ar,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xae,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xar,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaas,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _LM_,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _CL__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ETa,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xamm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CC_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CD_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CE_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CL_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CT_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CR_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _Ex,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ES,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xawrl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            128 | 0,
-            {
-                [_hPH]: _xam,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xars,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xampc,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xatc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaolm,
-            },
-        ],
-        [
-            5,
-            {
-                [_hH]: _xaolrud,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaollh,
-            },
-        ],
+        [2, { [_hH]: _xadm }],
+        [0, { [_hH]: _ar }],
+        [0, { [_hH]: _xae }],
+        [0, { [_hH]: _xar }],
+        [0, { [_hH]: _xaas }],
+        [4, { [_hH]: _LM_ }],
+        [1, { [_hH]: _CL__ }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
+        [0, { [_hH]: _xact }],
+        [0, { [_hH]: _ETa }],
+        [1, { [_hH]: _xamm }],
+        [0, { [_hH]: _xavi }],
+        [0, { [_hH]: _CC_ }],
+        [0, { [_hH]: _CD_ }],
+        [0, { [_hH]: _CE_ }],
+        [0, { [_hH]: _CL_ }],
+        [0, { [_hH]: _CT_ }],
+        [0, { [_hH]: _CR_ }],
+        [4, { [_hH]: _Ex }],
+        [0, { [_hH]: _ES }],
+        [0, { [_hH]: _xawrl }],
+        [0, { [_hH]: _xasse }],
+        [128 | 0, { [_hPH]: _xam }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xasc }],
+        [0, { [_hH]: _xarc }],
+        [0, { [_hH]: _xars }],
+        [1, { [_hH]: _xampc }],
+        [1, { [_hH]: _xatc }],
+        [0, { [_hH]: _xaolm }],
+        [5, { [_hH]: _xaolrud }],
+        [0, { [_hH]: _xaollh }],
     ],
 ];
 var HeadObjectRequest = [
@@ -8983,134 +6907,29 @@ var HeadObjectRequest = [
     ],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _IMS_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _INM_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _IUS_,
-            },
-        ],
+        [0, { [_hH]: _IM_ }],
+        [4, { [_hH]: _IMS_ }],
+        [0, { [_hH]: _INM_ }],
+        [4, { [_hH]: _IUS_ }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _Ra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rcc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rcd,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rce,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rcl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _rct,
-            },
-        ],
-        [
-            6,
-            {
-                [_hQ]: _re,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _pN,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacm,
-            },
-        ],
+        [0, { [_hH]: _Ra }],
+        [0, { [_hQ]: _rcc }],
+        [0, { [_hQ]: _rcd }],
+        [0, { [_hQ]: _rce }],
+        [0, { [_hQ]: _rcl }],
+        [0, { [_hQ]: _rct }],
+        [6, { [_hQ]: _re }],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [0, { [_hH]: _xarp }],
+        [1, { [_hQ]: _pN }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xacm }],
     ],
 ];
-var IdempotencyParameterMismatch = [
-    -3,
-    n0,
-    _IPM,
-    {
-        [_e]: _c,
-        [_hE]: 400,
-    },
-    [],
-    [],
-];
+var IdempotencyParameterMismatch = [-3, n0, _IPM, { [_e]: _c, [_hE]: 400 }, [], []];
 schema.TypeRegistry.for(n0).registerError(IdempotencyParameterMismatch, IdempotencyParameterMismatch$1);
 var IndexDocument = [3, n0, _IDn, 0, [_Su], [0]];
 var Initiator = [3, n0, _In, 0, [_ID, _DN], [0, 0]];
@@ -9128,16 +6947,7 @@ var IntelligentTieringAndOperator = [
     _ITAO,
     0,
     [_P, _T],
-    [
-        0,
-        [
-            () => TagSet,
-            {
-                [_xN]: _Ta,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [0, [() => TagSet, { [_xN]: _Ta, [_xF]: 1 }]],
 ];
 var IntelligentTieringConfiguration = [
     3,
@@ -9145,18 +6955,7 @@ var IntelligentTieringConfiguration = [
     _ITC,
     0,
     [_I, _F, _S, _Tie],
-    [
-        0,
-        [() => IntelligentTieringFilter, 0],
-        0,
-        [
-            () => TieringList,
-            {
-                [_xN]: _Tier,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [0, [() => IntelligentTieringFilter, 0], 0, [() => TieringList, { [_xN]: _Tier, [_xF]: 1 }]],
 ];
 var IntelligentTieringFilter = [
     3,
@@ -9166,41 +6965,11 @@ var IntelligentTieringFilter = [
     [_P, _Ta, _An],
     [0, () => Tag, [() => IntelligentTieringAndOperator, 0]],
 ];
-var InvalidObjectState = [
-    -3,
-    n0,
-    _IOS,
-    {
-        [_e]: _c,
-        [_hE]: 403,
-    },
-    [_SC, _AT],
-    [0, 0],
-];
+var InvalidObjectState = [-3, n0, _IOS, { [_e]: _c, [_hE]: 403 }, [_SC, _AT], [0, 0]];
 schema.TypeRegistry.for(n0).registerError(InvalidObjectState, InvalidObjectState$1);
-var InvalidRequest = [
-    -3,
-    n0,
-    _IR,
-    {
-        [_e]: _c,
-        [_hE]: 400,
-    },
-    [],
-    [],
-];
+var InvalidRequest = [-3, n0, _IR, { [_e]: _c, [_hE]: 400 }, [], []];
 schema.TypeRegistry.for(n0).registerError(InvalidRequest, InvalidRequest$1);
-var InvalidWriteOffset = [
-    -3,
-    n0,
-    _IWO,
-    {
-        [_e]: _c,
-        [_hE]: 400,
-    },
-    [],
-    [],
-];
+var InvalidWriteOffset = [-3, n0, _IWO, { [_e]: _c, [_hE]: 400 }, [], []];
 schema.TypeRegistry.for(n0).registerError(InvalidWriteOffset, InvalidWriteOffset$1);
 var InventoryConfiguration = [
     3,
@@ -9233,18 +7002,8 @@ var InventoryEncryption = [
     0,
     [_SSES, _SSEKMS],
     [
-        [
-            () => SSES3,
-            {
-                [_xN]: _SS,
-            },
-        ],
-        [
-            () => SSEKMS,
-            {
-                [_xN]: _SK,
-            },
-        ],
+        [() => SSES3, { [_xN]: _SS }],
+        [() => SSEKMS, { [_xN]: _SK }],
     ],
 ];
 var InventoryFilter = [3, n0, _IF, 0, [_P], [0]];
@@ -9313,23 +7072,7 @@ var LambdaFunctionConfiguration = [
     _LFC,
     0,
     [_I, _LFA, _Ev, _F],
-    [
-        0,
-        [
-            0,
-            {
-                [_xN]: _CF,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_xN]: _Eve,
-                [_xF]: 1,
-            },
-        ],
-        [() => NotificationConfigurationFilter, 0],
-    ],
+    [0, [0, { [_xN]: _CF }], [64 | 0, { [_xN]: _Eve, [_xF]: 1 }], [() => NotificationConfigurationFilter, 0]],
 ];
 var LifecycleExpiration = [3, n0, _LEi, 0, [_Da, _D, _EODM], [5, 1, 2]];
 var LifecycleRule = [
@@ -9344,20 +7087,8 @@ var LifecycleRule = [
         0,
         [() => LifecycleRuleFilter, 0],
         0,
-        [
-            () => TransitionList,
-            {
-                [_xN]: _Tra,
-                [_xF]: 1,
-            },
-        ],
-        [
-            () => NoncurrentVersionTransitionList,
-            {
-                [_xN]: _NVTo,
-                [_xF]: 1,
-            },
-        ],
+        [() => TransitionList, { [_xN]: _Tra, [_xF]: 1 }],
+        [() => NoncurrentVersionTransitionList, { [_xN]: _NVTo, [_xF]: 1 }],
         () => NoncurrentVersionExpiration,
         () => AbortIncompleteMultipartUpload,
     ],
@@ -9368,18 +7099,7 @@ var LifecycleRuleAndOperator = [
     _LRAO,
     0,
     [_P, _T, _OSGT, _OSLT],
-    [
-        0,
-        [
-            () => TagSet,
-            {
-                [_xN]: _Ta,
-                [_xF]: 1,
-            },
-        ],
-        1,
-        1,
-    ],
+    [0, [() => TagSet, { [_xN]: _Ta, [_xF]: 1 }], 1, 1],
 ];
 var LifecycleRuleFilter = [
     3,
@@ -9393,22 +7113,9 @@ var ListBucketAnalyticsConfigurationsOutput = [
     3,
     n0,
     _LBACO,
-    {
-        [_xN]: _LBACR,
-    },
+    { [_xN]: _LBACR },
     [_IT, _CTon, _NCT, _ACLn],
-    [
-        2,
-        0,
-        0,
-        [
-            () => AnalyticsConfigurationList,
-            {
-                [_xN]: _ACn,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [2, 0, 0, [() => AnalyticsConfigurationList, { [_xN]: _ACn, [_xF]: 1 }]],
 ];
 var ListBucketAnalyticsConfigurationsRequest = [
     3,
@@ -9418,18 +7125,8 @@ var ListBucketAnalyticsConfigurationsRequest = [
     [_B, _CTon, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _ct }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var ListBucketIntelligentTieringConfigurationsOutput = [
@@ -9438,18 +7135,7 @@ var ListBucketIntelligentTieringConfigurationsOutput = [
     _LBITCO,
     0,
     [_IT, _CTon, _NCT, _ITCL],
-    [
-        2,
-        0,
-        0,
-        [
-            () => IntelligentTieringConfigurationList,
-            {
-                [_xN]: _ITC,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [2, 0, 0, [() => IntelligentTieringConfigurationList, { [_xN]: _ITC, [_xF]: 1 }]],
 ];
 var ListBucketIntelligentTieringConfigurationsRequest = [
     3,
@@ -9459,40 +7145,17 @@ var ListBucketIntelligentTieringConfigurationsRequest = [
     [_B, _CTon, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _ct }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var ListBucketInventoryConfigurationsOutput = [
     3,
     n0,
     _LBICO,
-    {
-        [_xN]: _LICR,
-    },
+    { [_xN]: _LICR },
     [_CTon, _ICL, _IT, _NCT],
-    [
-        0,
-        [
-            () => InventoryConfigurationList,
-            {
-                [_xN]: _IC,
-                [_xF]: 1,
-            },
-        ],
-        2,
-        0,
-    ],
+    [0, [() => InventoryConfigurationList, { [_xN]: _IC, [_xF]: 1 }], 2, 0],
 ];
 var ListBucketInventoryConfigurationsRequest = [
     3,
@@ -9502,40 +7165,17 @@ var ListBucketInventoryConfigurationsRequest = [
     [_B, _CTon, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _ct }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var ListBucketMetricsConfigurationsOutput = [
     3,
     n0,
     _LBMCO,
-    {
-        [_xN]: _LMCR,
-    },
+    { [_xN]: _LMCR },
     [_IT, _CTon, _NCT, _MCL],
-    [
-        2,
-        0,
-        0,
-        [
-            () => MetricsConfigurationList,
-            {
-                [_xN]: _MCe,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [2, 0, 0, [() => MetricsConfigurationList, { [_xN]: _MCe, [_xF]: 1 }]],
 ];
 var ListBucketMetricsConfigurationsRequest = [
     3,
@@ -9545,27 +7185,15 @@ var ListBucketMetricsConfigurationsRequest = [
     [_B, _CTon, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _ct }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var ListBucketsOutput = [
     3,
     n0,
     _LBO,
-    {
-        [_xN]: _LAMBR,
-    },
+    { [_xN]: _LAMBR },
     [_Bu, _O, _CTon, _P],
     [[() => Buckets, 0], () => Owner, 0, 0],
 ];
@@ -9576,39 +7204,17 @@ var ListBucketsRequest = [
     0,
     [_MB, _CTon, _P, _BR],
     [
-        [
-            1,
-            {
-                [_hQ]: _mb,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _p,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _br,
-            },
-        ],
+        [1, { [_hQ]: _mb }],
+        [0, { [_hQ]: _ct }],
+        [0, { [_hQ]: _p }],
+        [0, { [_hQ]: _br }],
     ],
 ];
 var ListDirectoryBucketsOutput = [
     3,
     n0,
     _LDBO,
-    {
-        [_xN]: _LAMDBR,
-    },
+    { [_xN]: _LAMDBR },
     [_Bu, _CTon],
     [[() => Buckets, 0], 0],
 ];
@@ -9619,27 +7225,15 @@ var ListDirectoryBucketsRequest = [
     0,
     [_CTon, _MDB],
     [
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _mdb,
-            },
-        ],
+        [0, { [_hQ]: _ct }],
+        [1, { [_hQ]: _mdb }],
     ],
 ];
 var ListMultipartUploadsOutput = [
     3,
     n0,
     _LMUO,
-    {
-        [_xN]: _LMUR,
-    },
+    { [_xN]: _LMUR },
     [_B, _KM, _UIM, _NKM, _P, _Deli, _NUIM, _MUa, _IT, _U, _CPom, _ETn, _RC],
     [
         0,
@@ -9651,26 +7245,10 @@ var ListMultipartUploadsOutput = [
         0,
         1,
         2,
-        [
-            () => MultipartUploadList,
-            {
-                [_xN]: _Up,
-                [_xF]: 1,
-            },
-        ],
-        [
-            () => CommonPrefixList,
-            {
-                [_xF]: 1,
-            },
-        ],
+        [() => MultipartUploadList, { [_xN]: _Up, [_xF]: 1 }],
+        [() => CommonPrefixList, { [_xF]: 1 }],
         0,
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var ListMultipartUploadsRequest = [
@@ -9681,91 +7259,34 @@ var ListMultipartUploadsRequest = [
     [_B, _Deli, _ETn, _KM, _MUa, _P, _UIM, _EBO, _RP],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _d,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _et,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _km,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _mu,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _p,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _uim,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
+        [0, { [_hQ]: _d }],
+        [0, { [_hQ]: _et }],
+        [0, { [_hQ]: _km }],
+        [1, { [_hQ]: _mu }],
+        [0, { [_hQ]: _p }],
+        [0, { [_hQ]: _uim }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xarp }],
     ],
 ];
 var ListObjectsOutput = [
     3,
     n0,
     _LOO,
-    {
-        [_xN]: _LBRi,
-    },
+    { [_xN]: _LBRi },
     [_IT, _Ma, _NM, _Con, _N, _P, _Deli, _MK, _CPom, _ETn, _RC],
     [
         2,
         0,
         0,
-        [
-            () => ObjectList,
-            {
-                [_xF]: 1,
-            },
-        ],
+        [() => ObjectList, { [_xF]: 1 }],
         0,
         0,
         0,
         1,
-        [
-            () => CommonPrefixList,
-            {
-                [_xF]: 1,
-            },
-        ],
+        [() => CommonPrefixList, { [_xF]: 1 }],
         0,
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var ListObjectsRequest = [
@@ -9776,93 +7297,36 @@ var ListObjectsRequest = [
     [_B, _Deli, _ETn, _Ma, _MK, _P, _RP, _EBO, _OOA],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _d,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _et,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _m,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _mk,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _p,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_hH]: _xaooa,
-            },
-        ],
+        [0, { [_hQ]: _d }],
+        [0, { [_hQ]: _et }],
+        [0, { [_hQ]: _m }],
+        [1, { [_hQ]: _mk }],
+        [0, { [_hQ]: _p }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [64 | 0, { [_hH]: _xaooa }],
     ],
 ];
 var ListObjectsV2Output = [
     3,
     n0,
     _LOVO,
-    {
-        [_xN]: _LBRi,
-    },
+    { [_xN]: _LBRi },
     [_IT, _Con, _N, _P, _Deli, _MK, _CPom, _ETn, _KC, _CTon, _NCT, _SA, _RC],
     [
         2,
-        [
-            () => ObjectList,
-            {
-                [_xF]: 1,
-            },
-        ],
+        [() => ObjectList, { [_xF]: 1 }],
         0,
         0,
         0,
         1,
-        [
-            () => CommonPrefixList,
-            {
-                [_xF]: 1,
-            },
-        ],
+        [() => CommonPrefixList, { [_xF]: 1 }],
         0,
         1,
         0,
         0,
         0,
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var ListObjectsV2Request = [
@@ -9873,75 +7337,23 @@ var ListObjectsV2Request = [
     [_B, _Deli, _ETn, _MK, _P, _CTon, _FO, _SA, _RP, _EBO, _OOA],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _d,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _et,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _mk,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _p,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _ct,
-            },
-        ],
-        [
-            2,
-            {
-                [_hQ]: _fo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _sa,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_hH]: _xaooa,
-            },
-        ],
+        [0, { [_hQ]: _d }],
+        [0, { [_hQ]: _et }],
+        [1, { [_hQ]: _mk }],
+        [0, { [_hQ]: _p }],
+        [0, { [_hQ]: _ct }],
+        [2, { [_hQ]: _fo }],
+        [0, { [_hQ]: _sa }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [64 | 0, { [_hH]: _xaooa }],
     ],
 ];
 var ListObjectVersionsOutput = [
     3,
     n0,
     _LOVOi,
-    {
-        [_xN]: _LVR,
-    },
+    { [_xN]: _LVR },
     [_IT, _KM, _VIM, _NKM, _NVIM, _Ve, _DMe, _N, _P, _Deli, _MK, _CPom, _ETn, _RC],
     [
         2,
@@ -9949,37 +7361,15 @@ var ListObjectVersionsOutput = [
         0,
         0,
         0,
-        [
-            () => ObjectVersionList,
-            {
-                [_xN]: _Ver,
-                [_xF]: 1,
-            },
-        ],
-        [
-            () => DeleteMarkers,
-            {
-                [_xN]: _DM,
-                [_xF]: 1,
-            },
-        ],
+        [() => ObjectVersionList, { [_xN]: _Ver, [_xF]: 1 }],
+        [() => DeleteMarkers, { [_xN]: _DM, [_xF]: 1 }],
         0,
         0,
         0,
         1,
-        [
-            () => CommonPrefixList,
-            {
-                [_xF]: 1,
-            },
-        ],
+        [() => CommonPrefixList, { [_xF]: 1 }],
         0,
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var ListObjectVersionsRequest = [
@@ -9990,83 +7380,26 @@ var ListObjectVersionsRequest = [
     [_B, _Deli, _ETn, _KM, _MK, _P, _VIM, _EBO, _RP, _OOA],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _d,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _et,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _km,
-            },
-        ],
-        [
-            1,
-            {
-                [_hQ]: _mk,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _p,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vim,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_hH]: _xaooa,
-            },
-        ],
+        [0, { [_hQ]: _d }],
+        [0, { [_hQ]: _et }],
+        [0, { [_hQ]: _km }],
+        [1, { [_hQ]: _mk }],
+        [0, { [_hQ]: _p }],
+        [0, { [_hQ]: _vim }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xarp }],
+        [64 | 0, { [_hH]: _xaooa }],
     ],
 ];
 var ListPartsOutput = [
     3,
     n0,
     _LPO,
-    {
-        [_xN]: _LPR,
-    },
+    { [_xN]: _LPR },
     [_AD, _ARI, _B, _K, _UI, _PNM, _NPNM, _MP, _IT, _Pa, _In, _O, _SC, _RC, _CA, _CT],
     [
-        [
-            4,
-            {
-                [_hH]: _xaad,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaari,
-            },
-        ],
+        [4, { [_hH]: _xaad }],
+        [0, { [_hH]: _xaari }],
         0,
         0,
         0,
@@ -10074,22 +7407,11 @@ var ListPartsOutput = [
         0,
         1,
         2,
-        [
-            () => Parts,
-            {
-                [_xN]: _Par,
-                [_xF]: 1,
-            },
-        ],
+        [() => Parts, { [_xN]: _Par, [_xF]: 1 }],
         () => Initiator,
         () => Owner,
         0,
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
         0,
         0,
     ],
@@ -10103,54 +7425,14 @@ var ListPartsRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            1,
-            {
-                [_hQ]: _mp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _pnm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _uI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
+        [1, { [_hQ]: _mp }],
+        [0, { [_hQ]: _pnm }],
+        [0, { [_hQ]: _uI }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
     ],
 ];
 var LocationInfo = [3, n0, _LI, 0, [_Ty, _N], [0, 0]];
@@ -10196,17 +7478,7 @@ var MetricsAndOperator = [
     _MAO,
     0,
     [_P, _T, _APAc],
-    [
-        0,
-        [
-            () => TagSet,
-            {
-                [_xN]: _Ta,
-                [_xF]: 1,
-            },
-        ],
-        0,
-    ],
+    [0, [() => TagSet, { [_xN]: _Ta, [_xF]: 1 }], 0],
 ];
 var MetricsConfiguration = [3, n0, _MCe, 0, [_I, _F], [0, [() => MetricsFilter, 0]]];
 var MultipartUpload = [
@@ -10219,52 +7491,13 @@ var MultipartUpload = [
 ];
 var NoncurrentVersionExpiration = [3, n0, _NVE, 0, [_ND, _NNV], [1, 1]];
 var NoncurrentVersionTransition = [3, n0, _NVTo, 0, [_ND, _SC, _NNV], [1, 0, 1]];
-var NoSuchBucket = [
-    -3,
-    n0,
-    _NSB,
-    {
-        [_e]: _c,
-        [_hE]: 404,
-    },
-    [],
-    [],
-];
+var NoSuchBucket = [-3, n0, _NSB, { [_e]: _c, [_hE]: 404 }, [], []];
 schema.TypeRegistry.for(n0).registerError(NoSuchBucket, NoSuchBucket$1);
-var NoSuchKey = [
-    -3,
-    n0,
-    _NSK,
-    {
-        [_e]: _c,
-        [_hE]: 404,
-    },
-    [],
-    [],
-];
+var NoSuchKey = [-3, n0, _NSK, { [_e]: _c, [_hE]: 404 }, [], []];
 schema.TypeRegistry.for(n0).registerError(NoSuchKey, NoSuchKey$1);
-var NoSuchUpload = [
-    -3,
-    n0,
-    _NSU,
-    {
-        [_e]: _c,
-        [_hE]: 404,
-    },
-    [],
-    [],
-];
+var NoSuchUpload = [-3, n0, _NSU, { [_e]: _c, [_hE]: 404 }, [], []];
 schema.TypeRegistry.for(n0).registerError(NoSuchUpload, NoSuchUpload$1);
-var NotFound = [
-    -3,
-    n0,
-    _NF,
-    {
-        [_e]: _c,
-    },
-    [],
-    [],
-];
+var NotFound = [-3, n0, _NF, { [_e]: _c }, [], []];
 schema.TypeRegistry.for(n0).registerError(NotFound, NotFound$1);
 var NotificationConfiguration = [
     3,
@@ -10273,27 +7506,9 @@ var NotificationConfiguration = [
     0,
     [_TCo, _QCu, _LFCa, _EBC],
     [
-        [
-            () => TopicConfigurationList,
-            {
-                [_xN]: _TCop,
-                [_xF]: 1,
-            },
-        ],
-        [
-            () => QueueConfigurationList,
-            {
-                [_xN]: _QCue,
-                [_xF]: 1,
-            },
-        ],
-        [
-            () => LambdaFunctionConfigurationList,
-            {
-                [_xN]: _CFC,
-                [_xF]: 1,
-            },
-        ],
+        [() => TopicConfigurationList, { [_xN]: _TCop, [_xF]: 1 }],
+        [() => QueueConfigurationList, { [_xN]: _QCue, [_xF]: 1 }],
+        [() => LambdaFunctionConfigurationList, { [_xN]: _CFC, [_xF]: 1 }],
         () => EventBridgeConfiguration,
     ],
 ];
@@ -10303,14 +7518,7 @@ var NotificationConfigurationFilter = [
     _NCF,
     0,
     [_K],
-    [
-        [
-            () => S3KeyFilter,
-            {
-                [_xN]: _SKe,
-            },
-        ],
-    ],
+    [[() => S3KeyFilter, { [_xN]: _SKe }]],
 ];
 var _Object = [
     3,
@@ -10318,51 +7526,16 @@ var _Object = [
     _Obj,
     0,
     [_K, _LM, _ETa, _CA, _CT, _Si, _SC, _O, _RSe],
-    [
-        0,
-        4,
-        0,
-        [
-            64 | 0,
-            {
-                [_xF]: 1,
-            },
-        ],
-        0,
-        1,
-        0,
-        () => Owner,
-        () => RestoreStatus,
-    ],
+    [0, 4, 0, [64 | 0, { [_xF]: 1 }], 0, 1, 0, () => Owner, () => RestoreStatus],
 ];
-var ObjectAlreadyInActiveTierError = [
-    -3,
-    n0,
-    _OAIATE,
-    {
-        [_e]: _c,
-        [_hE]: 403,
-    },
-    [],
-    [],
-];
+var ObjectAlreadyInActiveTierError = [-3, n0, _OAIATE, { [_e]: _c, [_hE]: 403 }, [], []];
 schema.TypeRegistry.for(n0).registerError(ObjectAlreadyInActiveTierError, ObjectAlreadyInActiveTierError$1);
 var ObjectIdentifier = [3, n0, _OI, 0, [_K, _VI, _ETa, _LMT, _Si], [0, 0, 0, 6, 1]];
 var ObjectLockConfiguration = [3, n0, _OLC, 0, [_OLE, _Ru], [0, () => ObjectLockRule]];
 var ObjectLockLegalHold = [3, n0, _OLLH, 0, [_S], [0]];
 var ObjectLockRetention = [3, n0, _OLR, 0, [_Mo, _RUD], [0, 5]];
 var ObjectLockRule = [3, n0, _OLRb, 0, [_DRe], [() => DefaultRetention]];
-var ObjectNotInActiveTierError = [
-    -3,
-    n0,
-    _ONIATE,
-    {
-        [_e]: _c,
-        [_hE]: 403,
-    },
-    [],
-    [],
-];
+var ObjectNotInActiveTierError = [-3, n0, _ONIATE, { [_e]: _c, [_hE]: 403 }, [], []];
 schema.TypeRegistry.for(n0).registerError(ObjectNotInActiveTierError, ObjectNotInActiveTierError$1);
 var ObjectPart = [
     3,
@@ -10378,24 +7551,7 @@ var ObjectVersion = [
     _OV,
     0,
     [_ETa, _CA, _CT, _Si, _SC, _K, _VI, _IL, _LM, _O, _RSe],
-    [
-        0,
-        [
-            64 | 0,
-            {
-                [_xF]: 1,
-            },
-        ],
-        0,
-        1,
-        0,
-        0,
-        0,
-        2,
-        4,
-        () => Owner,
-        () => RestoreStatus,
-    ],
+    [0, [64 | 0, { [_xF]: 1 }], 0, 1, 0, 0, 0, 2, 4, () => Owner, () => RestoreStatus],
 ];
 var OutputLocation = [3, n0, _OL, 0, [_S_], [[() => S3Location, 0]]];
 var OutputSerialization = [
@@ -10413,15 +7569,7 @@ var OwnershipControls = [
     _OC,
     0,
     [_R],
-    [
-        [
-            () => OwnershipControlsRules,
-            {
-                [_xN]: _Ru,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => OwnershipControlsRules, { [_xN]: _Ru, [_xF]: 1 }]],
 ];
 var OwnershipControlsRule = [3, n0, _OCR, 0, [_OO], [0]];
 var ParquetInput = [3, n0, _PI, 0, [], []];
@@ -10433,47 +7581,10 @@ var Part = [
     [_PN, _LM, _ETa, _Si, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh],
     [1, 4, 0, 1, 0, 0, 0, 0, 0],
 ];
-var PartitionedPrefix = [
-    3,
-    n0,
-    _PP,
-    {
-        [_xN]: _PP,
-    },
-    [_PDS],
-    [0],
-];
-var PolicyStatus = [
-    3,
-    n0,
-    _PS,
-    0,
-    [_IP],
-    [
-        [
-            2,
-            {
-                [_xN]: _IP,
-            },
-        ],
-    ],
-];
+var PartitionedPrefix = [3, n0, _PP, { [_xN]: _PP }, [_PDS], [0]];
+var PolicyStatus = [3, n0, _PS, 0, [_IP], [[2, { [_xN]: _IP }]]];
 var Progress = [3, n0, _Pr, 0, [_BS, _BP, _BRy], [1, 1, 1]];
-var ProgressEvent = [
-    3,
-    n0,
-    _PE,
-    0,
-    [_Det],
-    [
-        [
-            () => Progress,
-            {
-                [_eP]: 1,
-            },
-        ],
-    ],
-];
+var ProgressEvent = [3, n0, _PE, 0, [_Det], [[() => Progress, { [_eP]: 1 }]]];
 var PublicAccessBlockConfiguration = [
     3,
     n0,
@@ -10481,30 +7592,10 @@ var PublicAccessBlockConfiguration = [
     0,
     [_BPA, _IPA, _BPP, _RPB],
     [
-        [
-            2,
-            {
-                [_xN]: _BPA,
-            },
-        ],
-        [
-            2,
-            {
-                [_xN]: _IPA,
-            },
-        ],
-        [
-            2,
-            {
-                [_xN]: _BPP,
-            },
-        ],
-        [
-            2,
-            {
-                [_xN]: _RPB,
-            },
-        ],
+        [2, { [_xN]: _BPA }],
+        [2, { [_xN]: _IPA }],
+        [2, { [_xN]: _BPP }],
+        [2, { [_xN]: _RPB }],
     ],
 ];
 var PutBucketAbacRequest = [
@@ -10515,31 +7606,10 @@ var PutBucketAbacRequest = [
     [_B, _CMD, _CA, _EBO, _AS],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            () => AbacStatus,
-            {
-                [_xN]: _AS,
-                [_hP]: 1,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
+        [() => AbacStatus, { [_xN]: _AS, [_hP]: 1 }],
     ],
 ];
 var PutBucketAccelerateConfigurationRequest = [
@@ -10550,25 +7620,9 @@ var PutBucketAccelerateConfigurationRequest = [
     [_B, _AC, _EBO, _CA],
     [
         [0, 1],
-        [
-            () => AccelerateConfiguration,
-            {
-                [_xN]: _AC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
+        [() => AccelerateConfiguration, { [_xN]: _AC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xasca }],
     ],
 ];
 var PutBucketAclRequest = [
@@ -10578,68 +7632,17 @@ var PutBucketAclRequest = [
     0,
     [_ACL_, _ACP, _B, _CMD, _CA, _GFC, _GR, _GRACP, _GW, _GWACP, _EBO],
     [
-        [
-            0,
-            {
-                [_hH]: _xaa,
-            },
-        ],
-        [
-            () => AccessControlPolicy,
-            {
-                [_xN]: _ACP,
-                [_hP]: 1,
-            },
-        ],
+        [0, { [_hH]: _xaa }],
+        [() => AccessControlPolicy, { [_xN]: _ACP, [_hP]: 1 }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagfc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagw,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagwa,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xagfc }],
+        [0, { [_hH]: _xagr }],
+        [0, { [_hH]: _xagra }],
+        [0, { [_hH]: _xagw }],
+        [0, { [_hH]: _xagwa }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketAnalyticsConfigurationRequest = [
@@ -10650,25 +7653,9 @@ var PutBucketAnalyticsConfigurationRequest = [
     [_B, _I, _ACn, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            () => AnalyticsConfiguration,
-            {
-                [_xN]: _ACn,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [() => AnalyticsConfiguration, { [_xN]: _ACn, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketCorsRequest = [
@@ -10679,31 +7666,10 @@ var PutBucketCorsRequest = [
     [_B, _CORSC, _CMD, _CA, _EBO],
     [
         [0, 1],
-        [
-            () => CORSConfiguration,
-            {
-                [_xN]: _CORSC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [() => CORSConfiguration, { [_xN]: _CORSC, [_hP]: 1 }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketEncryptionRequest = [
@@ -10714,31 +7680,10 @@ var PutBucketEncryptionRequest = [
     [_B, _CMD, _CA, _SSEC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => ServerSideEncryptionConfiguration,
-            {
-                [_xN]: _SSEC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => ServerSideEncryptionConfiguration, { [_xN]: _SSEC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketIntelligentTieringConfigurationRequest = [
@@ -10749,25 +7694,9 @@ var PutBucketIntelligentTieringConfigurationRequest = [
     [_B, _I, _EBO, _ITC],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            () => IntelligentTieringConfiguration,
-            {
-                [_xN]: _ITC,
-                [_hP]: 1,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [0, { [_hH]: _xaebo }],
+        [() => IntelligentTieringConfiguration, { [_xN]: _ITC, [_hP]: 1 }],
     ],
 ];
 var PutBucketInventoryConfigurationRequest = [
@@ -10778,25 +7707,9 @@ var PutBucketInventoryConfigurationRequest = [
     [_B, _I, _IC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            () => InventoryConfiguration,
-            {
-                [_xN]: _IC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [() => InventoryConfiguration, { [_xN]: _IC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketLifecycleConfigurationOutput = [
@@ -10805,14 +7718,7 @@ var PutBucketLifecycleConfigurationOutput = [
     _PBLCO,
     0,
     [_TDMOS],
-    [
-        [
-            0,
-            {
-                [_hH]: _xatdmos,
-            },
-        ],
-    ],
+    [[0, { [_hH]: _xatdmos }]],
 ];
 var PutBucketLifecycleConfigurationRequest = [
     3,
@@ -10822,31 +7728,10 @@ var PutBucketLifecycleConfigurationRequest = [
     [_B, _CA, _LCi, _EBO, _TDMOS],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => BucketLifecycleConfiguration,
-            {
-                [_xN]: _LCi,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xatdmos,
-            },
-        ],
+        [0, { [_hH]: _xasca }],
+        [() => BucketLifecycleConfiguration, { [_xN]: _LCi, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xatdmos }],
     ],
 ];
 var PutBucketLoggingRequest = [
@@ -10857,31 +7742,10 @@ var PutBucketLoggingRequest = [
     [_B, _BLS, _CMD, _CA, _EBO],
     [
         [0, 1],
-        [
-            () => BucketLoggingStatus,
-            {
-                [_xN]: _BLS,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [() => BucketLoggingStatus, { [_xN]: _BLS, [_hP]: 1 }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketMetricsConfigurationRequest = [
@@ -10892,25 +7756,9 @@ var PutBucketMetricsConfigurationRequest = [
     [_B, _I, _MCe, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _i,
-            },
-        ],
-        [
-            () => MetricsConfiguration,
-            {
-                [_xN]: _MCe,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _i }],
+        [() => MetricsConfiguration, { [_xN]: _MCe, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketNotificationConfigurationRequest = [
@@ -10921,25 +7769,9 @@ var PutBucketNotificationConfigurationRequest = [
     [_B, _NC, _EBO, _SDV],
     [
         [0, 1],
-        [
-            () => NotificationConfiguration,
-            {
-                [_xN]: _NC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xasdv,
-            },
-        ],
+        [() => NotificationConfiguration, { [_xN]: _NC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
+        [2, { [_hH]: _xasdv }],
     ],
 ];
 var PutBucketOwnershipControlsRequest = [
@@ -10950,31 +7782,10 @@ var PutBucketOwnershipControlsRequest = [
     [_B, _CMD, _EBO, _OC, _CA],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            () => OwnershipControls,
-            {
-                [_xN]: _OC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xaebo }],
+        [() => OwnershipControls, { [_xN]: _OC, [_hP]: 1 }],
+        [0, { [_hH]: _xasca }],
     ],
 ];
 var PutBucketPolicyRequest = [
@@ -10985,31 +7796,11 @@ var PutBucketPolicyRequest = [
     [_B, _CMD, _CA, _CRSBA, _Po, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xacrsba,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [2, { [_hH]: _xacrsba }],
         [0, 16],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketReplicationRequest = [
@@ -11020,37 +7811,11 @@ var PutBucketReplicationRequest = [
     [_B, _CMD, _CA, _RCe, _To, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => ReplicationConfiguration,
-            {
-                [_xN]: _RCe,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xabolt,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => ReplicationConfiguration, { [_xN]: _RCe, [_hP]: 1 }],
+        [0, { [_hH]: _xabolt }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketRequestPaymentRequest = [
@@ -11061,31 +7826,10 @@ var PutBucketRequestPaymentRequest = [
     [_B, _CMD, _CA, _RPC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => RequestPaymentConfiguration,
-            {
-                [_xN]: _RPC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => RequestPaymentConfiguration, { [_xN]: _RPC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketTaggingRequest = [
@@ -11096,31 +7840,10 @@ var PutBucketTaggingRequest = [
     [_B, _CMD, _CA, _Tag, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => Tagging,
-            {
-                [_xN]: _Tag,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => Tagging, { [_xN]: _Tag, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketVersioningRequest = [
@@ -11131,37 +7854,11 @@ var PutBucketVersioningRequest = [
     [_B, _CMD, _CA, _MFA, _VC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xam_,
-            },
-        ],
-        [
-            () => VersioningConfiguration,
-            {
-                [_xN]: _VC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xam_ }],
+        [() => VersioningConfiguration, { [_xN]: _VC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutBucketWebsiteRequest = [
@@ -11172,48 +7869,13 @@ var PutBucketWebsiteRequest = [
     [_B, _CMD, _CA, _WC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => WebsiteConfiguration,
-            {
-                [_xN]: _WC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => WebsiteConfiguration, { [_xN]: _WC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var PutObjectAclOutput = [
-    3,
-    n0,
-    _POAO,
-    0,
-    [_RC],
-    [
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
-];
+var PutObjectAclOutput = [3, n0, _POAO, 0, [_RC], [[0, { [_hH]: _xarc }]]];
 var PutObjectAclRequest = [
     3,
     n0,
@@ -11221,98 +7883,23 @@ var PutObjectAclRequest = [
     0,
     [_ACL_, _ACP, _B, _CMD, _CA, _GFC, _GR, _GRACP, _GW, _GWACP, _K, _RP, _VI, _EBO],
     [
-        [
-            0,
-            {
-                [_hH]: _xaa,
-            },
-        ],
-        [
-            () => AccessControlPolicy,
-            {
-                [_xN]: _ACP,
-                [_hP]: 1,
-            },
-        ],
+        [0, { [_hH]: _xaa }],
+        [() => AccessControlPolicy, { [_xN]: _ACP, [_hP]: 1 }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagfc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagw,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagwa,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xagfc }],
+        [0, { [_hH]: _xagr }],
+        [0, { [_hH]: _xagra }],
+        [0, { [_hH]: _xagw }],
+        [0, { [_hH]: _xagwa }],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var PutObjectLegalHoldOutput = [
-    3,
-    n0,
-    _POLHO,
-    0,
-    [_RC],
-    [
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
-];
+var PutObjectLegalHoldOutput = [3, n0, _POLHO, 0, [_RC], [[0, { [_hH]: _xarc }]]];
 var PutObjectLegalHoldRequest = [
     3,
     n0,
@@ -11322,60 +7909,15 @@ var PutObjectLegalHoldRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            () => ObjectLockLegalHold,
-            {
-                [_xN]: _LH,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [() => ObjectLockLegalHold, { [_xN]: _LH, [_hP]: 1 }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var PutObjectLockConfigurationOutput = [
-    3,
-    n0,
-    _POLCO,
-    0,
-    [_RC],
-    [
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
-];
+var PutObjectLockConfigurationOutput = [3, n0, _POLCO, 0, [_RC], [[0, { [_hH]: _xarc }]]];
 var PutObjectLockConfigurationRequest = [
     3,
     n0,
@@ -11384,43 +7926,12 @@ var PutObjectLockConfigurationRequest = [
     [_B, _OLC, _RP, _To, _CMD, _CA, _EBO],
     [
         [0, 1],
-        [
-            () => ObjectLockConfiguration,
-            {
-                [_xN]: _OLC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xabolt,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [() => ObjectLockConfiguration, { [_xN]: _OLC, [_hP]: 1 }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xabolt }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var PutObjectOutput = [
@@ -11448,108 +7959,23 @@ var PutObjectOutput = [
         _RC,
     ],
     [
-        [
-            0,
-            {
-                [_hH]: _xae,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ETa,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xaos,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xae }],
+        [0, { [_hH]: _ETa }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
+        [0, { [_hH]: _xact }],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xavi }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [1, { [_hH]: _xaos }],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var PutObjectRequest = [
@@ -11601,254 +8027,50 @@ var PutObjectRequest = [
         _EBO,
     ],
     [
-        [
-            0,
-            {
-                [_hH]: _xaa,
-            },
-        ],
+        [0, { [_hH]: _xaa }],
         [() => StreamingBlob, 16],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CC_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CD_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CE_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CL_,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _CL__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CT_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _Ex,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _INM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagfc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagra,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xagwa,
-            },
-        ],
+        [0, { [_hH]: _CC_ }],
+        [0, { [_hH]: _CD_ }],
+        [0, { [_hH]: _CE_ }],
+        [0, { [_hH]: _CL_ }],
+        [1, { [_hH]: _CL__ }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _CT_ }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
+        [4, { [_hH]: _Ex }],
+        [0, { [_hH]: _IM_ }],
+        [0, { [_hH]: _INM_ }],
+        [0, { [_hH]: _xagfc }],
+        [0, { [_hH]: _xagr }],
+        [0, { [_hH]: _xagra }],
+        [0, { [_hH]: _xagwa }],
         [0, 1],
-        [
-            1,
-            {
-                [_hH]: _xawob,
-            },
-        ],
-        [
-            128 | 0,
-            {
-                [_hPH]: _xam,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xawrl,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            () => SSEKMSEncryptionContext,
-            {
-                [_hH]: _xassec,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xat,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaolm,
-            },
-        ],
-        [
-            5,
-            {
-                [_hH]: _xaolrud,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaollh,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [1, { [_hH]: _xawob }],
+        [128 | 0, { [_hPH]: _xam }],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xasc }],
+        [0, { [_hH]: _xawrl }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [() => SSEKMSEncryptionContext, { [_hH]: _xassec }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xat }],
+        [0, { [_hH]: _xaolm }],
+        [5, { [_hH]: _xaolrud }],
+        [0, { [_hH]: _xaollh }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var PutObjectRetentionOutput = [
-    3,
-    n0,
-    _PORO,
-    0,
-    [_RC],
-    [
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-    ],
-];
+var PutObjectRetentionOutput = [3, n0, _PORO, 0, [_RC], [[0, { [_hH]: _xarc }]]];
 var PutObjectRetentionRequest = [
     3,
     n0,
@@ -11858,66 +8080,16 @@ var PutObjectRetentionRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            () => ObjectLockRetention,
-            {
-                [_xN]: _Ret,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xabgr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [() => ObjectLockRetention, { [_xN]: _Ret, [_hP]: 1 }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hQ]: _vI }],
+        [2, { [_hH]: _xabgr }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var PutObjectTaggingOutput = [
-    3,
-    n0,
-    _POTO,
-    0,
-    [_VI],
-    [
-        [
-            0,
-            {
-                [_hH]: _xavi,
-            },
-        ],
-    ],
-];
+var PutObjectTaggingOutput = [3, n0, _POTO, 0, [_VI], [[0, { [_hH]: _xavi }]]];
 var PutObjectTaggingRequest = [
     3,
     n0,
@@ -11927,43 +8099,12 @@ var PutObjectTaggingRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => Tagging,
-            {
-                [_xN]: _Tag,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => Tagging, { [_xN]: _Tag, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xarp }],
     ],
 ];
 var PutPublicAccessBlockRequest = [
@@ -11974,31 +8115,10 @@ var PutPublicAccessBlockRequest = [
     [_B, _CMD, _CA, _PABC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => PublicAccessBlockConfiguration,
-            {
-                [_xN]: _PABC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => PublicAccessBlockConfiguration, { [_xN]: _PABC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var QueueConfiguration = [
@@ -12007,40 +8127,10 @@ var QueueConfiguration = [
     _QCue,
     0,
     [_I, _QA, _Ev, _F],
-    [
-        0,
-        [
-            0,
-            {
-                [_xN]: _Qu,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_xN]: _Eve,
-                [_xF]: 1,
-            },
-        ],
-        [() => NotificationConfigurationFilter, 0],
-    ],
+    [0, [0, { [_xN]: _Qu }], [64 | 0, { [_xN]: _Eve, [_xF]: 1 }], [() => NotificationConfigurationFilter, 0]],
 ];
 var RecordExpiration = [3, n0, _REe, 0, [_E, _D], [0, 1]];
-var RecordsEvent = [
-    3,
-    n0,
-    _REec,
-    0,
-    [_Payl],
-    [
-        [
-            21,
-            {
-                [_eP]: 1,
-            },
-        ],
-    ],
-];
+var RecordsEvent = [3, n0, _REec, 0, [_Payl], [[21, { [_eP]: 1 }]]];
 var Redirect = [3, n0, _Red, 0, [_HN, _HRC, _Pro, _RKPW, _RKW], [0, 0, 0, 0, 0]];
 var RedirectAllRequestsTo = [3, n0, _RART, 0, [_HN, _Pro], [0, 0]];
 var RenameObjectOutput = [3, n0, _ROO, 0, [], []];
@@ -12053,67 +8143,16 @@ var RenameObjectRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xars_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _IM_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _INM_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _IMS_,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _IUS_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarsim,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarsinm,
-            },
-        ],
-        [
-            6,
-            {
-                [_hH]: _xarsims,
-            },
-        ],
-        [
-            6,
-            {
-                [_hH]: _xarsius,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xact_,
-                [_iT]: 1,
-            },
-        ],
+        [0, { [_hH]: _xars_ }],
+        [0, { [_hH]: _IM_ }],
+        [0, { [_hH]: _INM_ }],
+        [4, { [_hH]: _IMS_ }],
+        [4, { [_hH]: _IUS_ }],
+        [0, { [_hH]: _xarsim }],
+        [0, { [_hH]: _xarsinm }],
+        [6, { [_hH]: _xarsims }],
+        [6, { [_hH]: _xarsius }],
+        [0, { [_hH]: _xact_, [_iT]: 1 }],
     ],
 ];
 var ReplicaModifications = [3, n0, _RM, 0, [_S], [0]];
@@ -12123,16 +8162,7 @@ var ReplicationConfiguration = [
     _RCe,
     0,
     [_Ro, _R],
-    [
-        0,
-        [
-            () => ReplicationRules,
-            {
-                [_xN]: _Ru,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [0, [() => ReplicationRules, { [_xN]: _Ru, [_xF]: 1 }]],
 ];
 var ReplicationRule = [
     3,
@@ -12158,16 +8188,7 @@ var ReplicationRuleAndOperator = [
     _RRAO,
     0,
     [_P, _T],
-    [
-        0,
-        [
-            () => TagSet,
-            {
-                [_xN]: _Ta,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [0, [() => TagSet, { [_xN]: _Ta, [_xF]: 1 }]],
 ];
 var ReplicationRuleFilter = [
     3,
@@ -12188,18 +8209,8 @@ var RestoreObjectOutput = [
     0,
     [_RC, _ROP],
     [
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarop,
-            },
-        ],
+        [0, { [_hH]: _xarc }],
+        [0, { [_hH]: _xarop }],
     ],
 ];
 var RestoreObjectRequest = [
@@ -12211,37 +8222,11 @@ var RestoreObjectRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hQ]: _vI,
-            },
-        ],
-        [
-            () => RestoreRequest,
-            {
-                [_hP]: 1,
-                [_xN]: _RRes,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hQ]: _vI }],
+        [() => RestoreRequest, { [_hP]: 1, [_xN]: _RRes }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var RestoreRequest = [
@@ -12260,15 +8245,7 @@ var S3KeyFilter = [
     _SKF,
     0,
     [_FRi],
-    [
-        [
-            () => FilterRuleList,
-            {
-                [_xN]: _FR,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => FilterRuleList, { [_xN]: _FR, [_xF]: 1 }]],
 ];
 var S3Location = [
     3,
@@ -12298,36 +8275,16 @@ var SelectObjectContentRequest = [
     [
         [0, 1],
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
         0,
         0,
         () => RequestProgress,
         () => InputSerialization,
         () => OutputSerialization,
         () => ScanRange,
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var SelectParameters = [
@@ -12352,15 +8309,7 @@ var ServerSideEncryptionConfiguration = [
     _SSEC,
     0,
     [_R],
-    [
-        [
-            () => ServerSideEncryptionRules,
-            {
-                [_xN]: _Ru,
-                [_xF]: 1,
-            },
-        ],
-    ],
+    [[() => ServerSideEncryptionRules, { [_xN]: _Ru, [_xF]: 1 }]],
 ];
 var ServerSideEncryptionRule = [
     3,
@@ -12377,42 +8326,13 @@ var SessionCredentials = [
     0,
     [_AKI, _SAK, _ST, _E],
     [
-        [
-            0,
-            {
-                [_xN]: _AKI,
-            },
-        ],
-        [
-            () => SessionCredentialValue,
-            {
-                [_xN]: _SAK,
-            },
-        ],
-        [
-            () => SessionCredentialValue,
-            {
-                [_xN]: _ST,
-            },
-        ],
-        [
-            4,
-            {
-                [_xN]: _E,
-            },
-        ],
+        [0, { [_xN]: _AKI }],
+        [() => SessionCredentialValue, { [_xN]: _SAK }],
+        [() => SessionCredentialValue, { [_xN]: _ST }],
+        [4, { [_xN]: _E }],
     ],
 ];
-var SimplePrefix = [
-    3,
-    n0,
-    _SPi,
-    {
-        [_xN]: _SPi,
-    },
-    [],
-    [],
-];
+var SimplePrefix = [3, n0, _SPi, { [_xN]: _SPi }, [], []];
 var SourceSelectionCriteria = [
     3,
     n0,
@@ -12421,43 +8341,11 @@ var SourceSelectionCriteria = [
     [_SKEO, _RM],
     [() => SseKmsEncryptedObjects, () => ReplicaModifications],
 ];
-var SSEKMS = [
-    3,
-    n0,
-    _SSEKMS,
-    {
-        [_xN]: _SK,
-    },
-    [_KI],
-    [[() => SSEKMSKeyId, 0]],
-];
+var SSEKMS = [3, n0, _SSEKMS, { [_xN]: _SK }, [_KI], [[() => SSEKMSKeyId, 0]]];
 var SseKmsEncryptedObjects = [3, n0, _SKEO, 0, [_S], [0]];
-var SSES3 = [
-    3,
-    n0,
-    _SSES,
-    {
-        [_xN]: _SS,
-    },
-    [],
-    [],
-];
+var SSES3 = [3, n0, _SSES, { [_xN]: _SS }, [], []];
 var Stats = [3, n0, _Sta, 0, [_BS, _BP, _BRy], [1, 1, 1]];
-var StatsEvent = [
-    3,
-    n0,
-    _SE,
-    0,
-    [_Det],
-    [
-        [
-            () => Stats,
-            {
-                [_eP]: 1,
-            },
-        ],
-    ],
-];
+var StatsEvent = [3, n0, _SE, 0, [_Det], [[() => Stats, { [_eP]: 1 }]]];
 var StorageClassAnalysis = [
     3,
     n0,
@@ -12482,15 +8370,7 @@ var TargetGrant = [
     _TGa,
     0,
     [_Gra, _Pe],
-    [
-        [
-            () => Grantee,
-            {
-                [_xNm]: [_x, _hi],
-            },
-        ],
-        0,
-    ],
+    [[() => Grantee, { [_xNm]: [_x, _hi] }], 0],
 ];
 var TargetObjectKeyFormat = [
     3,
@@ -12499,32 +8379,12 @@ var TargetObjectKeyFormat = [
     0,
     [_SPi, _PP],
     [
-        [
-            () => SimplePrefix,
-            {
-                [_xN]: _SPi,
-            },
-        ],
-        [
-            () => PartitionedPrefix,
-            {
-                [_xN]: _PP,
-            },
-        ],
+        [() => SimplePrefix, { [_xN]: _SPi }],
+        [() => PartitionedPrefix, { [_xN]: _PP }],
     ],
 ];
 var Tiering = [3, n0, _Tier, 0, [_D, _AT], [1, 0]];
-var TooManyParts = [
-    -3,
-    n0,
-    _TMP,
-    {
-        [_e]: _c,
-        [_hE]: 400,
-    },
-    [],
-    [],
-];
+var TooManyParts = [-3, n0, _TMP, { [_e]: _c, [_hE]: 400 }, [], []];
 schema.TypeRegistry.for(n0).registerError(TooManyParts, TooManyParts$1);
 var TopicConfiguration = [
     3,
@@ -12532,23 +8392,7 @@ var TopicConfiguration = [
     _TCop,
     0,
     [_I, _TAo, _Ev, _F],
-    [
-        0,
-        [
-            0,
-            {
-                [_xN]: _Top,
-            },
-        ],
-        [
-            64 | 0,
-            {
-                [_xN]: _Eve,
-                [_xF]: 1,
-            },
-        ],
-        [() => NotificationConfigurationFilter, 0],
-    ],
+    [0, [0, { [_xN]: _Top }], [64 | 0, { [_xN]: _Eve, [_xF]: 1 }], [() => NotificationConfigurationFilter, 0]],
 ];
 var Transition = [3, n0, _Tra, 0, [_Da, _D, _SC], [5, 1, 0]];
 var UpdateBucketMetadataInventoryTableConfigurationRequest = [
@@ -12559,31 +8403,10 @@ var UpdateBucketMetadataInventoryTableConfigurationRequest = [
     [_B, _CMD, _CA, _ITCn, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => InventoryTableConfigurationUpdates,
-            {
-                [_xN]: _ITCn,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => InventoryTableConfigurationUpdates, { [_xN]: _ITCn, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var UpdateBucketMetadataJournalTableConfigurationRequest = [
@@ -12594,31 +8417,10 @@ var UpdateBucketMetadataJournalTableConfigurationRequest = [
     [_B, _CMD, _CA, _JTC, _EBO],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            () => JournalTableConfigurationUpdates,
-            {
-                [_xN]: _JTC,
-                [_hP]: 1,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [() => JournalTableConfigurationUpdates, { [_xN]: _JTC, [_hP]: 1 }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
 var UploadPartCopyOutput = [
@@ -12628,49 +8430,14 @@ var UploadPartCopyOutput = [
     0,
     [_CSVI, _CPR, _SSE, _SSECA, _SSECKMD, _SSEKMSKI, _BKE, _RC],
     [
-        [
-            0,
-            {
-                [_hH]: _xacsvi,
-            },
-        ],
+        [0, { [_hH]: _xacsvi }],
         [() => CopyPartResult, 16],
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var UploadPartCopyRequest = [
@@ -12701,109 +8468,24 @@ var UploadPartCopyRequest = [
     ],
     [
         [0, 1],
-        [
-            0,
-            {
-                [_hH]: _xacs__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacsim,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _xacsims,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacsinm,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _xacsius,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacsr,
-            },
-        ],
+        [0, { [_hH]: _xacs__ }],
+        [0, { [_hH]: _xacsim }],
+        [4, { [_hH]: _xacsims }],
+        [0, { [_hH]: _xacsinm }],
+        [4, { [_hH]: _xacsius }],
+        [0, { [_hH]: _xacsr }],
         [0, 1],
-        [
-            1,
-            {
-                [_hQ]: _pN,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _uI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacssseca,
-            },
-        ],
-        [
-            () => CopySourceSSECustomerKey,
-            {
-                [_hH]: _xacssseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacssseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasebo,
-            },
-        ],
+        [1, { [_hQ]: _pN }],
+        [0, { [_hQ]: _uI }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [0, { [_hH]: _xacssseca }],
+        [() => CopySourceSSECustomerKey, { [_hH]: _xacssseck }],
+        [0, { [_hH]: _xacssseckM }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
+        [0, { [_hH]: _xasebo }],
     ],
 ];
 var UploadPartOutput = [
@@ -12813,78 +8495,18 @@ var UploadPartOutput = [
     0,
     [_SSE, _ETa, _CCRC, _CCRCC, _CCRCNVME, _CSHA, _CSHAh, _SSECA, _SSECKMD, _SSEKMSKI, _BKE, _RC],
     [
-        [
-            0,
-            {
-                [_hH]: _xasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _ETa,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xasseakki,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xassebke,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarc,
-            },
-        ],
+        [0, { [_hH]: _xasse }],
+        [0, { [_hH]: _ETa }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
+        [0, { [_hH]: _xasseca }],
+        [0, { [_hH]: _xasseckM }],
+        [() => SSEKMSKeyId, { [_hH]: _xasseakki }],
+        [2, { [_hH]: _xassebke }],
+        [0, { [_hH]: _xarc }],
     ],
 ];
 var UploadPartRequest = [
@@ -12915,115 +8537,25 @@ var UploadPartRequest = [
     [
         [() => StreamingBlob, 16],
         [0, 1],
-        [
-            1,
-            {
-                [_hH]: _CL__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _CM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasca,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xacs_,
-            },
-        ],
+        [1, { [_hH]: _CL__ }],
+        [0, { [_hH]: _CM }],
+        [0, { [_hH]: _xasca }],
+        [0, { [_hH]: _xacc }],
+        [0, { [_hH]: _xacc_ }],
+        [0, { [_hH]: _xacc__ }],
+        [0, { [_hH]: _xacs }],
+        [0, { [_hH]: _xacs_ }],
         [0, 1],
-        [
-            1,
-            {
-                [_hQ]: _pN,
-            },
-        ],
-        [
-            0,
-            {
-                [_hQ]: _uI,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseca,
-            },
-        ],
-        [
-            () => SSECustomerKey,
-            {
-                [_hH]: _xasseck,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xasseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xarp,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xaebo,
-            },
-        ],
+        [1, { [_hQ]: _pN }],
+        [0, { [_hQ]: _uI }],
+        [0, { [_hH]: _xasseca }],
+        [() => SSECustomerKey, { [_hH]: _xasseck }],
+        [0, { [_hH]: _xasseckM }],
+        [0, { [_hH]: _xarp }],
+        [0, { [_hH]: _xaebo }],
     ],
 ];
-var VersioningConfiguration = [
-    3,
-    n0,
-    _VC,
-    0,
-    [_MFAD, _S],
-    [
-        [
-            0,
-            {
-                [_xN]: _MDf,
-            },
-        ],
-        0,
-    ],
-];
+var VersioningConfiguration = [3, n0, _VC, 0, [_MFAD, _S], [[0, { [_xN]: _MDf }], 0]];
 var WebsiteConfiguration = [
     3,
     n0,
@@ -13081,297 +8613,63 @@ var WriteGetObjectResponseRequest = [
         _BKE,
     ],
     [
-        [
-            0,
-            {
-                [_hL]: 1,
-                [_hH]: _xarr,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xart,
-            },
-        ],
+        [0, { [_hL]: 1, [_hH]: _xarr }],
+        [0, { [_hH]: _xart }],
         [() => StreamingBlob, 16],
-        [
-            1,
-            {
-                [_hH]: _xafs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafec,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafem,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhar,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhCC,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhCD,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhCE,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhCL,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _CL__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhCR,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhCT,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxacc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxacc_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxacc__,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxacs,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxacs_,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xafhxadm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhE,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _xafhE_,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxae,
-            },
-        ],
-        [
-            4,
-            {
-                [_hH]: _xafhLM,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xafhxamm,
-            },
-        ],
-        [
-            128 | 0,
-            {
-                [_hPH]: _xam,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxaolm,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxaollh,
-            },
-        ],
-        [
-            5,
-            {
-                [_hH]: _xafhxaolrud,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xafhxampc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxars,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxarc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxar,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxasse,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxasseca,
-            },
-        ],
-        [
-            () => SSEKMSKeyId,
-            {
-                [_hH]: _xafhxasseakki,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxasseckM,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxasc,
-            },
-        ],
-        [
-            1,
-            {
-                [_hH]: _xafhxatc,
-            },
-        ],
-        [
-            0,
-            {
-                [_hH]: _xafhxavi,
-            },
-        ],
-        [
-            2,
-            {
-                [_hH]: _xafhxassebke,
-            },
-        ],
+        [1, { [_hH]: _xafs }],
+        [0, { [_hH]: _xafec }],
+        [0, { [_hH]: _xafem }],
+        [0, { [_hH]: _xafhar }],
+        [0, { [_hH]: _xafhCC }],
+        [0, { [_hH]: _xafhCD }],
+        [0, { [_hH]: _xafhCE }],
+        [0, { [_hH]: _xafhCL }],
+        [1, { [_hH]: _CL__ }],
+        [0, { [_hH]: _xafhCR }],
+        [0, { [_hH]: _xafhCT }],
+        [0, { [_hH]: _xafhxacc }],
+        [0, { [_hH]: _xafhxacc_ }],
+        [0, { [_hH]: _xafhxacc__ }],
+        [0, { [_hH]: _xafhxacs }],
+        [0, { [_hH]: _xafhxacs_ }],
+        [2, { [_hH]: _xafhxadm }],
+        [0, { [_hH]: _xafhE }],
+        [4, { [_hH]: _xafhE_ }],
+        [0, { [_hH]: _xafhxae }],
+        [4, { [_hH]: _xafhLM }],
+        [1, { [_hH]: _xafhxamm }],
+        [128 | 0, { [_hPH]: _xam }],
+        [0, { [_hH]: _xafhxaolm }],
+        [0, { [_hH]: _xafhxaollh }],
+        [5, { [_hH]: _xafhxaolrud }],
+        [1, { [_hH]: _xafhxampc }],
+        [0, { [_hH]: _xafhxars }],
+        [0, { [_hH]: _xafhxarc }],
+        [0, { [_hH]: _xafhxar }],
+        [0, { [_hH]: _xafhxasse }],
+        [0, { [_hH]: _xafhxasseca }],
+        [() => SSEKMSKeyId, { [_hH]: _xafhxasseakki }],
+        [0, { [_hH]: _xafhxasseckM }],
+        [0, { [_hH]: _xafhxasc }],
+        [1, { [_hH]: _xafhxatc }],
+        [0, { [_hH]: _xafhxavi }],
+        [2, { [_hH]: _xafhxassebke }],
     ],
 ];
 var __Unit = "unit";
 var S3ServiceException = [-3, _sm, "S3ServiceException", 0, [], []];
 schema.TypeRegistry.for(_sm).registerError(S3ServiceException, S3ServiceException$1);
 var AnalyticsConfigurationList = [1, n0, _ACLn, 0, [() => AnalyticsConfiguration, 0]];
-var Buckets = [
-    1,
-    n0,
-    _Bu,
-    0,
-    [
-        () => Bucket,
-        {
-            [_xN]: _B,
-        },
-    ],
-];
+var Buckets = [1, n0, _Bu, 0, [() => Bucket, { [_xN]: _B }]];
 var CommonPrefixList = [1, n0, _CPL, 0, () => CommonPrefix];
 var CompletedPartList = [1, n0, _CPLo, 0, () => CompletedPart];
 var CORSRules = [1, n0, _CORSR, 0, [() => CORSRule, 0]];
 var DeletedObjects = [1, n0, _DOe, 0, () => DeletedObject];
 var DeleteMarkers = [1, n0, _DMe, 0, () => DeleteMarkerEntry];
-var EncryptionTypeList = [
-    1,
-    n0,
-    _ETL,
-    0,
-    [
-        0,
-        {
-            [_xN]: _ET,
-        },
-    ],
-];
+var EncryptionTypeList = [1, n0, _ETL, 0, [0, { [_xN]: _ET }]];
 var Errors = [1, n0, _Er, 0, () => _Error];
 var FilterRuleList = [1, n0, _FRL, 0, () => FilterRule];
-var Grants = [
-    1,
-    n0,
-    _G,
-    0,
-    [
-        () => Grant,
-        {
-            [_xN]: _Gr,
-        },
-    ],
-];
+var Grants = [1, n0, _G, 0, [() => Grant, { [_xN]: _Gr }]];
 var IntelligentTieringConfigurationList = [
     1,
     n0,
@@ -13380,18 +8678,7 @@ var IntelligentTieringConfigurationList = [
     [() => IntelligentTieringConfiguration, 0],
 ];
 var InventoryConfigurationList = [1, n0, _ICL, 0, [() => InventoryConfiguration, 0]];
-var InventoryOptionalFields = [
-    1,
-    n0,
-    _IOF,
-    0,
-    [
-        0,
-        {
-            [_xN]: _Fi,
-        },
-    ],
-];
+var InventoryOptionalFields = [1, n0, _IOF, 0, [0, { [_xN]: _Fi }]];
 var LambdaFunctionConfigurationList = [
     1,
     n0,
@@ -13411,58 +8698,14 @@ var Parts = [1, n0, _Pa, 0, () => Part];
 var PartsList = [1, n0, _PL, 0, () => ObjectPart];
 var QueueConfigurationList = [1, n0, _QCL, 0, [() => QueueConfiguration, 0]];
 var ReplicationRules = [1, n0, _RRep, 0, [() => ReplicationRule, 0]];
-var RoutingRules = [
-    1,
-    n0,
-    _RR,
-    0,
-    [
-        () => RoutingRule,
-        {
-            [_xN]: _RRo,
-        },
-    ],
-];
+var RoutingRules = [1, n0, _RR, 0, [() => RoutingRule, { [_xN]: _RRo }]];
 var ServerSideEncryptionRules = [1, n0, _SSERe, 0, [() => ServerSideEncryptionRule, 0]];
-var TagSet = [
-    1,
-    n0,
-    _TS,
-    0,
-    [
-        () => Tag,
-        {
-            [_xN]: _Ta,
-        },
-    ],
-];
-var TargetGrants = [
-    1,
-    n0,
-    _TG,
-    0,
-    [
-        () => TargetGrant,
-        {
-            [_xN]: _Gr,
-        },
-    ],
-];
+var TagSet = [1, n0, _TS, 0, [() => Tag, { [_xN]: _Ta }]];
+var TargetGrants = [1, n0, _TG, 0, [() => TargetGrant, { [_xN]: _Gr }]];
 var TieringList = [1, n0, _TL, 0, () => Tiering];
 var TopicConfigurationList = [1, n0, _TCL, 0, [() => TopicConfiguration, 0]];
 var TransitionList = [1, n0, _TLr, 0, () => Transition];
-var UserMetadata = [
-    1,
-    n0,
-    _UM,
-    0,
-    [
-        () => MetadataEntry,
-        {
-            [_xN]: _ME,
-        },
-    ],
-];
+var UserMetadata = [1, n0, _UM, 0, [() => MetadataEntry, { [_xN]: _ME }]];
 var AnalyticsFilter = [
     3,
     n0,
@@ -13483,9 +8726,7 @@ var SelectObjectContentEventStream = [
     3,
     n0,
     _SOCES,
-    {
-        [_s]: 1,
-    },
+    { [_s]: 1 },
     [_Rec, _Sta, _Pr, _Cont, _End],
     [[() => RecordsEvent, 0], [() => StatsEvent, 0], [() => ProgressEvent, 0], () => ContinuationEvent, () => EndEvent],
 ];
@@ -13493,9 +8734,7 @@ var AbortMultipartUpload = [
     9,
     n0,
     _AMU,
-    {
-        [_h]: ["DELETE", "/{Key+}?x-id=AbortMultipartUpload", 204],
-    },
+    { [_h]: ["DELETE", "/{Key+}?x-id=AbortMultipartUpload", 204] },
     () => AbortMultipartUploadRequest,
     () => AbortMultipartUploadOutput,
 ];
@@ -13503,9 +8742,7 @@ var CompleteMultipartUpload = [
     9,
     n0,
     _CMUo,
-    {
-        [_h]: ["POST", "/{Key+}", 200],
-    },
+    { [_h]: ["POST", "/{Key+}", 200] },
     () => CompleteMultipartUploadRequest,
     () => CompleteMultipartUploadOutput,
 ];
@@ -13513,9 +8750,7 @@ var CopyObject = [
     9,
     n0,
     _CO,
-    {
-        [_h]: ["PUT", "/{Key+}?x-id=CopyObject", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?x-id=CopyObject", 200] },
     () => CopyObjectRequest,
     () => CopyObjectOutput,
 ];
@@ -13523,9 +8758,7 @@ var CreateBucket = [
     9,
     n0,
     _CB,
-    {
-        [_h]: ["PUT", "/", 200],
-    },
+    { [_h]: ["PUT", "/", 200] },
     () => CreateBucketRequest,
     () => CreateBucketOutput,
 ];
@@ -13533,9 +8766,7 @@ var CreateBucketMetadataConfiguration = [
     9,
     n0,
     _CBMC,
-    {
-        [_h]: ["POST", "/?metadataConfiguration", 200],
-    },
+    { [_h]: ["POST", "/?metadataConfiguration", 200] },
     () => CreateBucketMetadataConfigurationRequest,
     () => __Unit,
 ];
@@ -13543,9 +8774,7 @@ var CreateBucketMetadataTableConfiguration = [
     9,
     n0,
     _CBMTC,
-    {
-        [_h]: ["POST", "/?metadataTable", 200],
-    },
+    { [_h]: ["POST", "/?metadataTable", 200] },
     () => CreateBucketMetadataTableConfigurationRequest,
     () => __Unit,
 ];
@@ -13553,9 +8782,7 @@ var CreateMultipartUpload = [
     9,
     n0,
     _CMUr,
-    {
-        [_h]: ["POST", "/{Key+}?uploads", 200],
-    },
+    { [_h]: ["POST", "/{Key+}?uploads", 200] },
     () => CreateMultipartUploadRequest,
     () => CreateMultipartUploadOutput,
 ];
@@ -13563,9 +8790,7 @@ var CreateSession = [
     9,
     n0,
     _CSr,
-    {
-        [_h]: ["GET", "/?session", 200],
-    },
+    { [_h]: ["GET", "/?session", 200] },
     () => CreateSessionRequest,
     () => CreateSessionOutput,
 ];
@@ -13573,9 +8798,7 @@ var DeleteBucket = [
     9,
     n0,
     _DB,
-    {
-        [_h]: ["DELETE", "/", 204],
-    },
+    { [_h]: ["DELETE", "/", 204] },
     () => DeleteBucketRequest,
     () => __Unit,
 ];
@@ -13583,9 +8806,7 @@ var DeleteBucketAnalyticsConfiguration = [
     9,
     n0,
     _DBAC,
-    {
-        [_h]: ["DELETE", "/?analytics", 204],
-    },
+    { [_h]: ["DELETE", "/?analytics", 204] },
     () => DeleteBucketAnalyticsConfigurationRequest,
     () => __Unit,
 ];
@@ -13593,9 +8814,7 @@ var DeleteBucketCors = [
     9,
     n0,
     _DBC,
-    {
-        [_h]: ["DELETE", "/?cors", 204],
-    },
+    { [_h]: ["DELETE", "/?cors", 204] },
     () => DeleteBucketCorsRequest,
     () => __Unit,
 ];
@@ -13603,9 +8822,7 @@ var DeleteBucketEncryption = [
     9,
     n0,
     _DBE,
-    {
-        [_h]: ["DELETE", "/?encryption", 204],
-    },
+    { [_h]: ["DELETE", "/?encryption", 204] },
     () => DeleteBucketEncryptionRequest,
     () => __Unit,
 ];
@@ -13613,9 +8830,7 @@ var DeleteBucketIntelligentTieringConfiguration = [
     9,
     n0,
     _DBITC,
-    {
-        [_h]: ["DELETE", "/?intelligent-tiering", 204],
-    },
+    { [_h]: ["DELETE", "/?intelligent-tiering", 204] },
     () => DeleteBucketIntelligentTieringConfigurationRequest,
     () => __Unit,
 ];
@@ -13623,9 +8838,7 @@ var DeleteBucketInventoryConfiguration = [
     9,
     n0,
     _DBIC,
-    {
-        [_h]: ["DELETE", "/?inventory", 204],
-    },
+    { [_h]: ["DELETE", "/?inventory", 204] },
     () => DeleteBucketInventoryConfigurationRequest,
     () => __Unit,
 ];
@@ -13633,9 +8846,7 @@ var DeleteBucketLifecycle = [
     9,
     n0,
     _DBL,
-    {
-        [_h]: ["DELETE", "/?lifecycle", 204],
-    },
+    { [_h]: ["DELETE", "/?lifecycle", 204] },
     () => DeleteBucketLifecycleRequest,
     () => __Unit,
 ];
@@ -13643,9 +8854,7 @@ var DeleteBucketMetadataConfiguration = [
     9,
     n0,
     _DBMC,
-    {
-        [_h]: ["DELETE", "/?metadataConfiguration", 204],
-    },
+    { [_h]: ["DELETE", "/?metadataConfiguration", 204] },
     () => DeleteBucketMetadataConfigurationRequest,
     () => __Unit,
 ];
@@ -13653,9 +8862,7 @@ var DeleteBucketMetadataTableConfiguration = [
     9,
     n0,
     _DBMTC,
-    {
-        [_h]: ["DELETE", "/?metadataTable", 204],
-    },
+    { [_h]: ["DELETE", "/?metadataTable", 204] },
     () => DeleteBucketMetadataTableConfigurationRequest,
     () => __Unit,
 ];
@@ -13663,9 +8870,7 @@ var DeleteBucketMetricsConfiguration = [
     9,
     n0,
     _DBMCe,
-    {
-        [_h]: ["DELETE", "/?metrics", 204],
-    },
+    { [_h]: ["DELETE", "/?metrics", 204] },
     () => DeleteBucketMetricsConfigurationRequest,
     () => __Unit,
 ];
@@ -13673,9 +8878,7 @@ var DeleteBucketOwnershipControls = [
     9,
     n0,
     _DBOC,
-    {
-        [_h]: ["DELETE", "/?ownershipControls", 204],
-    },
+    { [_h]: ["DELETE", "/?ownershipControls", 204] },
     () => DeleteBucketOwnershipControlsRequest,
     () => __Unit,
 ];
@@ -13683,9 +8886,7 @@ var DeleteBucketPolicy = [
     9,
     n0,
     _DBP,
-    {
-        [_h]: ["DELETE", "/?policy", 204],
-    },
+    { [_h]: ["DELETE", "/?policy", 204] },
     () => DeleteBucketPolicyRequest,
     () => __Unit,
 ];
@@ -13693,9 +8894,7 @@ var DeleteBucketReplication = [
     9,
     n0,
     _DBRe,
-    {
-        [_h]: ["DELETE", "/?replication", 204],
-    },
+    { [_h]: ["DELETE", "/?replication", 204] },
     () => DeleteBucketReplicationRequest,
     () => __Unit,
 ];
@@ -13703,9 +8902,7 @@ var DeleteBucketTagging = [
     9,
     n0,
     _DBT,
-    {
-        [_h]: ["DELETE", "/?tagging", 204],
-    },
+    { [_h]: ["DELETE", "/?tagging", 204] },
     () => DeleteBucketTaggingRequest,
     () => __Unit,
 ];
@@ -13713,9 +8910,7 @@ var DeleteBucketWebsite = [
     9,
     n0,
     _DBW,
-    {
-        [_h]: ["DELETE", "/?website", 204],
-    },
+    { [_h]: ["DELETE", "/?website", 204] },
     () => DeleteBucketWebsiteRequest,
     () => __Unit,
 ];
@@ -13723,9 +8918,7 @@ var DeleteObject = [
     9,
     n0,
     _DOel,
-    {
-        [_h]: ["DELETE", "/{Key+}?x-id=DeleteObject", 204],
-    },
+    { [_h]: ["DELETE", "/{Key+}?x-id=DeleteObject", 204] },
     () => DeleteObjectRequest,
     () => DeleteObjectOutput,
 ];
@@ -13733,9 +8926,7 @@ var DeleteObjects = [
     9,
     n0,
     _DOele,
-    {
-        [_h]: ["POST", "/?delete", 200],
-    },
+    { [_h]: ["POST", "/?delete", 200] },
     () => DeleteObjectsRequest,
     () => DeleteObjectsOutput,
 ];
@@ -13743,9 +8934,7 @@ var DeleteObjectTagging = [
     9,
     n0,
     _DOT,
-    {
-        [_h]: ["DELETE", "/{Key+}?tagging", 204],
-    },
+    { [_h]: ["DELETE", "/{Key+}?tagging", 204] },
     () => DeleteObjectTaggingRequest,
     () => DeleteObjectTaggingOutput,
 ];
@@ -13753,9 +8942,7 @@ var DeletePublicAccessBlock = [
     9,
     n0,
     _DPAB,
-    {
-        [_h]: ["DELETE", "/?publicAccessBlock", 204],
-    },
+    { [_h]: ["DELETE", "/?publicAccessBlock", 204] },
     () => DeletePublicAccessBlockRequest,
     () => __Unit,
 ];
@@ -13763,9 +8950,7 @@ var GetBucketAbac = [
     9,
     n0,
     _GBA,
-    {
-        [_h]: ["GET", "/?abac", 200],
-    },
+    { [_h]: ["GET", "/?abac", 200] },
     () => GetBucketAbacRequest,
     () => GetBucketAbacOutput,
 ];
@@ -13773,9 +8958,7 @@ var GetBucketAccelerateConfiguration = [
     9,
     n0,
     _GBAC,
-    {
-        [_h]: ["GET", "/?accelerate", 200],
-    },
+    { [_h]: ["GET", "/?accelerate", 200] },
     () => GetBucketAccelerateConfigurationRequest,
     () => GetBucketAccelerateConfigurationOutput,
 ];
@@ -13783,9 +8966,7 @@ var GetBucketAcl = [
     9,
     n0,
     _GBAe,
-    {
-        [_h]: ["GET", "/?acl", 200],
-    },
+    { [_h]: ["GET", "/?acl", 200] },
     () => GetBucketAclRequest,
     () => GetBucketAclOutput,
 ];
@@ -13793,9 +8974,7 @@ var GetBucketAnalyticsConfiguration = [
     9,
     n0,
     _GBACe,
-    {
-        [_h]: ["GET", "/?analytics&x-id=GetBucketAnalyticsConfiguration", 200],
-    },
+    { [_h]: ["GET", "/?analytics&x-id=GetBucketAnalyticsConfiguration", 200] },
     () => GetBucketAnalyticsConfigurationRequest,
     () => GetBucketAnalyticsConfigurationOutput,
 ];
@@ -13803,9 +8982,7 @@ var GetBucketCors = [
     9,
     n0,
     _GBC,
-    {
-        [_h]: ["GET", "/?cors", 200],
-    },
+    { [_h]: ["GET", "/?cors", 200] },
     () => GetBucketCorsRequest,
     () => GetBucketCorsOutput,
 ];
@@ -13813,9 +8990,7 @@ var GetBucketEncryption = [
     9,
     n0,
     _GBE,
-    {
-        [_h]: ["GET", "/?encryption", 200],
-    },
+    { [_h]: ["GET", "/?encryption", 200] },
     () => GetBucketEncryptionRequest,
     () => GetBucketEncryptionOutput,
 ];
@@ -13823,9 +8998,7 @@ var GetBucketIntelligentTieringConfiguration = [
     9,
     n0,
     _GBITC,
-    {
-        [_h]: ["GET", "/?intelligent-tiering&x-id=GetBucketIntelligentTieringConfiguration", 200],
-    },
+    { [_h]: ["GET", "/?intelligent-tiering&x-id=GetBucketIntelligentTieringConfiguration", 200] },
     () => GetBucketIntelligentTieringConfigurationRequest,
     () => GetBucketIntelligentTieringConfigurationOutput,
 ];
@@ -13833,9 +9006,7 @@ var GetBucketInventoryConfiguration = [
     9,
     n0,
     _GBIC,
-    {
-        [_h]: ["GET", "/?inventory&x-id=GetBucketInventoryConfiguration", 200],
-    },
+    { [_h]: ["GET", "/?inventory&x-id=GetBucketInventoryConfiguration", 200] },
     () => GetBucketInventoryConfigurationRequest,
     () => GetBucketInventoryConfigurationOutput,
 ];
@@ -13843,9 +9014,7 @@ var GetBucketLifecycleConfiguration = [
     9,
     n0,
     _GBLC,
-    {
-        [_h]: ["GET", "/?lifecycle", 200],
-    },
+    { [_h]: ["GET", "/?lifecycle", 200] },
     () => GetBucketLifecycleConfigurationRequest,
     () => GetBucketLifecycleConfigurationOutput,
 ];
@@ -13853,9 +9022,7 @@ var GetBucketLocation = [
     9,
     n0,
     _GBL,
-    {
-        [_h]: ["GET", "/?location", 200],
-    },
+    { [_h]: ["GET", "/?location", 200] },
     () => GetBucketLocationRequest,
     () => GetBucketLocationOutput,
 ];
@@ -13863,9 +9030,7 @@ var GetBucketLogging = [
     9,
     n0,
     _GBLe,
-    {
-        [_h]: ["GET", "/?logging", 200],
-    },
+    { [_h]: ["GET", "/?logging", 200] },
     () => GetBucketLoggingRequest,
     () => GetBucketLoggingOutput,
 ];
@@ -13873,9 +9038,7 @@ var GetBucketMetadataConfiguration = [
     9,
     n0,
     _GBMC,
-    {
-        [_h]: ["GET", "/?metadataConfiguration", 200],
-    },
+    { [_h]: ["GET", "/?metadataConfiguration", 200] },
     () => GetBucketMetadataConfigurationRequest,
     () => GetBucketMetadataConfigurationOutput,
 ];
@@ -13883,9 +9046,7 @@ var GetBucketMetadataTableConfiguration = [
     9,
     n0,
     _GBMTC,
-    {
-        [_h]: ["GET", "/?metadataTable", 200],
-    },
+    { [_h]: ["GET", "/?metadataTable", 200] },
     () => GetBucketMetadataTableConfigurationRequest,
     () => GetBucketMetadataTableConfigurationOutput,
 ];
@@ -13893,9 +9054,7 @@ var GetBucketMetricsConfiguration = [
     9,
     n0,
     _GBMCe,
-    {
-        [_h]: ["GET", "/?metrics&x-id=GetBucketMetricsConfiguration", 200],
-    },
+    { [_h]: ["GET", "/?metrics&x-id=GetBucketMetricsConfiguration", 200] },
     () => GetBucketMetricsConfigurationRequest,
     () => GetBucketMetricsConfigurationOutput,
 ];
@@ -13903,9 +9062,7 @@ var GetBucketNotificationConfiguration = [
     9,
     n0,
     _GBNC,
-    {
-        [_h]: ["GET", "/?notification", 200],
-    },
+    { [_h]: ["GET", "/?notification", 200] },
     () => GetBucketNotificationConfigurationRequest,
     () => NotificationConfiguration,
 ];
@@ -13913,9 +9070,7 @@ var GetBucketOwnershipControls = [
     9,
     n0,
     _GBOC,
-    {
-        [_h]: ["GET", "/?ownershipControls", 200],
-    },
+    { [_h]: ["GET", "/?ownershipControls", 200] },
     () => GetBucketOwnershipControlsRequest,
     () => GetBucketOwnershipControlsOutput,
 ];
@@ -13923,9 +9078,7 @@ var GetBucketPolicy = [
     9,
     n0,
     _GBP,
-    {
-        [_h]: ["GET", "/?policy", 200],
-    },
+    { [_h]: ["GET", "/?policy", 200] },
     () => GetBucketPolicyRequest,
     () => GetBucketPolicyOutput,
 ];
@@ -13933,9 +9086,7 @@ var GetBucketPolicyStatus = [
     9,
     n0,
     _GBPS,
-    {
-        [_h]: ["GET", "/?policyStatus", 200],
-    },
+    { [_h]: ["GET", "/?policyStatus", 200] },
     () => GetBucketPolicyStatusRequest,
     () => GetBucketPolicyStatusOutput,
 ];
@@ -13943,9 +9094,7 @@ var GetBucketReplication = [
     9,
     n0,
     _GBR,
-    {
-        [_h]: ["GET", "/?replication", 200],
-    },
+    { [_h]: ["GET", "/?replication", 200] },
     () => GetBucketReplicationRequest,
     () => GetBucketReplicationOutput,
 ];
@@ -13953,9 +9102,7 @@ var GetBucketRequestPayment = [
     9,
     n0,
     _GBRP,
-    {
-        [_h]: ["GET", "/?requestPayment", 200],
-    },
+    { [_h]: ["GET", "/?requestPayment", 200] },
     () => GetBucketRequestPaymentRequest,
     () => GetBucketRequestPaymentOutput,
 ];
@@ -13963,9 +9110,7 @@ var GetBucketTagging = [
     9,
     n0,
     _GBT,
-    {
-        [_h]: ["GET", "/?tagging", 200],
-    },
+    { [_h]: ["GET", "/?tagging", 200] },
     () => GetBucketTaggingRequest,
     () => GetBucketTaggingOutput,
 ];
@@ -13973,9 +9118,7 @@ var GetBucketVersioning = [
     9,
     n0,
     _GBV,
-    {
-        [_h]: ["GET", "/?versioning", 200],
-    },
+    { [_h]: ["GET", "/?versioning", 200] },
     () => GetBucketVersioningRequest,
     () => GetBucketVersioningOutput,
 ];
@@ -13983,9 +9126,7 @@ var GetBucketWebsite = [
     9,
     n0,
     _GBW,
-    {
-        [_h]: ["GET", "/?website", 200],
-    },
+    { [_h]: ["GET", "/?website", 200] },
     () => GetBucketWebsiteRequest,
     () => GetBucketWebsiteOutput,
 ];
@@ -13993,9 +9134,7 @@ var GetObject = [
     9,
     n0,
     _GO,
-    {
-        [_h]: ["GET", "/{Key+}?x-id=GetObject", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?x-id=GetObject", 200] },
     () => GetObjectRequest,
     () => GetObjectOutput,
 ];
@@ -14003,9 +9142,7 @@ var GetObjectAcl = [
     9,
     n0,
     _GOA,
-    {
-        [_h]: ["GET", "/{Key+}?acl", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?acl", 200] },
     () => GetObjectAclRequest,
     () => GetObjectAclOutput,
 ];
@@ -14013,9 +9150,7 @@ var GetObjectAttributes = [
     9,
     n0,
     _GOAe,
-    {
-        [_h]: ["GET", "/{Key+}?attributes", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?attributes", 200] },
     () => GetObjectAttributesRequest,
     () => GetObjectAttributesOutput,
 ];
@@ -14023,9 +9158,7 @@ var GetObjectLegalHold = [
     9,
     n0,
     _GOLH,
-    {
-        [_h]: ["GET", "/{Key+}?legal-hold", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?legal-hold", 200] },
     () => GetObjectLegalHoldRequest,
     () => GetObjectLegalHoldOutput,
 ];
@@ -14033,9 +9166,7 @@ var GetObjectLockConfiguration = [
     9,
     n0,
     _GOLC,
-    {
-        [_h]: ["GET", "/?object-lock", 200],
-    },
+    { [_h]: ["GET", "/?object-lock", 200] },
     () => GetObjectLockConfigurationRequest,
     () => GetObjectLockConfigurationOutput,
 ];
@@ -14043,9 +9174,7 @@ var GetObjectRetention = [
     9,
     n0,
     _GORe,
-    {
-        [_h]: ["GET", "/{Key+}?retention", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?retention", 200] },
     () => GetObjectRetentionRequest,
     () => GetObjectRetentionOutput,
 ];
@@ -14053,9 +9182,7 @@ var GetObjectTagging = [
     9,
     n0,
     _GOT,
-    {
-        [_h]: ["GET", "/{Key+}?tagging", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?tagging", 200] },
     () => GetObjectTaggingRequest,
     () => GetObjectTaggingOutput,
 ];
@@ -14063,9 +9190,7 @@ var GetObjectTorrent = [
     9,
     n0,
     _GOTe,
-    {
-        [_h]: ["GET", "/{Key+}?torrent", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?torrent", 200] },
     () => GetObjectTorrentRequest,
     () => GetObjectTorrentOutput,
 ];
@@ -14073,9 +9198,7 @@ var GetPublicAccessBlock = [
     9,
     n0,
     _GPAB,
-    {
-        [_h]: ["GET", "/?publicAccessBlock", 200],
-    },
+    { [_h]: ["GET", "/?publicAccessBlock", 200] },
     () => GetPublicAccessBlockRequest,
     () => GetPublicAccessBlockOutput,
 ];
@@ -14083,9 +9206,7 @@ var HeadBucket = [
     9,
     n0,
     _HB,
-    {
-        [_h]: ["HEAD", "/", 200],
-    },
+    { [_h]: ["HEAD", "/", 200] },
     () => HeadBucketRequest,
     () => HeadBucketOutput,
 ];
@@ -14093,9 +9214,7 @@ var HeadObject = [
     9,
     n0,
     _HO,
-    {
-        [_h]: ["HEAD", "/{Key+}", 200],
-    },
+    { [_h]: ["HEAD", "/{Key+}", 200] },
     () => HeadObjectRequest,
     () => HeadObjectOutput,
 ];
@@ -14103,9 +9222,7 @@ var ListBucketAnalyticsConfigurations = [
     9,
     n0,
     _LBAC,
-    {
-        [_h]: ["GET", "/?analytics&x-id=ListBucketAnalyticsConfigurations", 200],
-    },
+    { [_h]: ["GET", "/?analytics&x-id=ListBucketAnalyticsConfigurations", 200] },
     () => ListBucketAnalyticsConfigurationsRequest,
     () => ListBucketAnalyticsConfigurationsOutput,
 ];
@@ -14113,9 +9230,7 @@ var ListBucketIntelligentTieringConfigurations = [
     9,
     n0,
     _LBITC,
-    {
-        [_h]: ["GET", "/?intelligent-tiering&x-id=ListBucketIntelligentTieringConfigurations", 200],
-    },
+    { [_h]: ["GET", "/?intelligent-tiering&x-id=ListBucketIntelligentTieringConfigurations", 200] },
     () => ListBucketIntelligentTieringConfigurationsRequest,
     () => ListBucketIntelligentTieringConfigurationsOutput,
 ];
@@ -14123,9 +9238,7 @@ var ListBucketInventoryConfigurations = [
     9,
     n0,
     _LBIC,
-    {
-        [_h]: ["GET", "/?inventory&x-id=ListBucketInventoryConfigurations", 200],
-    },
+    { [_h]: ["GET", "/?inventory&x-id=ListBucketInventoryConfigurations", 200] },
     () => ListBucketInventoryConfigurationsRequest,
     () => ListBucketInventoryConfigurationsOutput,
 ];
@@ -14133,9 +9246,7 @@ var ListBucketMetricsConfigurations = [
     9,
     n0,
     _LBMC,
-    {
-        [_h]: ["GET", "/?metrics&x-id=ListBucketMetricsConfigurations", 200],
-    },
+    { [_h]: ["GET", "/?metrics&x-id=ListBucketMetricsConfigurations", 200] },
     () => ListBucketMetricsConfigurationsRequest,
     () => ListBucketMetricsConfigurationsOutput,
 ];
@@ -14143,9 +9254,7 @@ var ListBuckets = [
     9,
     n0,
     _LB,
-    {
-        [_h]: ["GET", "/?x-id=ListBuckets", 200],
-    },
+    { [_h]: ["GET", "/?x-id=ListBuckets", 200] },
     () => ListBucketsRequest,
     () => ListBucketsOutput,
 ];
@@ -14153,9 +9262,7 @@ var ListDirectoryBuckets = [
     9,
     n0,
     _LDB,
-    {
-        [_h]: ["GET", "/?x-id=ListDirectoryBuckets", 200],
-    },
+    { [_h]: ["GET", "/?x-id=ListDirectoryBuckets", 200] },
     () => ListDirectoryBucketsRequest,
     () => ListDirectoryBucketsOutput,
 ];
@@ -14163,9 +9270,7 @@ var ListMultipartUploads = [
     9,
     n0,
     _LMU,
-    {
-        [_h]: ["GET", "/?uploads", 200],
-    },
+    { [_h]: ["GET", "/?uploads", 200] },
     () => ListMultipartUploadsRequest,
     () => ListMultipartUploadsOutput,
 ];
@@ -14173,9 +9278,7 @@ var ListObjects = [
     9,
     n0,
     _LO,
-    {
-        [_h]: ["GET", "/", 200],
-    },
+    { [_h]: ["GET", "/", 200] },
     () => ListObjectsRequest,
     () => ListObjectsOutput,
 ];
@@ -14183,9 +9286,7 @@ var ListObjectsV2 = [
     9,
     n0,
     _LOV,
-    {
-        [_h]: ["GET", "/?list-type=2", 200],
-    },
+    { [_h]: ["GET", "/?list-type=2", 200] },
     () => ListObjectsV2Request,
     () => ListObjectsV2Output,
 ];
@@ -14193,9 +9294,7 @@ var ListObjectVersions = [
     9,
     n0,
     _LOVi,
-    {
-        [_h]: ["GET", "/?versions", 200],
-    },
+    { [_h]: ["GET", "/?versions", 200] },
     () => ListObjectVersionsRequest,
     () => ListObjectVersionsOutput,
 ];
@@ -14203,9 +9302,7 @@ var ListParts = [
     9,
     n0,
     _LP,
-    {
-        [_h]: ["GET", "/{Key+}?x-id=ListParts", 200],
-    },
+    { [_h]: ["GET", "/{Key+}?x-id=ListParts", 200] },
     () => ListPartsRequest,
     () => ListPartsOutput,
 ];
@@ -14213,9 +9310,7 @@ var PutBucketAbac = [
     9,
     n0,
     _PBA,
-    {
-        [_h]: ["PUT", "/?abac", 200],
-    },
+    { [_h]: ["PUT", "/?abac", 200] },
     () => PutBucketAbacRequest,
     () => __Unit,
 ];
@@ -14223,9 +9318,7 @@ var PutBucketAccelerateConfiguration = [
     9,
     n0,
     _PBAC,
-    {
-        [_h]: ["PUT", "/?accelerate", 200],
-    },
+    { [_h]: ["PUT", "/?accelerate", 200] },
     () => PutBucketAccelerateConfigurationRequest,
     () => __Unit,
 ];
@@ -14233,9 +9326,7 @@ var PutBucketAcl = [
     9,
     n0,
     _PBAu,
-    {
-        [_h]: ["PUT", "/?acl", 200],
-    },
+    { [_h]: ["PUT", "/?acl", 200] },
     () => PutBucketAclRequest,
     () => __Unit,
 ];
@@ -14243,9 +9334,7 @@ var PutBucketAnalyticsConfiguration = [
     9,
     n0,
     _PBACu,
-    {
-        [_h]: ["PUT", "/?analytics", 200],
-    },
+    { [_h]: ["PUT", "/?analytics", 200] },
     () => PutBucketAnalyticsConfigurationRequest,
     () => __Unit,
 ];
@@ -14253,9 +9342,7 @@ var PutBucketCors = [
     9,
     n0,
     _PBC,
-    {
-        [_h]: ["PUT", "/?cors", 200],
-    },
+    { [_h]: ["PUT", "/?cors", 200] },
     () => PutBucketCorsRequest,
     () => __Unit,
 ];
@@ -14263,9 +9350,7 @@ var PutBucketEncryption = [
     9,
     n0,
     _PBE,
-    {
-        [_h]: ["PUT", "/?encryption", 200],
-    },
+    { [_h]: ["PUT", "/?encryption", 200] },
     () => PutBucketEncryptionRequest,
     () => __Unit,
 ];
@@ -14273,9 +9358,7 @@ var PutBucketIntelligentTieringConfiguration = [
     9,
     n0,
     _PBITC,
-    {
-        [_h]: ["PUT", "/?intelligent-tiering", 200],
-    },
+    { [_h]: ["PUT", "/?intelligent-tiering", 200] },
     () => PutBucketIntelligentTieringConfigurationRequest,
     () => __Unit,
 ];
@@ -14283,9 +9366,7 @@ var PutBucketInventoryConfiguration = [
     9,
     n0,
     _PBIC,
-    {
-        [_h]: ["PUT", "/?inventory", 200],
-    },
+    { [_h]: ["PUT", "/?inventory", 200] },
     () => PutBucketInventoryConfigurationRequest,
     () => __Unit,
 ];
@@ -14293,9 +9374,7 @@ var PutBucketLifecycleConfiguration = [
     9,
     n0,
     _PBLC,
-    {
-        [_h]: ["PUT", "/?lifecycle", 200],
-    },
+    { [_h]: ["PUT", "/?lifecycle", 200] },
     () => PutBucketLifecycleConfigurationRequest,
     () => PutBucketLifecycleConfigurationOutput,
 ];
@@ -14303,9 +9382,7 @@ var PutBucketLogging = [
     9,
     n0,
     _PBL,
-    {
-        [_h]: ["PUT", "/?logging", 200],
-    },
+    { [_h]: ["PUT", "/?logging", 200] },
     () => PutBucketLoggingRequest,
     () => __Unit,
 ];
@@ -14313,9 +9390,7 @@ var PutBucketMetricsConfiguration = [
     9,
     n0,
     _PBMC,
-    {
-        [_h]: ["PUT", "/?metrics", 200],
-    },
+    { [_h]: ["PUT", "/?metrics", 200] },
     () => PutBucketMetricsConfigurationRequest,
     () => __Unit,
 ];
@@ -14323,9 +9398,7 @@ var PutBucketNotificationConfiguration = [
     9,
     n0,
     _PBNC,
-    {
-        [_h]: ["PUT", "/?notification", 200],
-    },
+    { [_h]: ["PUT", "/?notification", 200] },
     () => PutBucketNotificationConfigurationRequest,
     () => __Unit,
 ];
@@ -14333,9 +9406,7 @@ var PutBucketOwnershipControls = [
     9,
     n0,
     _PBOC,
-    {
-        [_h]: ["PUT", "/?ownershipControls", 200],
-    },
+    { [_h]: ["PUT", "/?ownershipControls", 200] },
     () => PutBucketOwnershipControlsRequest,
     () => __Unit,
 ];
@@ -14343,9 +9414,7 @@ var PutBucketPolicy = [
     9,
     n0,
     _PBP,
-    {
-        [_h]: ["PUT", "/?policy", 200],
-    },
+    { [_h]: ["PUT", "/?policy", 200] },
     () => PutBucketPolicyRequest,
     () => __Unit,
 ];
@@ -14353,9 +9422,7 @@ var PutBucketReplication = [
     9,
     n0,
     _PBR,
-    {
-        [_h]: ["PUT", "/?replication", 200],
-    },
+    { [_h]: ["PUT", "/?replication", 200] },
     () => PutBucketReplicationRequest,
     () => __Unit,
 ];
@@ -14363,9 +9430,7 @@ var PutBucketRequestPayment = [
     9,
     n0,
     _PBRP,
-    {
-        [_h]: ["PUT", "/?requestPayment", 200],
-    },
+    { [_h]: ["PUT", "/?requestPayment", 200] },
     () => PutBucketRequestPaymentRequest,
     () => __Unit,
 ];
@@ -14373,9 +9438,7 @@ var PutBucketTagging = [
     9,
     n0,
     _PBT,
-    {
-        [_h]: ["PUT", "/?tagging", 200],
-    },
+    { [_h]: ["PUT", "/?tagging", 200] },
     () => PutBucketTaggingRequest,
     () => __Unit,
 ];
@@ -14383,9 +9446,7 @@ var PutBucketVersioning = [
     9,
     n0,
     _PBV,
-    {
-        [_h]: ["PUT", "/?versioning", 200],
-    },
+    { [_h]: ["PUT", "/?versioning", 200] },
     () => PutBucketVersioningRequest,
     () => __Unit,
 ];
@@ -14393,9 +9454,7 @@ var PutBucketWebsite = [
     9,
     n0,
     _PBW,
-    {
-        [_h]: ["PUT", "/?website", 200],
-    },
+    { [_h]: ["PUT", "/?website", 200] },
     () => PutBucketWebsiteRequest,
     () => __Unit,
 ];
@@ -14403,9 +9462,7 @@ var PutObject = [
     9,
     n0,
     _PO,
-    {
-        [_h]: ["PUT", "/{Key+}?x-id=PutObject", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?x-id=PutObject", 200] },
     () => PutObjectRequest,
     () => PutObjectOutput,
 ];
@@ -14413,9 +9470,7 @@ var PutObjectAcl = [
     9,
     n0,
     _POA,
-    {
-        [_h]: ["PUT", "/{Key+}?acl", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?acl", 200] },
     () => PutObjectAclRequest,
     () => PutObjectAclOutput,
 ];
@@ -14423,9 +9478,7 @@ var PutObjectLegalHold = [
     9,
     n0,
     _POLH,
-    {
-        [_h]: ["PUT", "/{Key+}?legal-hold", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?legal-hold", 200] },
     () => PutObjectLegalHoldRequest,
     () => PutObjectLegalHoldOutput,
 ];
@@ -14433,9 +9486,7 @@ var PutObjectLockConfiguration = [
     9,
     n0,
     _POLC,
-    {
-        [_h]: ["PUT", "/?object-lock", 200],
-    },
+    { [_h]: ["PUT", "/?object-lock", 200] },
     () => PutObjectLockConfigurationRequest,
     () => PutObjectLockConfigurationOutput,
 ];
@@ -14443,9 +9494,7 @@ var PutObjectRetention = [
     9,
     n0,
     _PORu,
-    {
-        [_h]: ["PUT", "/{Key+}?retention", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?retention", 200] },
     () => PutObjectRetentionRequest,
     () => PutObjectRetentionOutput,
 ];
@@ -14453,9 +9502,7 @@ var PutObjectTagging = [
     9,
     n0,
     _POT,
-    {
-        [_h]: ["PUT", "/{Key+}?tagging", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?tagging", 200] },
     () => PutObjectTaggingRequest,
     () => PutObjectTaggingOutput,
 ];
@@ -14463,9 +9510,7 @@ var PutPublicAccessBlock = [
     9,
     n0,
     _PPAB,
-    {
-        [_h]: ["PUT", "/?publicAccessBlock", 200],
-    },
+    { [_h]: ["PUT", "/?publicAccessBlock", 200] },
     () => PutPublicAccessBlockRequest,
     () => __Unit,
 ];
@@ -14473,9 +9518,7 @@ var RenameObject = [
     9,
     n0,
     _RO,
-    {
-        [_h]: ["PUT", "/{Key+}?renameObject", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?renameObject", 200] },
     () => RenameObjectRequest,
     () => RenameObjectOutput,
 ];
@@ -14483,9 +9526,7 @@ var RestoreObject = [
     9,
     n0,
     _ROe,
-    {
-        [_h]: ["POST", "/{Key+}?restore", 200],
-    },
+    { [_h]: ["POST", "/{Key+}?restore", 200] },
     () => RestoreObjectRequest,
     () => RestoreObjectOutput,
 ];
@@ -14493,9 +9534,7 @@ var SelectObjectContent = [
     9,
     n0,
     _SOC,
-    {
-        [_h]: ["POST", "/{Key+}?select&select-type=2", 200],
-    },
+    { [_h]: ["POST", "/{Key+}?select&select-type=2", 200] },
     () => SelectObjectContentRequest,
     () => SelectObjectContentOutput,
 ];
@@ -14503,9 +9542,7 @@ var UpdateBucketMetadataInventoryTableConfiguration = [
     9,
     n0,
     _UBMITC,
-    {
-        [_h]: ["PUT", "/?metadataInventoryTable", 200],
-    },
+    { [_h]: ["PUT", "/?metadataInventoryTable", 200] },
     () => UpdateBucketMetadataInventoryTableConfigurationRequest,
     () => __Unit,
 ];
@@ -14513,9 +9550,7 @@ var UpdateBucketMetadataJournalTableConfiguration = [
     9,
     n0,
     _UBMJTC,
-    {
-        [_h]: ["PUT", "/?metadataJournalTable", 200],
-    },
+    { [_h]: ["PUT", "/?metadataJournalTable", 200] },
     () => UpdateBucketMetadataJournalTableConfigurationRequest,
     () => __Unit,
 ];
@@ -14523,9 +9558,7 @@ var UploadPart = [
     9,
     n0,
     _UP,
-    {
-        [_h]: ["PUT", "/{Key+}?x-id=UploadPart", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?x-id=UploadPart", 200] },
     () => UploadPartRequest,
     () => UploadPartOutput,
 ];
@@ -14533,9 +9566,7 @@ var UploadPartCopy = [
     9,
     n0,
     _UPC,
-    {
-        [_h]: ["PUT", "/{Key+}?x-id=UploadPartCopy", 200],
-    },
+    { [_h]: ["PUT", "/{Key+}?x-id=UploadPartCopy", 200] },
     () => UploadPartCopyRequest,
     () => UploadPartCopyOutput,
 ];
@@ -14543,10 +9574,7 @@ var WriteGetObjectResponse = [
     9,
     n0,
     _WGOR,
-    {
-        [_en]: ["{RequestRoute}."],
-        [_h]: ["POST", "/WriteGetObjectResponse", 200],
-    },
+    { [_en]: ["{RequestRoute}."], [_h]: ["POST", "/WriteGetObjectResponse", 200] },
     () => WriteGetObjectResponseRequest,
     () => __Unit,
 ];
@@ -16834,6 +11862,7 @@ const ObjectLockMode = {
 const StorageClass = {
     DEEP_ARCHIVE: "DEEP_ARCHIVE",
     EXPRESS_ONEZONE: "EXPRESS_ONEZONE",
+    FSX_ONTAP: "FSX_ONTAP",
     FSX_OPENZFS: "FSX_OPENZFS",
     GLACIER: "GLACIER",
     GLACIER_IR: "GLACIER_IR",
@@ -17110,6 +12139,7 @@ const EncodingType = {
 const ObjectStorageClass = {
     DEEP_ARCHIVE: "DEEP_ARCHIVE",
     EXPRESS_ONEZONE: "EXPRESS_ONEZONE",
+    FSX_ONTAP: "FSX_ONTAP",
     FSX_OPENZFS: "FSX_OPENZFS",
     GLACIER: "GLACIER",
     GLACIER_IR: "GLACIER_IR",
@@ -17402,14 +12432,13 @@ const hash_stream_node_1 = __nccwpck_require__(7698);
 const middleware_retry_1 = __nccwpck_require__(9618);
 const node_config_provider_1 = __nccwpck_require__(5704);
 const node_http_handler_1 = __nccwpck_require__(1279);
+const smithy_client_1 = __nccwpck_require__(1411);
 const util_body_length_node_1 = __nccwpck_require__(3638);
+const util_defaults_mode_node_1 = __nccwpck_require__(5435);
 const util_retry_1 = __nccwpck_require__(5518);
 const runtimeConfig_shared_1 = __nccwpck_require__(4070);
-const smithy_client_1 = __nccwpck_require__(1411);
-const util_defaults_mode_node_1 = __nccwpck_require__(5435);
-const smithy_client_2 = __nccwpck_require__(1411);
 const getRuntimeConfig = (config) => {
-    (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
+    (0, smithy_client_1.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
     const defaultConfigProvider = () => defaultsMode().then(smithy_client_1.loadConfigsForDefaultMode);
     const clientSharedValues = (0, runtimeConfig_shared_1.getRuntimeConfig)(config);
@@ -17932,8 +12961,17 @@ class ProtocolLib {
             const msg = exception.Message ?? additions.Message;
             const error = smithyClient.decorateServiceException(exception, additions);
             if (msg) {
-                error.Message = msg;
                 error.message = msg;
+            }
+            error.Error = {
+                ...error.Error,
+                Type: error.Error.Type,
+                Code: error.Error.Code,
+                Message: error.Error.message ?? error.Error.Message ?? msg,
+            };
+            const reqId = error.$metadata.requestId;
+            if (reqId) {
+                error.RequestId = reqId;
             }
             return error;
         }
@@ -17950,7 +12988,7 @@ class ProtocolLib {
             };
             Object.assign(output, Error);
             for (const [k, v] of entries) {
-                Error[k] = v;
+                Error[k === "message" ? "Message" : k] = v;
             }
             delete Error.__type;
             output.Error = Error;
@@ -17965,6 +13003,14 @@ class ProtocolLib {
         }
         if (queryCompatErrorData.Code) {
             errorData.Code = queryCompatErrorData.Code;
+        }
+    }
+    findQueryCompatibleError(registry, errorName) {
+        try {
+            return registry.getSchema(errorName);
+        }
+        catch (e) {
+            return registry.find((schema$1) => schema.NormalizedSchema.of(schema$1).getMergedTraits().awsQueryError?.[0] === errorName);
         }
     }
 }
@@ -17988,15 +13034,23 @@ class AwsSmithyRpcV2CborProtocol extends cbor.SmithyRpcV2CborProtocol {
         if (this.awsQueryCompatible) {
             this.mixin.setQueryCompatError(dataObject, response);
         }
-        const errorName = cbor.loadSmithyRpcV2CborErrorCode(response, dataObject) ?? "Unknown";
-        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorName, this.options.defaultNamespace, response, dataObject, metadata);
+        const errorName = (() => {
+            const compatHeader = response.headers["x-amzn-query-error"];
+            if (compatHeader && this.awsQueryCompatible) {
+                return compatHeader.split(";")[0];
+            }
+            return cbor.loadSmithyRpcV2CborErrorCode(response, dataObject) ?? "Unknown";
+        })();
+        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorName, this.options.defaultNamespace, response, dataObject, metadata, this.awsQueryCompatible ? this.mixin.findQueryCompatibleError : undefined);
         const ns = schema.NormalizedSchema.of(errorSchema);
         const message = dataObject.message ?? dataObject.Message ?? "Unknown";
         const ErrorCtor = schema.TypeRegistry.for(errorSchema[1]).getErrorCtor(errorSchema) ?? Error;
         const exception = new ErrorCtor(message);
         const output = {};
         for (const [name, member] of ns.structIterator()) {
-            output[name] = this.deserializer.readValue(member, dataObject[name]);
+            if (dataObject[name] != null) {
+                output[name] = this.deserializer.readValue(member, dataObject[name]);
+            }
         }
         if (this.awsQueryCompatible) {
             this.mixin.queryCompatOutput(dataObject, output);
@@ -18062,6 +13116,46 @@ class SerdeContextConfig {
     serdeContext;
     setSerdeContext(serdeContext) {
         this.serdeContext = serdeContext;
+    }
+}
+
+function* serializingStructIterator(ns, sourceObject) {
+    if (ns.isUnitSchema()) {
+        return;
+    }
+    const struct = ns.getSchema();
+    for (let i = 0; i < struct[4].length; ++i) {
+        const key = struct[4][i];
+        const memberSchema = struct[5][i];
+        const memberNs = new schema.NormalizedSchema([memberSchema, 0], key);
+        if (!(key in sourceObject) && !memberNs.isIdempotencyToken()) {
+            continue;
+        }
+        yield [key, memberNs];
+    }
+}
+function* deserializingStructIterator(ns, sourceObject, nameTrait) {
+    if (ns.isUnitSchema()) {
+        return;
+    }
+    const struct = ns.getSchema();
+    let keysRemaining = Object.keys(sourceObject).filter((k) => k !== "__type").length;
+    for (let i = 0; i < struct[4].length; ++i) {
+        if (keysRemaining === 0) {
+            break;
+        }
+        const key = struct[4][i];
+        const memberSchema = struct[5][i];
+        const memberNs = new schema.NormalizedSchema([memberSchema, 0], key);
+        let serializationKey = key;
+        if (nameTrait) {
+            serializationKey = memberNs.getMergedTraits()[nameTrait] ?? key;
+        }
+        if (!(serializationKey in sourceObject)) {
+            continue;
+        }
+        yield [key, memberNs];
+        keysRemaining -= 1;
     }
 }
 
@@ -18154,38 +13248,40 @@ class JsonShapeDeserializer extends SerdeContextConfig {
     _read(schema$1, value) {
         const isObject = value !== null && typeof value === "object";
         const ns = schema.NormalizedSchema.of(schema$1);
-        if (ns.isListSchema() && Array.isArray(value)) {
-            const listMember = ns.getValueSchema();
-            const out = [];
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const item of value) {
-                if (sparse || item != null) {
-                    out.push(this._read(listMember, item));
+        if (isObject) {
+            if (ns.isStructSchema()) {
+                const out = {};
+                for (const [memberName, memberSchema] of deserializingStructIterator(ns, value, this.settings.jsonName ? "jsonName" : false)) {
+                    const fromKey = this.settings.jsonName ? memberSchema.getMergedTraits().jsonName ?? memberName : memberName;
+                    const deserializedValue = this._read(memberSchema, value[fromKey]);
+                    if (deserializedValue != null) {
+                        out[memberName] = deserializedValue;
+                    }
                 }
+                return out;
             }
-            return out;
-        }
-        else if (ns.isMapSchema() && isObject) {
-            const mapMember = ns.getValueSchema();
-            const out = {};
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const [_k, _v] of Object.entries(value)) {
-                if (sparse || _v != null) {
-                    out[_k] = this._read(mapMember, _v);
+            if (Array.isArray(value) && ns.isListSchema()) {
+                const listMember = ns.getValueSchema();
+                const out = [];
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const item of value) {
+                    if (sparse || item != null) {
+                        out.push(this._read(listMember, item));
+                    }
                 }
+                return out;
             }
-            return out;
-        }
-        else if (ns.isStructSchema() && isObject) {
-            const out = {};
-            for (const [memberName, memberSchema] of ns.structIterator()) {
-                const fromKey = this.settings.jsonName ? memberSchema.getMergedTraits().jsonName ?? memberName : memberName;
-                const deserializedValue = this._read(memberSchema, value[fromKey]);
-                if (deserializedValue != null) {
-                    out[memberName] = deserializedValue;
+            if (ns.isMapSchema()) {
+                const mapMember = ns.getValueSchema();
+                const out = {};
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const [_k, _v] of Object.entries(value)) {
+                    if (sparse || _v != null) {
+                        out[_k] = this._read(mapMember, _v);
+                    }
                 }
+                return out;
             }
-            return out;
         }
         if (ns.isBlobSchema() && typeof value === "string") {
             return utilBase64.fromBase64(value);
@@ -18196,6 +13292,7 @@ class JsonShapeDeserializer extends SerdeContextConfig {
             if (isJson) {
                 return serde.LazyJsonString.from(value);
             }
+            return value;
         }
         if (ns.isTimestampSchema() && value != null) {
             const format = protocols.determineTimestampFormat(ns, this.settings);
@@ -18233,6 +13330,7 @@ class JsonShapeDeserializer extends SerdeContextConfig {
                 case "NaN":
                     return NaN;
             }
+            return value;
         }
         if (ns.isDocumentSchema()) {
             if (isObject) {
@@ -18304,6 +13402,7 @@ class JsonReplacer {
 class JsonShapeSerializer extends SerdeContextConfig {
     settings;
     buffer;
+    useReplacer = false;
     rootSchema;
     constructor(settings) {
         super();
@@ -18320,9 +13419,13 @@ class JsonShapeSerializer extends SerdeContextConfig {
         }
     }
     flush() {
-        const { rootSchema } = this;
+        const { rootSchema, useReplacer } = this;
         this.rootSchema = undefined;
+        this.useReplacer = false;
         if (rootSchema?.isStructSchema() || rootSchema?.isDocumentSchema()) {
+            if (!useReplacer) {
+                return JSON.stringify(this.buffer);
+            }
             const replacer = new JsonReplacer();
             return replacer.replaceInJson(JSON.stringify(this.buffer, replacer.createReplacer(), 0));
         }
@@ -18331,67 +13434,67 @@ class JsonShapeSerializer extends SerdeContextConfig {
     _write(schema$1, value, container) {
         const isObject = value !== null && typeof value === "object";
         const ns = schema.NormalizedSchema.of(schema$1);
-        if (ns.isListSchema() && Array.isArray(value)) {
-            const listMember = ns.getValueSchema();
-            const out = [];
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const item of value) {
-                if (sparse || item != null) {
-                    out.push(this._write(listMember, item));
+        if (isObject) {
+            if (ns.isStructSchema()) {
+                const out = {};
+                for (const [memberName, memberSchema] of serializingStructIterator(ns, value)) {
+                    const serializableValue = this._write(memberSchema, value[memberName], ns);
+                    if (serializableValue !== undefined) {
+                        const jsonName = memberSchema.getMergedTraits().jsonName;
+                        const targetKey = this.settings.jsonName ? jsonName ?? memberName : memberName;
+                        out[targetKey] = serializableValue;
+                    }
+                }
+                return out;
+            }
+            if (Array.isArray(value) && ns.isListSchema()) {
+                const listMember = ns.getValueSchema();
+                const out = [];
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const item of value) {
+                    if (sparse || item != null) {
+                        out.push(this._write(listMember, item));
+                    }
+                }
+                return out;
+            }
+            if (ns.isMapSchema()) {
+                const mapMember = ns.getValueSchema();
+                const out = {};
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const [_k, _v] of Object.entries(value)) {
+                    if (sparse || _v != null) {
+                        out[_k] = this._write(mapMember, _v);
+                    }
+                }
+                return out;
+            }
+            if (value instanceof Uint8Array && (ns.isBlobSchema() || ns.isDocumentSchema())) {
+                if (ns === this.rootSchema) {
+                    return value;
+                }
+                return (this.serdeContext?.base64Encoder ?? utilBase64.toBase64)(value);
+            }
+            if (value instanceof Date && (ns.isTimestampSchema() || ns.isDocumentSchema())) {
+                const format = protocols.determineTimestampFormat(ns, this.settings);
+                switch (format) {
+                    case 5:
+                        return value.toISOString().replace(".000Z", "Z");
+                    case 6:
+                        return serde.dateToUtcString(value);
+                    case 7:
+                        return value.getTime() / 1000;
+                    default:
+                        console.warn("Missing timestamp format, using epoch seconds", value);
+                        return value.getTime() / 1000;
                 }
             }
-            return out;
-        }
-        else if (ns.isMapSchema() && isObject) {
-            const mapMember = ns.getValueSchema();
-            const out = {};
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const [_k, _v] of Object.entries(value)) {
-                if (sparse || _v != null) {
-                    out[_k] = this._write(mapMember, _v);
-                }
+            if (value instanceof serde.NumericValue) {
+                this.useReplacer = true;
             }
-            return out;
-        }
-        else if (ns.isStructSchema() && isObject) {
-            const out = {};
-            for (const [memberName, memberSchema] of ns.structIterator()) {
-                const targetKey = this.settings.jsonName ? memberSchema.getMergedTraits().jsonName ?? memberName : memberName;
-                const serializableValue = this._write(memberSchema, value[memberName], ns);
-                if (serializableValue !== undefined) {
-                    out[targetKey] = serializableValue;
-                }
-            }
-            return out;
         }
         if (value === null && container?.isStructSchema()) {
             return void 0;
-        }
-        if ((ns.isBlobSchema() && (value instanceof Uint8Array || typeof value === "string")) ||
-            (ns.isDocumentSchema() && value instanceof Uint8Array)) {
-            if (ns === this.rootSchema) {
-                return value;
-            }
-            return (this.serdeContext?.base64Encoder ?? utilBase64.toBase64)(value);
-        }
-        if ((ns.isTimestampSchema() || ns.isDocumentSchema()) && value instanceof Date) {
-            const format = protocols.determineTimestampFormat(ns, this.settings);
-            switch (format) {
-                case 5:
-                    return value.toISOString().replace(".000Z", "Z");
-                case 6:
-                    return serde.dateToUtcString(value);
-                case 7:
-                    return value.getTime() / 1000;
-                default:
-                    console.warn("Missing timestamp format, using epoch seconds", value);
-                    return value.getTime() / 1000;
-            }
-        }
-        if (ns.isNumericSchema() && typeof value === "number") {
-            if (Math.abs(value) === Infinity || isNaN(value)) {
-                return String(value);
-            }
         }
         if (ns.isStringSchema()) {
             if (typeof value === "undefined" && ns.isIdempotencyToken()) {
@@ -18404,12 +13507,29 @@ class JsonShapeSerializer extends SerdeContextConfig {
                     return serde.LazyJsonString.from(value);
                 }
             }
+            return value;
+        }
+        if (typeof value === "number" && ns.isNumericSchema()) {
+            if (Math.abs(value) === Infinity || isNaN(value)) {
+                return String(value);
+            }
+            return value;
+        }
+        if (typeof value === "string" && ns.isBlobSchema()) {
+            if (ns === this.rootSchema) {
+                return value;
+            }
+            return (this.serdeContext?.base64Encoder ?? utilBase64.toBase64)(value);
+        }
+        if (typeof value === "bigint") {
+            this.useReplacer = true;
         }
         if (ns.isDocumentSchema()) {
             if (isObject) {
                 const out = Array.isArray(value) ? [] : {};
                 for (const [k, v] of Object.entries(value)) {
                     if (v instanceof serde.NumericValue) {
+                        this.useReplacer = true;
                         out[k] = v;
                     }
                     else {
@@ -18451,18 +13571,20 @@ class AwsJsonRpcProtocol extends protocols.RpcProtocol {
     codec;
     mixin;
     awsQueryCompatible;
-    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, }) {
+    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, jsonCodec, }) {
         super({
             defaultNamespace,
         });
         this.serviceTarget = serviceTarget;
-        this.codec = new JsonCodec({
-            timestampFormat: {
-                useTrait: true,
-                default: 7,
-            },
-            jsonName: false,
-        });
+        this.codec =
+            jsonCodec ??
+                new JsonCodec({
+                    timestampFormat: {
+                        useTrait: true,
+                        default: 7,
+                    },
+                    jsonName: false,
+                });
         this.serializer = this.codec.createSerializer();
         this.deserializer = this.codec.createDeserializer();
         this.awsQueryCompatible = !!awsQueryCompatible;
@@ -18493,15 +13615,16 @@ class AwsJsonRpcProtocol extends protocols.RpcProtocol {
             this.mixin.setQueryCompatError(dataObject, response);
         }
         const errorIdentifier = loadRestJsonErrorCode(response, dataObject) ?? "Unknown";
-        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, dataObject, metadata);
+        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, dataObject, metadata, this.awsQueryCompatible ? this.mixin.findQueryCompatibleError : undefined);
         const ns = schema.NormalizedSchema.of(errorSchema);
         const message = dataObject.message ?? dataObject.Message ?? "Unknown";
         const ErrorCtor = schema.TypeRegistry.for(errorSchema[1]).getErrorCtor(errorSchema) ?? Error;
         const exception = new ErrorCtor(message);
         const output = {};
         for (const [name, member] of ns.structIterator()) {
-            const target = member.getMergedTraits().jsonName ?? name;
-            output[name] = this.codec.createDeserializer().readObject(member, dataObject[target]);
+            if (dataObject[name] != null) {
+                output[name] = this.codec.createDeserializer().readObject(member, dataObject[name]);
+            }
         }
         if (this.awsQueryCompatible) {
             this.mixin.queryCompatOutput(dataObject, output);
@@ -18514,11 +13637,12 @@ class AwsJsonRpcProtocol extends protocols.RpcProtocol {
 }
 
 class AwsJson1_0Protocol extends AwsJsonRpcProtocol {
-    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, }) {
+    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, jsonCodec, }) {
         super({
             defaultNamespace,
             serviceTarget,
             awsQueryCompatible,
+            jsonCodec,
         });
     }
     getShapeId() {
@@ -18533,11 +13657,12 @@ class AwsJson1_0Protocol extends AwsJsonRpcProtocol {
 }
 
 class AwsJson1_1Protocol extends AwsJsonRpcProtocol {
-    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, }) {
+    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, jsonCodec, }) {
         super({
             defaultNamespace,
             serviceTarget,
             awsQueryCompatible,
+            jsonCodec,
         });
     }
     getShapeId() {
@@ -18886,7 +14011,7 @@ class QueryShapeSerializer extends SerdeContextConfig {
         }
         else if (ns.isStructSchema()) {
             if (value && typeof value === "object") {
-                for (const [memberName, member] of ns.structIterator()) {
+                for (const [memberName, member] of serializingStructIterator(ns, value)) {
                     if (value[memberName] == null && !member.isIdempotencyToken()) {
                         continue;
                     }
@@ -19019,18 +14144,13 @@ class AwsQueryProtocol extends protocols.RpcProtocol {
             Code: errorData.Code,
             Message: message,
         };
-        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, errorData, metadata, (registry, errorName) => {
-            try {
-                return registry.getSchema(errorName);
-            }
-            catch (e) {
-                return registry.find((schema$1) => schema.NormalizedSchema.of(schema$1).getMergedTraits().awsQueryError?.[0] === errorName);
-            }
-        });
+        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, errorData, metadata, this.mixin.findQueryCompatibleError);
         const ns = schema.NormalizedSchema.of(errorSchema);
         const ErrorCtor = schema.TypeRegistry.for(errorSchema[1]).getErrorCtor(errorSchema) ?? Error;
         const exception = new ErrorCtor(message);
         const output = {
+            Type: errorData.Error.Type,
+            Code: errorData.Error.Code,
             Error: errorData.Error,
         };
         for (const [name, member] of ns.structIterator()) {
@@ -19183,7 +14303,7 @@ class XmlShapeSerializer extends SerdeContextConfig {
         }
         const structXmlNode = xmlBuilder.XmlNode.of(name);
         const [xmlnsAttr, xmlns] = this.getXmlnsAttribute(ns, parentXmlns);
-        for (const [memberName, memberSchema] of ns.structIterator()) {
+        for (const [memberName, memberSchema] of serializingStructIterator(ns, value)) {
             const val = value[memberName];
             if (val != null || memberSchema.isIdempotencyToken()) {
                 if (memberSchema.getMergedTraits().xmlAttribute) {
@@ -19453,7 +14573,9 @@ class AwsRestXmlProtocol extends protocols.HttpBindingProtocol {
         }
         if (request.headers["content-type"] === this.getDefaultContentType()) {
             if (typeof request.body === "string") {
-                request.body = '<?xml version="1.0" encoding="UTF-8"?>' + request.body;
+                if (!request.body.startsWith("<?xml ")) {
+                    request.body = '<?xml version="1.0" encoding="UTF-8"?>' + request.body;
+                }
             }
         }
         return request;
@@ -19669,8 +14791,17 @@ class ProtocolLib {
             const msg = exception.Message ?? additions.Message;
             const error = smithyClient.decorateServiceException(exception, additions);
             if (msg) {
-                error.Message = msg;
                 error.message = msg;
+            }
+            error.Error = {
+                ...error.Error,
+                Type: error.Error.Type,
+                Code: error.Error.Code,
+                Message: error.Error.message ?? error.Error.Message ?? msg,
+            };
+            const reqId = error.$metadata.requestId;
+            if (reqId) {
+                error.RequestId = reqId;
             }
             return error;
         }
@@ -19687,7 +14818,7 @@ class ProtocolLib {
             };
             Object.assign(output, Error);
             for (const [k, v] of entries) {
-                Error[k] = v;
+                Error[k === "message" ? "Message" : k] = v;
             }
             delete Error.__type;
             output.Error = Error;
@@ -19702,6 +14833,14 @@ class ProtocolLib {
         }
         if (queryCompatErrorData.Code) {
             errorData.Code = queryCompatErrorData.Code;
+        }
+    }
+    findQueryCompatibleError(registry, errorName) {
+        try {
+            return registry.getSchema(errorName);
+        }
+        catch (e) {
+            return registry.find((schema$1) => schema.NormalizedSchema.of(schema$1).getMergedTraits().awsQueryError?.[0] === errorName);
         }
     }
 }
@@ -19725,15 +14864,23 @@ class AwsSmithyRpcV2CborProtocol extends cbor.SmithyRpcV2CborProtocol {
         if (this.awsQueryCompatible) {
             this.mixin.setQueryCompatError(dataObject, response);
         }
-        const errorName = cbor.loadSmithyRpcV2CborErrorCode(response, dataObject) ?? "Unknown";
-        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorName, this.options.defaultNamespace, response, dataObject, metadata);
+        const errorName = (() => {
+            const compatHeader = response.headers["x-amzn-query-error"];
+            if (compatHeader && this.awsQueryCompatible) {
+                return compatHeader.split(";")[0];
+            }
+            return cbor.loadSmithyRpcV2CborErrorCode(response, dataObject) ?? "Unknown";
+        })();
+        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorName, this.options.defaultNamespace, response, dataObject, metadata, this.awsQueryCompatible ? this.mixin.findQueryCompatibleError : undefined);
         const ns = schema.NormalizedSchema.of(errorSchema);
         const message = dataObject.message ?? dataObject.Message ?? "Unknown";
         const ErrorCtor = schema.TypeRegistry.for(errorSchema[1]).getErrorCtor(errorSchema) ?? Error;
         const exception = new ErrorCtor(message);
         const output = {};
         for (const [name, member] of ns.structIterator()) {
-            output[name] = this.deserializer.readValue(member, dataObject[name]);
+            if (dataObject[name] != null) {
+                output[name] = this.deserializer.readValue(member, dataObject[name]);
+            }
         }
         if (this.awsQueryCompatible) {
             this.mixin.queryCompatOutput(dataObject, output);
@@ -19799,6 +14946,46 @@ class SerdeContextConfig {
     serdeContext;
     setSerdeContext(serdeContext) {
         this.serdeContext = serdeContext;
+    }
+}
+
+function* serializingStructIterator(ns, sourceObject) {
+    if (ns.isUnitSchema()) {
+        return;
+    }
+    const struct = ns.getSchema();
+    for (let i = 0; i < struct[4].length; ++i) {
+        const key = struct[4][i];
+        const memberSchema = struct[5][i];
+        const memberNs = new schema.NormalizedSchema([memberSchema, 0], key);
+        if (!(key in sourceObject) && !memberNs.isIdempotencyToken()) {
+            continue;
+        }
+        yield [key, memberNs];
+    }
+}
+function* deserializingStructIterator(ns, sourceObject, nameTrait) {
+    if (ns.isUnitSchema()) {
+        return;
+    }
+    const struct = ns.getSchema();
+    let keysRemaining = Object.keys(sourceObject).filter((k) => k !== "__type").length;
+    for (let i = 0; i < struct[4].length; ++i) {
+        if (keysRemaining === 0) {
+            break;
+        }
+        const key = struct[4][i];
+        const memberSchema = struct[5][i];
+        const memberNs = new schema.NormalizedSchema([memberSchema, 0], key);
+        let serializationKey = key;
+        if (nameTrait) {
+            serializationKey = memberNs.getMergedTraits()[nameTrait] ?? key;
+        }
+        if (!(serializationKey in sourceObject)) {
+            continue;
+        }
+        yield [key, memberNs];
+        keysRemaining -= 1;
     }
 }
 
@@ -19891,38 +15078,40 @@ class JsonShapeDeserializer extends SerdeContextConfig {
     _read(schema$1, value) {
         const isObject = value !== null && typeof value === "object";
         const ns = schema.NormalizedSchema.of(schema$1);
-        if (ns.isListSchema() && Array.isArray(value)) {
-            const listMember = ns.getValueSchema();
-            const out = [];
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const item of value) {
-                if (sparse || item != null) {
-                    out.push(this._read(listMember, item));
+        if (isObject) {
+            if (ns.isStructSchema()) {
+                const out = {};
+                for (const [memberName, memberSchema] of deserializingStructIterator(ns, value, this.settings.jsonName ? "jsonName" : false)) {
+                    const fromKey = this.settings.jsonName ? memberSchema.getMergedTraits().jsonName ?? memberName : memberName;
+                    const deserializedValue = this._read(memberSchema, value[fromKey]);
+                    if (deserializedValue != null) {
+                        out[memberName] = deserializedValue;
+                    }
                 }
+                return out;
             }
-            return out;
-        }
-        else if (ns.isMapSchema() && isObject) {
-            const mapMember = ns.getValueSchema();
-            const out = {};
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const [_k, _v] of Object.entries(value)) {
-                if (sparse || _v != null) {
-                    out[_k] = this._read(mapMember, _v);
+            if (Array.isArray(value) && ns.isListSchema()) {
+                const listMember = ns.getValueSchema();
+                const out = [];
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const item of value) {
+                    if (sparse || item != null) {
+                        out.push(this._read(listMember, item));
+                    }
                 }
+                return out;
             }
-            return out;
-        }
-        else if (ns.isStructSchema() && isObject) {
-            const out = {};
-            for (const [memberName, memberSchema] of ns.structIterator()) {
-                const fromKey = this.settings.jsonName ? memberSchema.getMergedTraits().jsonName ?? memberName : memberName;
-                const deserializedValue = this._read(memberSchema, value[fromKey]);
-                if (deserializedValue != null) {
-                    out[memberName] = deserializedValue;
+            if (ns.isMapSchema()) {
+                const mapMember = ns.getValueSchema();
+                const out = {};
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const [_k, _v] of Object.entries(value)) {
+                    if (sparse || _v != null) {
+                        out[_k] = this._read(mapMember, _v);
+                    }
                 }
+                return out;
             }
-            return out;
         }
         if (ns.isBlobSchema() && typeof value === "string") {
             return utilBase64.fromBase64(value);
@@ -19933,6 +15122,7 @@ class JsonShapeDeserializer extends SerdeContextConfig {
             if (isJson) {
                 return serde.LazyJsonString.from(value);
             }
+            return value;
         }
         if (ns.isTimestampSchema() && value != null) {
             const format = protocols.determineTimestampFormat(ns, this.settings);
@@ -19970,6 +15160,7 @@ class JsonShapeDeserializer extends SerdeContextConfig {
                 case "NaN":
                     return NaN;
             }
+            return value;
         }
         if (ns.isDocumentSchema()) {
             if (isObject) {
@@ -20041,6 +15232,7 @@ class JsonReplacer {
 class JsonShapeSerializer extends SerdeContextConfig {
     settings;
     buffer;
+    useReplacer = false;
     rootSchema;
     constructor(settings) {
         super();
@@ -20057,9 +15249,13 @@ class JsonShapeSerializer extends SerdeContextConfig {
         }
     }
     flush() {
-        const { rootSchema } = this;
+        const { rootSchema, useReplacer } = this;
         this.rootSchema = undefined;
+        this.useReplacer = false;
         if (rootSchema?.isStructSchema() || rootSchema?.isDocumentSchema()) {
+            if (!useReplacer) {
+                return JSON.stringify(this.buffer);
+            }
             const replacer = new JsonReplacer();
             return replacer.replaceInJson(JSON.stringify(this.buffer, replacer.createReplacer(), 0));
         }
@@ -20068,67 +15264,67 @@ class JsonShapeSerializer extends SerdeContextConfig {
     _write(schema$1, value, container) {
         const isObject = value !== null && typeof value === "object";
         const ns = schema.NormalizedSchema.of(schema$1);
-        if (ns.isListSchema() && Array.isArray(value)) {
-            const listMember = ns.getValueSchema();
-            const out = [];
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const item of value) {
-                if (sparse || item != null) {
-                    out.push(this._write(listMember, item));
+        if (isObject) {
+            if (ns.isStructSchema()) {
+                const out = {};
+                for (const [memberName, memberSchema] of serializingStructIterator(ns, value)) {
+                    const serializableValue = this._write(memberSchema, value[memberName], ns);
+                    if (serializableValue !== undefined) {
+                        const jsonName = memberSchema.getMergedTraits().jsonName;
+                        const targetKey = this.settings.jsonName ? jsonName ?? memberName : memberName;
+                        out[targetKey] = serializableValue;
+                    }
+                }
+                return out;
+            }
+            if (Array.isArray(value) && ns.isListSchema()) {
+                const listMember = ns.getValueSchema();
+                const out = [];
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const item of value) {
+                    if (sparse || item != null) {
+                        out.push(this._write(listMember, item));
+                    }
+                }
+                return out;
+            }
+            if (ns.isMapSchema()) {
+                const mapMember = ns.getValueSchema();
+                const out = {};
+                const sparse = !!ns.getMergedTraits().sparse;
+                for (const [_k, _v] of Object.entries(value)) {
+                    if (sparse || _v != null) {
+                        out[_k] = this._write(mapMember, _v);
+                    }
+                }
+                return out;
+            }
+            if (value instanceof Uint8Array && (ns.isBlobSchema() || ns.isDocumentSchema())) {
+                if (ns === this.rootSchema) {
+                    return value;
+                }
+                return (this.serdeContext?.base64Encoder ?? utilBase64.toBase64)(value);
+            }
+            if (value instanceof Date && (ns.isTimestampSchema() || ns.isDocumentSchema())) {
+                const format = protocols.determineTimestampFormat(ns, this.settings);
+                switch (format) {
+                    case 5:
+                        return value.toISOString().replace(".000Z", "Z");
+                    case 6:
+                        return serde.dateToUtcString(value);
+                    case 7:
+                        return value.getTime() / 1000;
+                    default:
+                        console.warn("Missing timestamp format, using epoch seconds", value);
+                        return value.getTime() / 1000;
                 }
             }
-            return out;
-        }
-        else if (ns.isMapSchema() && isObject) {
-            const mapMember = ns.getValueSchema();
-            const out = {};
-            const sparse = !!ns.getMergedTraits().sparse;
-            for (const [_k, _v] of Object.entries(value)) {
-                if (sparse || _v != null) {
-                    out[_k] = this._write(mapMember, _v);
-                }
+            if (value instanceof serde.NumericValue) {
+                this.useReplacer = true;
             }
-            return out;
-        }
-        else if (ns.isStructSchema() && isObject) {
-            const out = {};
-            for (const [memberName, memberSchema] of ns.structIterator()) {
-                const targetKey = this.settings.jsonName ? memberSchema.getMergedTraits().jsonName ?? memberName : memberName;
-                const serializableValue = this._write(memberSchema, value[memberName], ns);
-                if (serializableValue !== undefined) {
-                    out[targetKey] = serializableValue;
-                }
-            }
-            return out;
         }
         if (value === null && container?.isStructSchema()) {
             return void 0;
-        }
-        if ((ns.isBlobSchema() && (value instanceof Uint8Array || typeof value === "string")) ||
-            (ns.isDocumentSchema() && value instanceof Uint8Array)) {
-            if (ns === this.rootSchema) {
-                return value;
-            }
-            return (this.serdeContext?.base64Encoder ?? utilBase64.toBase64)(value);
-        }
-        if ((ns.isTimestampSchema() || ns.isDocumentSchema()) && value instanceof Date) {
-            const format = protocols.determineTimestampFormat(ns, this.settings);
-            switch (format) {
-                case 5:
-                    return value.toISOString().replace(".000Z", "Z");
-                case 6:
-                    return serde.dateToUtcString(value);
-                case 7:
-                    return value.getTime() / 1000;
-                default:
-                    console.warn("Missing timestamp format, using epoch seconds", value);
-                    return value.getTime() / 1000;
-            }
-        }
-        if (ns.isNumericSchema() && typeof value === "number") {
-            if (Math.abs(value) === Infinity || isNaN(value)) {
-                return String(value);
-            }
         }
         if (ns.isStringSchema()) {
             if (typeof value === "undefined" && ns.isIdempotencyToken()) {
@@ -20141,12 +15337,29 @@ class JsonShapeSerializer extends SerdeContextConfig {
                     return serde.LazyJsonString.from(value);
                 }
             }
+            return value;
+        }
+        if (typeof value === "number" && ns.isNumericSchema()) {
+            if (Math.abs(value) === Infinity || isNaN(value)) {
+                return String(value);
+            }
+            return value;
+        }
+        if (typeof value === "string" && ns.isBlobSchema()) {
+            if (ns === this.rootSchema) {
+                return value;
+            }
+            return (this.serdeContext?.base64Encoder ?? utilBase64.toBase64)(value);
+        }
+        if (typeof value === "bigint") {
+            this.useReplacer = true;
         }
         if (ns.isDocumentSchema()) {
             if (isObject) {
                 const out = Array.isArray(value) ? [] : {};
                 for (const [k, v] of Object.entries(value)) {
                     if (v instanceof serde.NumericValue) {
+                        this.useReplacer = true;
                         out[k] = v;
                     }
                     else {
@@ -20188,18 +15401,20 @@ class AwsJsonRpcProtocol extends protocols.RpcProtocol {
     codec;
     mixin;
     awsQueryCompatible;
-    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, }) {
+    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, jsonCodec, }) {
         super({
             defaultNamespace,
         });
         this.serviceTarget = serviceTarget;
-        this.codec = new JsonCodec({
-            timestampFormat: {
-                useTrait: true,
-                default: 7,
-            },
-            jsonName: false,
-        });
+        this.codec =
+            jsonCodec ??
+                new JsonCodec({
+                    timestampFormat: {
+                        useTrait: true,
+                        default: 7,
+                    },
+                    jsonName: false,
+                });
         this.serializer = this.codec.createSerializer();
         this.deserializer = this.codec.createDeserializer();
         this.awsQueryCompatible = !!awsQueryCompatible;
@@ -20230,15 +15445,16 @@ class AwsJsonRpcProtocol extends protocols.RpcProtocol {
             this.mixin.setQueryCompatError(dataObject, response);
         }
         const errorIdentifier = loadRestJsonErrorCode(response, dataObject) ?? "Unknown";
-        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, dataObject, metadata);
+        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, dataObject, metadata, this.awsQueryCompatible ? this.mixin.findQueryCompatibleError : undefined);
         const ns = schema.NormalizedSchema.of(errorSchema);
         const message = dataObject.message ?? dataObject.Message ?? "Unknown";
         const ErrorCtor = schema.TypeRegistry.for(errorSchema[1]).getErrorCtor(errorSchema) ?? Error;
         const exception = new ErrorCtor(message);
         const output = {};
         for (const [name, member] of ns.structIterator()) {
-            const target = member.getMergedTraits().jsonName ?? name;
-            output[name] = this.codec.createDeserializer().readObject(member, dataObject[target]);
+            if (dataObject[name] != null) {
+                output[name] = this.codec.createDeserializer().readObject(member, dataObject[name]);
+            }
         }
         if (this.awsQueryCompatible) {
             this.mixin.queryCompatOutput(dataObject, output);
@@ -20251,11 +15467,12 @@ class AwsJsonRpcProtocol extends protocols.RpcProtocol {
 }
 
 class AwsJson1_0Protocol extends AwsJsonRpcProtocol {
-    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, }) {
+    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, jsonCodec, }) {
         super({
             defaultNamespace,
             serviceTarget,
             awsQueryCompatible,
+            jsonCodec,
         });
     }
     getShapeId() {
@@ -20270,11 +15487,12 @@ class AwsJson1_0Protocol extends AwsJsonRpcProtocol {
 }
 
 class AwsJson1_1Protocol extends AwsJsonRpcProtocol {
-    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, }) {
+    constructor({ defaultNamespace, serviceTarget, awsQueryCompatible, jsonCodec, }) {
         super({
             defaultNamespace,
             serviceTarget,
             awsQueryCompatible,
+            jsonCodec,
         });
     }
     getShapeId() {
@@ -20623,7 +15841,7 @@ class QueryShapeSerializer extends SerdeContextConfig {
         }
         else if (ns.isStructSchema()) {
             if (value && typeof value === "object") {
-                for (const [memberName, member] of ns.structIterator()) {
+                for (const [memberName, member] of serializingStructIterator(ns, value)) {
                     if (value[memberName] == null && !member.isIdempotencyToken()) {
                         continue;
                     }
@@ -20756,18 +15974,13 @@ class AwsQueryProtocol extends protocols.RpcProtocol {
             Code: errorData.Code,
             Message: message,
         };
-        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, errorData, metadata, (registry, errorName) => {
-            try {
-                return registry.getSchema(errorName);
-            }
-            catch (e) {
-                return registry.find((schema$1) => schema.NormalizedSchema.of(schema$1).getMergedTraits().awsQueryError?.[0] === errorName);
-            }
-        });
+        const { errorSchema, errorMetadata } = await this.mixin.getErrorSchemaOrThrowBaseException(errorIdentifier, this.options.defaultNamespace, response, errorData, metadata, this.mixin.findQueryCompatibleError);
         const ns = schema.NormalizedSchema.of(errorSchema);
         const ErrorCtor = schema.TypeRegistry.for(errorSchema[1]).getErrorCtor(errorSchema) ?? Error;
         const exception = new ErrorCtor(message);
         const output = {
+            Type: errorData.Error.Type,
+            Code: errorData.Error.Code,
             Error: errorData.Error,
         };
         for (const [name, member] of ns.structIterator()) {
@@ -20920,7 +16133,7 @@ class XmlShapeSerializer extends SerdeContextConfig {
         }
         const structXmlNode = xmlBuilder.XmlNode.of(name);
         const [xmlnsAttr, xmlns] = this.getXmlnsAttribute(ns, parentXmlns);
-        for (const [memberName, memberSchema] of ns.structIterator()) {
+        for (const [memberName, memberSchema] of serializingStructIterator(ns, value)) {
             const val = value[memberName];
             if (val != null || memberSchema.isIdempotencyToken()) {
                 if (memberSchema.getMergedTraits().xmlAttribute) {
@@ -21190,7 +16403,9 @@ class AwsRestXmlProtocol extends protocols.HttpBindingProtocol {
         }
         if (request.headers["content-type"] === this.getDefaultContentType()) {
             if (typeof request.body === "string") {
-                request.body = '<?xml version="1.0" encoding="UTF-8"?>' + request.body;
+                if (!request.body.startsWith("<?xml ")) {
+                    request.body = '<?xml version="1.0" encoding="UTF-8"?>' + request.body;
+                }
             }
         }
         return request;
@@ -24401,12 +19616,7 @@ class InvokeStoreSingle extends InvokeStoreBase {
     }
     run(context, fn) {
         this.currentContext = context;
-        try {
-            return fn();
-        }
-        finally {
-            this.currentContext = undefined;
-        }
+        return fn();
     }
 }
 class InvokeStoreMulti extends InvokeStoreBase {
@@ -25914,8 +21124,15 @@ class CborShapeDeserializer extends protocols.SerdeContext {
     }
     readValue(_schema, value) {
         const ns = schema.NormalizedSchema.of(_schema);
-        if (ns.isTimestampSchema() && typeof value === "number") {
-            return serde._parseEpochTimestamp(value);
+        if (ns.isTimestampSchema()) {
+            if (typeof value === "number") {
+                return serde._parseEpochTimestamp(value);
+            }
+            if (typeof value === "object") {
+                if (value.tag === 1 && "value" in value) {
+                    return serde._parseEpochTimestamp(value.value);
+                }
+            }
         }
         if (ns.isBlobSchema()) {
             if (typeof value === "string") {
@@ -25931,7 +21148,7 @@ class CborShapeDeserializer extends protocols.SerdeContext {
             typeof value === "symbol") {
             return value;
         }
-        else if (typeof value === "function" || typeof value === "object") {
+        else if (typeof value === "object") {
             if (value === null) {
                 return null;
             }
@@ -60627,7 +55844,7 @@ module.exports = parseParams
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.937.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-s3","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn g:vitest run","test:browser":"node ./test/browser-build/esbuild && yarn g:vitest run -c vitest.config.browser.mts","test:browser:watch":"node ./test/browser-build/esbuild && yarn g:vitest watch -c vitest.config.browser.mts","test:e2e":"yarn g:vitest run -c vitest.config.e2e.mts && yarn test:browser","test:e2e:watch":"yarn g:vitest watch -c vitest.config.e2e.mts","test:integration":"yarn g:vitest run -c vitest.config.integ.mts","test:integration:watch":"yarn g:vitest watch -c vitest.config.integ.mts","test:watch":"yarn g:vitest watch"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"5.2.0","@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.936.0","@aws-sdk/credential-provider-node":"3.936.0","@aws-sdk/middleware-bucket-endpoint":"3.936.0","@aws-sdk/middleware-expect-continue":"3.936.0","@aws-sdk/middleware-flexible-checksums":"3.936.0","@aws-sdk/middleware-host-header":"3.936.0","@aws-sdk/middleware-location-constraint":"3.936.0","@aws-sdk/middleware-logger":"3.936.0","@aws-sdk/middleware-recursion-detection":"3.936.0","@aws-sdk/middleware-sdk-s3":"3.936.0","@aws-sdk/middleware-ssec":"3.936.0","@aws-sdk/middleware-user-agent":"3.936.0","@aws-sdk/region-config-resolver":"3.936.0","@aws-sdk/signature-v4-multi-region":"3.936.0","@aws-sdk/types":"3.936.0","@aws-sdk/util-endpoints":"3.936.0","@aws-sdk/util-user-agent-browser":"3.936.0","@aws-sdk/util-user-agent-node":"3.936.0","@smithy/config-resolver":"^4.4.3","@smithy/core":"^3.18.5","@smithy/eventstream-serde-browser":"^4.2.5","@smithy/eventstream-serde-config-resolver":"^4.3.5","@smithy/eventstream-serde-node":"^4.2.5","@smithy/fetch-http-handler":"^5.3.6","@smithy/hash-blob-browser":"^4.2.6","@smithy/hash-node":"^4.2.5","@smithy/hash-stream-node":"^4.2.5","@smithy/invalid-dependency":"^4.2.5","@smithy/md5-js":"^4.2.5","@smithy/middleware-content-length":"^4.2.5","@smithy/middleware-endpoint":"^4.3.12","@smithy/middleware-retry":"^4.4.12","@smithy/middleware-serde":"^4.2.6","@smithy/middleware-stack":"^4.2.5","@smithy/node-config-provider":"^4.3.5","@smithy/node-http-handler":"^4.4.5","@smithy/protocol-http":"^5.3.5","@smithy/smithy-client":"^4.9.8","@smithy/types":"^4.9.0","@smithy/url-parser":"^4.2.5","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.11","@smithy/util-defaults-mode-node":"^4.2.14","@smithy/util-endpoints":"^3.2.5","@smithy/util-middleware":"^4.2.5","@smithy/util-retry":"^4.2.5","@smithy/util-stream":"^4.5.6","@smithy/util-utf8":"^4.2.0","@smithy/util-waiter":"^4.2.5","tslib":"^2.6.2"},"devDependencies":{"@aws-sdk/signature-v4-crt":"3.936.0","@tsconfig/node18":"18.2.4","@types/node":"^18.19.69","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~5.8.3"},"engines":{"node":">=18.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-s3","description":"AWS SDK for JavaScript S3 Client for Node.js, Browser and React Native","version":"3.946.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-s3","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo s3","test":"yarn g:vitest run","test:browser":"node ./test/browser-build/esbuild && yarn g:vitest run -c vitest.config.browser.mts","test:browser:watch":"node ./test/browser-build/esbuild && yarn g:vitest watch -c vitest.config.browser.mts","test:e2e":"yarn g:vitest run -c vitest.config.e2e.mts && yarn test:browser","test:e2e:watch":"yarn g:vitest watch -c vitest.config.e2e.mts","test:index":"tsc --noEmit ./test/index-types.ts && node ./test/index-objects.spec.mjs","test:integration":"yarn g:vitest run -c vitest.config.integ.mts","test:integration:watch":"yarn g:vitest watch -c vitest.config.integ.mts","test:watch":"yarn g:vitest watch"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha1-browser":"5.2.0","@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/core":"3.946.0","@aws-sdk/credential-provider-node":"3.946.0","@aws-sdk/middleware-bucket-endpoint":"3.936.0","@aws-sdk/middleware-expect-continue":"3.936.0","@aws-sdk/middleware-flexible-checksums":"3.946.0","@aws-sdk/middleware-host-header":"3.936.0","@aws-sdk/middleware-location-constraint":"3.936.0","@aws-sdk/middleware-logger":"3.936.0","@aws-sdk/middleware-recursion-detection":"3.936.0","@aws-sdk/middleware-sdk-s3":"3.946.0","@aws-sdk/middleware-ssec":"3.936.0","@aws-sdk/middleware-user-agent":"3.946.0","@aws-sdk/region-config-resolver":"3.936.0","@aws-sdk/signature-v4-multi-region":"3.946.0","@aws-sdk/types":"3.936.0","@aws-sdk/util-endpoints":"3.936.0","@aws-sdk/util-user-agent-browser":"3.936.0","@aws-sdk/util-user-agent-node":"3.946.0","@smithy/config-resolver":"^4.4.3","@smithy/core":"^3.18.7","@smithy/eventstream-serde-browser":"^4.2.5","@smithy/eventstream-serde-config-resolver":"^4.3.5","@smithy/eventstream-serde-node":"^4.2.5","@smithy/fetch-http-handler":"^5.3.6","@smithy/hash-blob-browser":"^4.2.6","@smithy/hash-node":"^4.2.5","@smithy/hash-stream-node":"^4.2.5","@smithy/invalid-dependency":"^4.2.5","@smithy/md5-js":"^4.2.5","@smithy/middleware-content-length":"^4.2.5","@smithy/middleware-endpoint":"^4.3.14","@smithy/middleware-retry":"^4.4.14","@smithy/middleware-serde":"^4.2.6","@smithy/middleware-stack":"^4.2.5","@smithy/node-config-provider":"^4.3.5","@smithy/node-http-handler":"^4.4.5","@smithy/protocol-http":"^5.3.5","@smithy/smithy-client":"^4.9.10","@smithy/types":"^4.9.0","@smithy/url-parser":"^4.2.5","@smithy/util-base64":"^4.3.0","@smithy/util-body-length-browser":"^4.2.0","@smithy/util-body-length-node":"^4.2.1","@smithy/util-defaults-mode-browser":"^4.3.13","@smithy/util-defaults-mode-node":"^4.2.16","@smithy/util-endpoints":"^3.2.5","@smithy/util-middleware":"^4.2.5","@smithy/util-retry":"^4.2.5","@smithy/util-stream":"^4.5.6","@smithy/util-utf8":"^4.2.0","@smithy/util-waiter":"^4.2.5","tslib":"^2.6.2"},"devDependencies":{"@aws-sdk/signature-v4-crt":"3.946.0","@tsconfig/node18":"18.2.4","@types/node":"^18.19.69","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~5.8.3"},"engines":{"node":">=18.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-s3"}}');
 
 /***/ }),
 
