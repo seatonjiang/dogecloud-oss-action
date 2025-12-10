@@ -16,8 +16,8 @@
     "@vercel/ncc": "^0.38.4"
   },
   "dependencies": {
-    "@actions/core": "^1.11.1",
-    "@aws-sdk/client-s3": "^3.946.0",
+    "@actions/core": "^2.0.0",
+    "@aws-sdk/client-s3": "^3.948.0",
     "mime-types": "^3.0.2"
   },
   "engines": {
