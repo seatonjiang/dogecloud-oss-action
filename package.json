@@ -13,11 +13,11 @@
     "build": "npx ncc build src/index.js -o dist"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.4"
+    "@vercel/ncc": "^0.44.1"
   },
   "dependencies": {
-    "@actions/core": "^2.0.0",
-    "@aws-sdk/client-s3": "^3.948.0",
+    "@actions/core": "^3.0.1",
+    "@aws-sdk/client-s3": "^3.1108.0",
     "mime-types": "^3.0.2"
   },
   "engines": {
