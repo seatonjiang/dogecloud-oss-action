@@ -1,0 +1,26 @@
+name: "DogeCloud OSS Action"
+description: "GitHub Action for Uploading to DogeCloud OSS"
+author: "Seaton Jiang"
+branding:
+  color: "blue"
+  icon: "upload-cloud"
+inputs:
+  access_key:
+    description: "AccessKey"
+    required: true
+  secret_key:
+    description: "SecretKey"
+    required: true
+  bucket:
+    description: "Bucket name"
+    required: true
+  local_path:
+    description: "Path to local file or directory"
+    required: true
+  remote_path:
+    description: "Path to remote file or directory (optional)"
+    required: false
+    default: ""
+runs:
+  using: "node24"
+  main: "dist/index.js"
